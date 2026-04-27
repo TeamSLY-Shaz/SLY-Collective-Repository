@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Packs placeholder">
+  <rect width="1200" height="1500" fill="#f2efe9"/>
+  <rect x="260" y="300" width="680" height="760" rx="72" fill="#836a4c"/>
+  <rect x="340" y="410" width="520" height="110" rx="20" fill="#a4855f"/>
+  <rect x="340" y="560" width="520" height="110" rx="20" fill="#a4855f"/>
+  <rect x="340" y="710" width="520" height="110" rx="20" fill="#a4855f"/>
+  <text x="600" y="1410" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" fill="#1c1c1c">PACKS</text>
+</svg>

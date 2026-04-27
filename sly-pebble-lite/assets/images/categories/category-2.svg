@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Trunks placeholder">
+  <rect width="1200" height="1500" fill="#f4efe9"/>
+  <rect x="250" y="300" width="700" height="760" rx="75" fill="#7d5f49"/>
+  <rect x="300" y="330" width="600" height="120" rx="40" fill="#5e4534"/>
+  <text x="600" y="1410" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" fill="#1c1c1c">TRUNKS</text>
+</svg>
