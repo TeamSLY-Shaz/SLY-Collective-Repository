@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Pouch placeholder">
+  <rect width="1200" height="1500" fill="#f5ecef"/>
+  <rect x="260" y="260" width="680" height="880" rx="86" fill="#8f4d5e"/>
+  <rect x="315" y="295" width="570" height="122" rx="42" fill="#6b3946"/>
+  <ellipse cx="600" cy="760" rx="150" ry="190" fill="#b36e80"/>
+  <text x="600" y="1410" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" fill="#1c1c1c">POUCH</text>
+</svg>
