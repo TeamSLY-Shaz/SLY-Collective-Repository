@@ -123,10 +123,18 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			null
 		);
 
+		// Required: registers WordPress theme stylesheet handle via style.css
+		wp_enqueue_style(
+			'sly-pebble-lite-style',
+			get_stylesheet_uri(),
+			array('sly-pebble-lite-fonts'),
+			SLY_PEBBLE_LITE_VERSION
+		);
+
 		wp_enqueue_style(
 			'sly-pebble-lite-main',
 			get_template_directory_uri() . '/assets/css/main.css',
-			array(),
+			array('sly-pebble-lite-style'),
 			file_exists($css_file) ? (string) filemtime($css_file) : SLY_PEBBLE_LITE_VERSION
 		);
 
