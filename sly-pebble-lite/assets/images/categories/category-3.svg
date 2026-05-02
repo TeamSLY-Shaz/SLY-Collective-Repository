@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Briefs placeholder">
+  <rect width="1200" height="1500" fill="#edf2e9"/>
+  <path d="M300 520 Q600 300 900 520 L820 980 Q600 1120 380 980 Z" fill="#4c6651"/>
+  <rect x="340" y="480" width="520" height="115" rx="40" fill="#394f3d"/>
+  <text x="600" y="1410" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" fill="#1c1c1c">BRIEFS</text>
+</svg>
