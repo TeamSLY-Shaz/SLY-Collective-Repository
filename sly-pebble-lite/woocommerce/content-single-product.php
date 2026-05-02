@@ -300,7 +300,7 @@ $short_desc = trim( (string) $short_desc );
 						<span class="sly-pd-tab-icon" aria-hidden="true">+</span>
 					</button>
 					<div class="sly-pd-tab-content" hidden>
-						<p><?php esc_html_e( '87% Recycled Nylon, 13% Elastane. Our signature SLY-Flex fabric is engineered for all-day comfort with exceptional stretch recovery. The four-way stretch eliminates ride-up and maintains its shape through hundreds of washes.', 'sly-pebble-lite' ); ?></p>
+						<p><?php esc_html_e( '95% Bamboo, 5% Elastane. Our signature SLY-Flex fabric is engineered for all-day comfort with exceptional stretch recovery. The four-way stretch eliminates ride-up and maintains its shape through hundreds of washes.', 'sly-pebble-lite' ); ?></p>
 					</div>
 				</div>
 
@@ -310,7 +310,13 @@ $short_desc = trim( (string) $short_desc );
 						<span class="sly-pd-tab-icon" aria-hidden="true">+</span>
 					</button>
 					<div class="sly-pd-tab-content" hidden>
-						<p><?php esc_html_e( 'We ship from Melbourne, Australia. Standard shipping 3–7 business days. Express 1–3 business days. Free standard shipping on orders over $100. International shipping available to NZ, UK, US, CA.', 'sly-pebble-lite' ); ?></p>
+						<p><?php printf(
+							wp_kses(
+								__( 'Please view our <a href="%s" target="_blank" rel="noopener noreferrer">Shipping Information</a> page for a break down on individual country shipping costs. This excludes import tax and duties that may apply.', 'sly-pebble-lite' ),
+								[ 'a' => [ 'href' => [], 'target' => [], 'rel' => [] ] ]
+							),
+							esc_url( 'https://slycollective.com/shipping-underwear/' )
+						); ?></p>
 					</div>
 				</div>
 

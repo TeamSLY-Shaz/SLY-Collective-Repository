@@ -462,7 +462,7 @@ var $div2=$('<span class="sly-qty-divider"></span>');
 var $plus=$('<button type="button" class="sly-qty-btn" aria-label="Increase quantity">+</button>');
 $box.append($minus).append($div1).append($num).append($div2).append($plus);
 $stepper.append($label).append($box);
-$qty.after($stepper);
+$qty.closest('.quantity').after($stepper);
 function update(n){n=Math.max(1,n);$qty.val(n).trigger('change');$num.text(n);}
 $minus.on('click',function(){update(parseInt($num.text())-1);});
 $plus.on('click',function(){update(parseInt($num.text())+1);});

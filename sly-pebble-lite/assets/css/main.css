@@ -309,3 +309,11 @@ body.single-product .sly-pd-price .woocommerce-price-suffix,body.single-product 
 /* Font standardisation in product info */
 body.single-product .sly-pd-info h2,body.single-product .sly-pd-info h3,body.single-product .sly-pd-info h4,body.single-product .sly-pd-info h5,body.single-product .sly-pd-info h6{text-transform:none!important;letter-spacing:normal!important;font-weight:600!important}
 .sly-pd-brand-tagline p{font-weight:300!important;font-style:italic!important;text-transform:none!important;letter-spacing:0!important;line-height:1.8;font-size:1rem!important}
+/* ════════════════════════ v85 ════════════════════════ */
+/* Brand tagline — larger, semi-bold, no italic */
+.sly-pd-brand-tagline p{font-size:1.25rem!important;font-weight:600!important;font-style:normal!important;line-height:1.65!important}
+/* Bulk buy — centre heading and note */
+.sly-bb__heading{text-align:center!important}
+.sly-bb__note{text-align:center!important}
+/* Qty stepper — ensure visible (stepper now inserts outside .quantity wrapper) */
+.sly-qty-stepper{display:flex!important;visibility:visible!important}
