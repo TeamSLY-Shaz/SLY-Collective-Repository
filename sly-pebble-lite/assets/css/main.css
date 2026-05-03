@@ -350,42 +350,41 @@ body.single-product [class*="pricing_table"]{display:none!important}
 .sly-pd-feature-icon{font-size:1.6rem!important;line-height:1!important;color:var(--sly-accent)!important;flex-shrink:0}
 /* Footer brand paragraph — match footer body text size */
 .site-footer__brand p{font-size:0.9rem!important;font-weight:300!important}
-/* ════════════════════════ v88 — Category pages ════════════════════════ */
-/* Remove ALL borders, border-radius, padding from product cards */
-body.post-type-archive-product .sly-shop-card,
-body.tax-product_cat .sly-shop-card,
-body.post-type-archive-product .woocommerce ul.products li.product,
-body.tax-product_cat .woocommerce ul.products li.product{border:none!important;border-radius:0!important;box-shadow:none!important;padding:0!important;background:transparent!important;outline:none!important}
-/* Remove all borders and radius from images */
-body.post-type-archive-product .sly-shop-card__media,
-body.tax-product_cat .sly-shop-card__media{border-radius:0!important;border:none!important;overflow:hidden!important}
-body.post-type-archive-product .sly-shop-card__media img,
-body.post-type-archive-product .sly-shop-card__media video,
-body.post-type-archive-product .woocommerce ul.products li.product a img,
-body.tax-product_cat .sly-shop-card__media img,
-body.tax-product_cat .sly-shop-card__media video,
-body.tax-product_cat .woocommerce ul.products li.product a img{border:none!important;border-radius:0!important;outline:none!important}
-/* Reduce grid gap */
-body.post-type-archive-product .sly-shop-grid,
-body.tax-product_cat .sly-shop-grid{gap:0.5rem!important}
-/* Product title — considerably smaller */
-body.post-type-archive-product .woocommerce-loop-product__title,
-body.tax-product_cat .woocommerce-loop-product__title{font-size:12px!important;font-weight:500!important;letter-spacing:0!important;line-height:1.3!important;margin:0.3rem 0 0.15rem!important;padding:0 0.4rem!important}
-/* Product price — smaller, incl. suffix inline */
-body.post-type-archive-product .price,
-body.tax-product_cat .price{font-size:11px!important;font-weight:600!important;display:inline-flex!important;align-items:baseline!important;flex-wrap:wrap!important;gap:0.25em!important;margin:0 0 0.35rem!important;padding:0 0.4rem!important}
-body.post-type-archive-product .price .woocommerce-price-suffix,
-body.tax-product_cat .price .woocommerce-price-suffix,
-body.post-type-archive-product .price small,
-body.tax-product_cat .price small{display:inline!important;font-size:9px!important;font-weight:400!important;opacity:0.65!important;margin:0!important;padding:0!important;white-space:nowrap!important;vertical-align:baseline!important}
-/* Add to cart button — compact */
-body.post-type-archive-product .sly-shop-card .button,
-body.tax-product_cat .sly-shop-card .button{margin:0 0.4rem 0.4rem!important;font-size:0.72rem!important}
-/* Pagination — horizontal row */
-.woocommerce-pagination{text-align:center;margin:1.5rem 0}
-.woocommerce-pagination ul.page-numbers{display:inline-flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;gap:0.3rem!important;list-style:none!important;margin:0!important;padding:0!important}
-.woocommerce-pagination ul.page-numbers li{display:inline-flex!important;margin:0!important;padding:0!important;float:none!important}
-.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce-pagination ul.page-numbers li span.page-numbers{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:36px!important;height:36px!important;padding:0 0.55rem!important;border:1px solid var(--sly-line)!important;border-radius:6px!important;font-size:0.82rem!important;color:var(--sly-ink)!important;text-decoration:none!important}
+/* ════════════════════════ v89 — Category pages (fixed selectors) ════════════════════════ */
+/* Root cause fix: use .sly-shop-grid (our own ul class) not .woocommerce wrapper which
+   only exists on <body> in our custom template — descendant selectors like
+   "body .woocommerce ul" never matched because there is no intermediate .woocommerce element */
+
+/* === Cards: strip all border / border-radius / padding === */
+.sly-shop-grid li.product,.sly-shop-grid .sly-shop-card{border:none!important;border-radius:0!important;box-shadow:none!important;padding:0!important;background:transparent!important;outline:none!important}
+.sly-shop-grid .sly-shop-card__media{border-radius:0!important;border:none!important;overflow:hidden!important}
+.sly-shop-grid .sly-shop-card__media img,.sly-shop-grid .sly-shop-card__media video,.sly-shop-grid li.product a img{border:none!important;border-radius:0!important;outline:none!important;box-shadow:none!important}
+/* === Fonts: product title + price === */
+.sly-shop-grid .woocommerce-loop-product__title{font-size:12px!important;font-weight:500!important;letter-spacing:0!important;line-height:1.3!important;margin:0.3rem 0 0.1rem!important;padding:0 0.4rem!important;text-transform:none!important}
+.sly-shop-grid .price{font-size:11px!important;font-weight:600!important;display:inline-flex!important;align-items:baseline!important;flex-wrap:wrap!important;gap:0.25em!important;margin:0 0 0.35rem!important;padding:0 0.4rem!important}
+.sly-shop-grid .price .woocommerce-price-suffix,.sly-shop-grid .price small{display:inline!important;font-size:9px!important;font-weight:400!important;opacity:0.65!important;margin:0!important;padding:0!important;white-space:nowrap!important;vertical-align:baseline!important}
+/* Add to cart button */
+.sly-shop-grid .sly-shop-card .button{margin:0 0.4rem 0.4rem!important;font-size:0.72rem!important}
+/* Grid gap */
+.sly-shop-grid{gap:0.5rem!important}
+/* === Mobile: explicit repeat so WC smallscreen.css can't override === */
+@media(max-width:900px){
+.sly-shop-grid li.product,.sly-shop-grid .sly-shop-card{border:none!important;border-radius:0!important;box-shadow:none!important;padding:0!important;background:transparent!important}
+.sly-shop-grid .sly-shop-card__media{border-radius:0!important;border:none!important}
+.sly-shop-grid .sly-shop-card__media img,.sly-shop-grid li.product a img{border:none!important;border-radius:0!important}
+.sly-shop-grid .woocommerce-loop-product__title{font-size:12px!important;padding:0 0.4rem!important}
+.sly-shop-grid .price{font-size:11px!important;display:inline-flex!important;align-items:baseline!important;padding:0 0.4rem!important}
+.sly-shop-grid .price .woocommerce-price-suffix,.sly-shop-grid .price small{display:inline!important;font-size:9px!important;margin:0!important;vertical-align:baseline!important}
+}
+/* === Pagination: horizontal flex — override WC float-based layout === */
+.woocommerce-pagination{text-align:center!important;margin:1.5rem 0!important}
+.woocommerce-pagination ul.page-numbers{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;gap:0.3rem!important;list-style:none!important;margin:0!important;padding:0!important}
+.woocommerce-pagination ul.page-numbers li{display:inline-flex!important;float:none!important;margin:0!important;padding:0!important;width:auto!important}
+.woocommerce-pagination ul.page-numbers li a.page-numbers,.woocommerce-pagination ul.page-numbers li span.page-numbers{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:36px!important;height:36px!important;padding:0 0.55rem!important;border:1px solid var(--sly-line)!important;border-radius:6px!important;font-size:0.82rem!important;color:var(--sly-ink)!important;text-decoration:none!important;float:none!important}
 .woocommerce-pagination ul.page-numbers li span.current{background:var(--sly-accent)!important;border-color:var(--sly-accent)!important;color:#fff!important}
 .woocommerce-pagination ul.page-numbers li a.page-numbers:hover{border-color:var(--sly-accent)!important;color:var(--sly-accent)!important}
+@media(max-width:900px){
+.woocommerce-pagination ul.page-numbers{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important}
+.woocommerce-pagination ul.page-numbers li{display:inline-flex!important;float:none!important;width:auto!important}
+.woocommerce-pagination ul.page-numbers li a.page-numbers,.woocommerce-pagination ul.page-numbers li span.page-numbers{float:none!important;display:inline-flex!important}
+}
