@@ -337,7 +337,7 @@ $short_desc = trim( (string) $short_desc );
 
 		<!-- Homepage button -->
 		<div class="sly-pd-home-btn">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button sly-button"><?php esc_html_e( 'SLY Collective Homepage', 'sly-pebble-lite' ); ?></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button sly-button"><?php esc_html_e( 'Homepage', 'sly-pebble-lite' ); ?></a>
 		</div>
 
 		<!-- About the product — content only, no heading -->

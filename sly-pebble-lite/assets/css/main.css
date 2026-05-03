@@ -388,3 +388,14 @@ body.single-product [class*="pricing_table"]{display:none!important}
 .woocommerce-pagination ul.page-numbers li{display:inline-flex!important;float:none!important;width:auto!important}
 .woocommerce-pagination ul.page-numbers li a.page-numbers,.woocommerce-pagination ul.page-numbers li span.page-numbers{float:none!important;display:inline-flex!important}
 }
+/* ════════════════════════ v91 ════════════════════════ */
+/* Mobile: gallery not sticky, ATC/BuyNow stacked below qty stepper; homepage btn 50% */
+@media(max-width:900px){
+  body.single-product .sly-pd-gallery-col{position:static!important}
+  .sly-pd-wc .woocommerce-variation-add-to-cart,
+  .sly-pd-wc .variations_button,
+  .sly-pd-wc form.cart:not(.variations_form){flex-direction:column!important;flex-wrap:nowrap!important;align-items:flex-start!important}
+  .sly-pd-wc .single_add_to_cart_button,
+  .sly-pd-wc .sly-buy-now{width:100%!important;flex:none!important;box-sizing:border-box!important}
+}
+.sly-pd-home-btn .sly-button{width:50%!important;max-width:50%!important}
