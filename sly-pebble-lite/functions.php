@@ -162,6 +162,19 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			.sly-shop-grid .price small { display:inline!important; font-size:9px!important; font-weight:400!important; opacity:0.65!important; margin:0!important; padding:0!important; white-space:nowrap!important; vertical-align:baseline!important; }
 		');
 
+		// Product page mobile overrides — third call, last in HTML output, beats all main.css rules.
+		wp_add_inline_style('sly-pebble-lite-main', '
+			@media(max-width:900px){
+				body.single-product .sly-pd-gallery-col { position:static!important; }
+				.sly-pd-wc .woocommerce-variation-add-to-cart,
+				.sly-pd-wc .variations_button,
+				.sly-pd-wc form.cart:not(.variations_form) { display:flex!important; flex-direction:column!important; flex-wrap:nowrap!important; align-items:flex-start!important; }
+				.sly-pd-wc .single_add_to_cart_button,
+				.sly-pd-wc .sly-buy-now { width:100%!important; flex:none!important; box-sizing:border-box!important; }
+			}
+			.sly-pd-home-btn .sly-button { width:50%!important; max-width:50%!important; }
+		');
+
 		wp_enqueue_script(
 			'sly-pebble-lite-main',
 			get_template_directory_uri() . '/assets/js/main.js',
