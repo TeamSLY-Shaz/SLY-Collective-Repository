@@ -335,8 +335,18 @@ body.single-product [class*="pricing_table"]{display:none!important}
 @media(min-width:901px){.sly-pd-slides{margin-bottom:10px!important}}
 /* Sticky ATC — constrain to site content width */
 .sly-sticky-atc__inner{max-width:var(--sly-wrap);margin-inline:auto;padding-inline:1rem}
-/* CTA homepage button — 90% width */
-.sly-pd-home-btn .sly-button{width:90%!important;max-width:90%!important}
+/* CTA homepage button — 70% width */
+.sly-pd-home-btn .sly-button{width:70%!important;max-width:70%!important}
 /* About the product — footer version (no top border, tighter spacing) */
 .sly-pd-about--footer{margin-top:1.5rem;border-top:1px solid var(--sly-line);padding-top:1.25rem}
 .sly-pd-about--footer .sly-pd-about-content p{font-size:0.9rem!important;line-height:1.7;opacity:0.88}
+/* ════════════════════════ v87 ════════════════════════ */
+/* Features — full-width block below price, left-aligned */
+.sly-pd-price-row{display:block!important}
+.sly-pd-price-row .sly-pd-price{margin-bottom:0.6rem}
+.sly-pd-features--inline{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-start!important;gap:0.35rem 1.1rem!important;text-align:left!important}
+.sly-pd-features--inline .sly-pd-feature{display:inline-flex!important;align-items:center!important;gap:0.3rem!important;font-size:0.8rem!important;font-weight:500!important;text-transform:none!important;letter-spacing:0!important;border-bottom:none!important;padding-bottom:0!important}
+/* Feature checkmark icon — 2× the text size */
+.sly-pd-feature-icon{font-size:1.6rem!important;line-height:1!important;color:var(--sly-accent)!important;flex-shrink:0}
+/* Footer brand paragraph — match footer body text size */
+.site-footer__brand p{font-size:0.9rem!important;font-weight:300!important}

@@ -178,7 +178,7 @@ $short_desc = trim( (string) $short_desc );
 			<?php if ( ! empty( $sly_features ) ) : ?>
 			<div class="sly-pd-features sly-pd-features--inline">
 				<?php foreach ( $sly_features as $feat ) : ?>
-					<span class="sly-pd-feature">&#10003; <?php echo esc_html( $feat ); ?></span>
+					<span class="sly-pd-feature"><span class="sly-pd-feature-icon">&#10003;</span> <?php echo esc_html( $feat ); ?></span>
 				<?php endforeach; ?>
 			</div>
 			<?php endif; ?>
@@ -310,6 +310,7 @@ $short_desc = trim( (string) $short_desc );
 						<span class="sly-pd-tab-icon" aria-hidden="true">+</span>
 					</button>
 					<div class="sly-pd-tab-content" hidden>
+						<p><?php esc_html_e( 'Standard Shipping — Pay $8.95 or spend $100 to receive complimentary standard shipping.', 'sly-pebble-lite' ); ?></p>
 						<p><?php printf(
 							wp_kses(
 								__( 'Please view our <a href="%s" target="_blank" rel="noopener noreferrer">Shipping Information</a> page for a break down on individual country shipping costs. This excludes import tax and duties that may apply.', 'sly-pebble-lite' ),
