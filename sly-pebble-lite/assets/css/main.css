@@ -317,3 +317,26 @@ body.single-product .sly-pd-info h2,body.single-product .sly-pd-info h3,body.sin
 .sly-bb__note{text-align:center!important}
 /* Qty stepper — ensure visible (stepper now inserts outside .quantity wrapper) */
 .sly-qty-stepper{display:flex!important;visibility:visible!important}
+/* ════════════════════════ v86 ════════════════════════ */
+/* Features — sentence case, left-aligned, no border */
+.sly-pd-features--inline{align-items:flex-start!important;text-align:left!important}
+.sly-pd-features--inline .sly-pd-feature{text-transform:none!important;letter-spacing:0!important;font-weight:500!important;border-bottom:none!important;padding-bottom:0!important}
+/* Hide third-party discount pricing table on all product pages */
+body.single-product .wdr-discount-table,
+body.single-product .wc-prl-pricing-table,
+body.single-product .yith-wcbdp-table,
+body.single-product .discount_table,
+body.single-product .wc_table_rate_shipping_debug,
+body.single-product [class*="bulk-discount"],
+body.single-product [class*="bulk_discount"],
+body.single-product [class*="pricing-table"],
+body.single-product [class*="pricing_table"]{display:none!important}
+/* Desktop gallery — 10px spacer below last image row */
+@media(min-width:901px){.sly-pd-slides{margin-bottom:10px!important}}
+/* Sticky ATC — constrain to site content width */
+.sly-sticky-atc__inner{max-width:var(--sly-wrap);margin-inline:auto;padding-inline:1rem}
+/* CTA homepage button — 90% width */
+.sly-pd-home-btn .sly-button{width:90%!important;max-width:90%!important}
+/* About the product — footer version (no top border, tighter spacing) */
+.sly-pd-about--footer{margin-top:1.5rem;border-top:1px solid var(--sly-line);padding-top:1.25rem}
+.sly-pd-about--footer .sly-pd-about-content p{font-size:0.9rem!important;line-height:1.7;opacity:0.88}

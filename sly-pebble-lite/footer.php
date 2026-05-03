@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 	<div class="container site-footer__grid">
 		<section class="site-footer__brand" data-reveal>
 			<h2>SLY Collective</h2>
-			<p>Premium men's underwear with engineered pouch comfort, zero ride-up design, and all-day support.</p>
+			<p>Premium men's underwear with engineered pouch comfort, separating your balls from your thighs, preventing heat buildup and all day comfort with our zero ride-up design.</p>
 		</section>
 		<section class="site-footer__menu" data-reveal>
 			<h3><?php esc_html_e('Quick Links', 'sly-pebble-lite'); ?></h3>

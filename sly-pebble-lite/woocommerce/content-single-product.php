@@ -336,8 +336,17 @@ $short_desc = trim( (string) $short_desc );
 
 		<!-- Homepage button -->
 		<div class="sly-pd-home-btn">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button sly-button"><?php esc_html_e( 'Back to Homepage', 'sly-pebble-lite' ); ?></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button sly-button"><?php esc_html_e( 'SLY Collective Homepage', 'sly-pebble-lite' ); ?></a>
 		</div>
+
+		<!-- About the product — content only, no heading -->
+		<?php if ( $full_desc ) : ?>
+		<div class="sly-pd-about sly-pd-about--footer">
+			<div class="sly-pd-about-content">
+				<?php echo wp_kses_post( wpautop( $full_desc ) ); ?>
+			</div>
+		</div>
+		<?php endif; ?>
 
 	</div><!-- .sly-pd-info -->
 
