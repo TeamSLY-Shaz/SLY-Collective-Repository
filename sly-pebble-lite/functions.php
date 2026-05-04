@@ -162,7 +162,7 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			.sly-shop-grid .price small { display:inline!important; font-size:9px!important; font-weight:400!important; opacity:0.65!important; margin:0!important; padding:0!important; white-space:nowrap!important; vertical-align:baseline!important; }
 		');
 
-		// Product page mobile overrides — third call, last in HTML output, beats all main.css rules.
+		// Product page overrides — third call, last in HTML output, beats all main.css rules.
 		wp_add_inline_style('sly-pebble-lite-main', '
 			@media(max-width:900px){
 				body.single-product .sly-pd-gallery-col { position:static!important; }
@@ -172,7 +172,13 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 				.sly-pd-wc .single_add_to_cart_button,
 				.sly-pd-wc .sly-buy-now { width:100%!important; flex:none!important; box-sizing:border-box!important; }
 			}
-			.sly-pd-home-btn .sly-button { width:50%!important; max-width:50%!important; }
+			.sly-qty-box { height:auto!important; border:1.5px solid var(--sly-line)!important; border-radius:6px!important; }
+			.sly-qty-btn { flex:0 0 auto!important; height:auto!important; padding:0.4rem 0.6rem!important; font-size:0.82rem!important; font-weight:600!important; line-height:1.2!important; }
+			.sly-qty-num { flex:0 0 auto!important; height:auto!important; min-width:2em!important; padding:0.4rem 0.5rem!important; font-size:0.82rem!important; font-weight:600!important; line-height:1.2!important; }
+			.sly-qty-divider { height:1em!important; }
+			.sly-pd-home-btn { margin-top:2rem!important; padding-top:1.5rem!important; border-top:1px solid var(--sly-line)!important; text-align:center!important; }
+			.sly-pd-home-btn .sly-button { background:var(--sly-ink)!important; color:#fff!important; border:1px solid var(--sly-ink)!important; width:50%!important; max-width:50%!important; }
+			.sly-pd-home-btn .sly-button:hover { background:var(--sly-accent)!important; border-color:var(--sly-accent)!important; }
 		');
 
 		wp_enqueue_script(

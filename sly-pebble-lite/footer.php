@@ -8,7 +8,6 @@ if (!defined('ABSPATH')) {
 <footer class="site-footer">
 	<div class="container site-footer__grid">
 		<section class="site-footer__brand" data-reveal>
-			<h2>SLY Collective</h2>
 			<p>Engineered ball pouch underwear that separates your balls from your thighs. No Adjustments. No more chafe. Zero ride-up.</p>
 		</section>
 		<section class="site-footer__menu" data-reveal>
@@ -32,7 +31,7 @@ if (!defined('ABSPATH')) {
 		</section>
 	</div>
 	<div class="container site-footer__bottom">
-		<p>&copy; <?php echo esc_html(gmdate('Y')); ?> SLY Collective. <?php esc_html_e('All rights reserved.', 'sly-pebble-lite'); ?></p>
+		<p>&copy; <?php echo esc_html(gmdate('Y')); ?> SLY Collective. <?php esc_html_e('Covering your butt since 2005.', 'sly-pebble-lite'); ?></p>
 	</div>
 </footer>
 

@@ -335,11 +335,6 @@ $short_desc = trim( (string) $short_desc );
 
 		</div><!-- .sly-pd-brand -->
 
-		<!-- Homepage button -->
-		<div class="sly-pd-home-btn">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button sly-button"><?php esc_html_e( 'Homepage', 'sly-pebble-lite' ); ?></a>
-		</div>
-
 		<!-- About the product — content only, no heading -->
 		<?php if ( $full_desc ) : ?>
 		<div class="sly-pd-about sly-pd-about--footer">
@@ -348,6 +343,11 @@ $short_desc = trim( (string) $short_desc );
 			</div>
 		</div>
 		<?php endif; ?>
+
+		<!-- Homepage CTA — bottom of page, below all content -->
+		<div class="sly-pd-home-btn">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button sly-button"><?php esc_html_e( 'Homepage', 'sly-pebble-lite' ); ?></a>
+		</div>
 
 	</div><!-- .sly-pd-info -->
 
