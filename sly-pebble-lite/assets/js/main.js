@@ -453,7 +453,7 @@ if(!$qty.length||$qty.data('sly-stepper'))return;
 $qty.data('sly-stepper',true).hide();
 var val=parseInt($qty.val())||1;
 var $stepper=$('<div class="sly-qty-stepper"></div>');
-var $label=$('<span class="sly-qty-label">Quantity</span>');
+var $label=$('<span class="sly-qty-label">QTY</span>');
 var $box=$('<div class="sly-qty-box"></div>');
 var $minus=$('<button type="button" class="sly-qty-btn" aria-label="Decrease quantity">−</button>');
 var $div1=$('<span class="sly-qty-divider"></span>');
