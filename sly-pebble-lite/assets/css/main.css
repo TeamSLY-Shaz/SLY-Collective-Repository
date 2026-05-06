@@ -398,4 +398,36 @@ body.single-product [class*="pricing_table"]{display:none!important}
   .sly-pd-wc .single_add_to_cart_button,
   .sly-pd-wc .sly-buy-now{width:100%!important;flex:none!important;box-sizing:border-box!important}
 }
+/* ════════════════════════ v98 ════════════════════════ */
+/* Category pages — remove every border/radius/shadow, reduce title, price inline, hide button */
+body.post-type-archive-product ul.products li.product,
+body.tax-product_cat ul.products li.product,
+body.post-type-archive-product .sly-shop-card,
+body.tax-product_cat .sly-shop-card{border:none!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:0!important;outline:none!important}
+body.post-type-archive-product .woocommerce-LoopProduct-link,
+body.tax-product_cat .woocommerce-LoopProduct-link{background:transparent!important;border-radius:0!important}
+body.post-type-archive-product ul.products li.product a img,
+body.tax-product_cat ul.products li.product a img,
+body.post-type-archive-product .sly-shop-card__media img,
+body.tax-product_cat .sly-shop-card__media img{border:none!important;border-radius:0!important;box-shadow:none!important;outline:none!important}
+body.post-type-archive-product ul.products li.product .woocommerce-loop-product__title,
+body.tax-product_cat ul.products li.product .woocommerce-loop-product__title{font-size:11px!important;font-weight:500!important;line-height:1.3!important;margin:0.3rem 0 0.1rem!important;padding:0 0.4rem!important}
+body.post-type-archive-product ul.products li.product .price,
+body.tax-product_cat ul.products li.product .price{display:block!important;font-size:11px!important;font-weight:600!important;margin:0 0 0.25rem!important;padding:0 0.4rem!important}
+body.post-type-archive-product ul.products li.product .price .woocommerce-Price-amount,
+body.post-type-archive-product ul.products li.product .price .woocommerce-price-suffix,
+body.post-type-archive-product ul.products li.product .price small,
+body.tax-product_cat ul.products li.product .price .woocommerce-Price-amount,
+body.tax-product_cat ul.products li.product .price .woocommerce-price-suffix,
+body.tax-product_cat ul.products li.product .price small{display:inline!important}
+body.post-type-archive-product ul.products li.product .price .woocommerce-price-suffix,
+body.post-type-archive-product ul.products li.product .price small,
+body.tax-product_cat ul.products li.product .price .woocommerce-price-suffix,
+body.tax-product_cat ul.products li.product .price small{font-size:9px!important;font-weight:400!important;white-space:nowrap!important;opacity:0.65!important;margin:0!important;padding:0!important}
+body.post-type-archive-product ul.products li.product .button,
+body.post-type-archive-product ul.products li.product .added_to_cart,
+body.post-type-archive-product .sly-shop-card .button,
+body.tax-product_cat ul.products li.product .button,
+body.tax-product_cat ul.products li.product .added_to_cart,
+body.tax-product_cat .sly-shop-card .button{display:none!important}
 .sly-pd-home-btn .sly-button{width:50%!important;max-width:50%!important}
