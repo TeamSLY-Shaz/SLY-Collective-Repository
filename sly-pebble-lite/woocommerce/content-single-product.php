@@ -344,6 +344,11 @@ $short_desc = trim( (string) $short_desc );
 		</div>
 		<?php endif; ?>
 
+		<!-- Homepage CTA -->
+		<div class="sly-pd-home-btn">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button sly-button"><?php esc_html_e( 'Homepage', 'sly-pebble-lite' ); ?></a>
+		</div>
+
 	</div><!-- .sly-pd-info -->
 
 </div><!-- .sly-pd -->

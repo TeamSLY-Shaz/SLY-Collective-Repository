@@ -468,8 +468,7 @@ $minus.on('click',function(){update(parseInt($num.text())-1);});
 $plus.on('click',function(){update(parseInt($num.text())+1);});
 $qty.on('change.slystepper',function(){$num.text(parseInt($qty.val())||1);});
 }
-$(function(){buildQtyStepper();});
-$(document.body).on('wc-variation-form-ready updated_wc_div',buildQtyStepper);
+$(document.body).on('updated_wc_div',buildQtyStepper);
 })(jQuery);
 // Mobile carousel arrows
 (function(){
@@ -544,8 +543,8 @@ if($qty.length)$rowWrapper.append($qty);
 $varTable.first().before($rowWrapper);
 });
 }
-$(function(){buildSlyPdSizeBoxes();});
-$(document.body).on('wc-variation-form-ready',buildSlyPdSizeBoxes);
+$(function(){buildSlyPdSizeBoxes();buildQtyStepper();});
+$(document.body).on('wc-variation-form-ready',function(){buildSlyPdSizeBoxes();buildQtyStepper();});
 })(jQuery);
 // Product page accordion tabs
 document.querySelectorAll('.sly-pd-tab-trigger').forEach((trigger)=>{
@@ -566,7 +565,7 @@ var rvDots=Array.from(rvDotsWrap.querySelectorAll('.sly-rv-dot'));
 if(!rvCards.length||!rvDots.length)return;
 var rvObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var idx=parseInt(e.target.getAttribute('data-rv-card'),10);rvDots.forEach(function(d,i){d.classList.toggle('is-active',i===idx);});}});},{root:rvTrack,threshold:0.5});
 rvCards.forEach(function(c){rvObs.observe(c);});
-rvDots.forEach(function(dot,i){dot.addEventListener('click',function(){var t=rvCards[i];if(t)t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});});});
+rvDots.forEach(function(dot,i){dot.addEventListener('click',function(){rvTrack.scrollTo({left:i*rvTrack.clientWidth,behavior:'smooth'});});});
 })();
 // Product gallery dots — tracks carousel position on mobile, decorative on desktop
 (function(){
