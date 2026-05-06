@@ -53,6 +53,7 @@ get_header();
 						<h2 class="woocommerce-loop-product__title"><?php the_title(); ?></h2>
 					</a>
 					<span class="price"><?php echo wp_kses_post($product ? $product->get_price_html() : ''); ?></span>
+					<?php woocommerce_template_loop_add_to_cart(); ?>
 				</li>
 			<?php endwhile; ?>
 		</ul>
