@@ -462,13 +462,15 @@ var $div2=$('<span class="sly-qty-divider"></span>');
 var $plus=$('<button type="button" class="sly-qty-btn" aria-label="Increase quantity">+</button>');
 $box.append($minus).append($div1).append($num).append($div2).append($plus);
 $stepper.append($label).append($box);
-$qty.closest('.quantity').after($stepper);
+var $varRow=$('.sly-pd-var-row');
+if($varRow.length){$varRow.append($stepper);}else{$qty.closest('.quantity').after($stepper);}
 function update(n){n=Math.max(1,n);$qty.val(n).trigger('change');$num.text(n);}
 $minus.on('click',function(){update(parseInt($num.text())-1);});
 $plus.on('click',function(){update(parseInt($num.text())+1);});
 $qty.on('change.slystepper',function(){$num.text(parseInt($qty.val())||1);});
 }
-$(document.body).on('updated_wc_div',buildQtyStepper);
+$(function(){setTimeout(buildQtyStepper,0);});
+$(document.body).on('wc-variation-form-ready updated_wc_div',buildQtyStepper);
 })(jQuery);
 // Mobile carousel arrows
 (function(){
@@ -543,8 +545,8 @@ if($qty.length)$rowWrapper.append($qty);
 $varTable.first().before($rowWrapper);
 });
 }
-$(function(){buildSlyPdSizeBoxes();buildQtyStepper();});
-$(document.body).on('wc-variation-form-ready',function(){buildSlyPdSizeBoxes();buildQtyStepper();});
+$(function(){buildSlyPdSizeBoxes();});
+$(document.body).on('wc-variation-form-ready',buildSlyPdSizeBoxes);
 })(jQuery);
 // Product page accordion tabs
 document.querySelectorAll('.sly-pd-tab-trigger').forEach((trigger)=>{
