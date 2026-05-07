@@ -7,7 +7,7 @@ get_header();
 
 $hero_kicker    = '> NO CHAFE. NO COMPROMISE. NO EXCEPTIONS.';
 $hero_title     = 'STOP ADJUSTING. START LIVING.';
-$hero_text      = 'Advanced pouch technology engineered for maximum support. Built for the way men actually move.';
+$hero_text      = 'Pouch Underwear built for the way men actually move.';
 $hero_cta_label = get_theme_mod('sly_hero_cta_label', 'Shop Best Sellers');
 $hero_cta_url   = get_theme_mod('sly_hero_cta_url', home_url('/shop'));
 $hero_image_id  = absint(get_theme_mod('sly_hero_image'));
@@ -79,12 +79,12 @@ $home_category_chip_1          = get_theme_mod('sly_home_category_chip_1', 'Men'
 $home_category_chip_2          = get_theme_mod('sly_home_category_chip_2', 'New');
 $home_feature_tiles            = array(
 	array(
-		'title' => get_theme_mod('sly_home_feature_1_title', 'No Ride Up'),
-		'text'  => get_theme_mod('sly_home_feature_1_text', 'Cut and panel engineering that stays put through daily movement.'),
+		'title' => get_theme_mod('sly_home_feature_1_title', 'ANTI-CHAFE. NO RIDE UP.'),
+		'text'  => get_theme_mod('sly_home_feature_1_text', 'For blokes who\'ve had enough of the old thigh rub, ball chafe, and constant awkward adjustments.'),
 	),
 	array(
-		'title' => get_theme_mod('sly_home_feature_2_title', 'Supportive Pouch'),
-		'text'  => get_theme_mod('sly_home_feature_2_text', 'Room where needed, support where it matters, comfort all day.'),
+		'title' => get_theme_mod('sly_home_feature_2_title', 'SUPPORTIVE POUCH'),
+		'text'  => get_theme_mod('sly_home_feature_2_text', 'Specially designed pouch gives the boys their own room to breathe, lifts and separates where it matters, helping reduce crowding, sweat and overheating.'),
 	),
 	array(
 		'title' => get_theme_mod('sly_home_feature_3_title', 'Fast Dispatch'),
@@ -388,6 +388,7 @@ if ($hero_image_id) {
 	<p><?php echo esc_html($home_trust_text); ?></p>
 </section>
 
+<?php if ( false ) : /* email capture hidden — SMTP not configured */ ?>
 <section class="container sly-email-capture" data-reveal>
 	<div class="sly-email-capture__copy">
 		<h2><?php echo esc_html(get_theme_mod('sly_email_heading', 'Get 10% Off Your First Order')); ?></h2>
@@ -406,6 +407,7 @@ if ($hero_image_id) {
 		?>
 	</div>
 </section>
+<?php endif; ?>
 
 <?php
 get_footer();

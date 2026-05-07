@@ -431,3 +431,34 @@ body.tax-product_cat ul.products li.product .button,
 body.tax-product_cat ul.products li.product .added_to_cart,
 body.tax-product_cat .sly-shop-card .button{display:none!important}
 .sly-pd-home-btn .sly-button{width:50%!important;max-width:50%!important}
+/* ════════════════════════ v101 ════════════════════════ */
+/* Hero kicker: white + semi-bold (was teal/invisible on dark overlay) */
+.hero-full .hero__kicker{color:#fff!important;font-weight:600!important}
+/* Hero title: 50% larger on desktop (48px → 72px) */
+@media(min-width:901px){.hero-full h1{font-size:72px!important;line-height:1.15!important}}
+/* Footer brand text: left padding on all sizes */
+.site-footer__brand p{padding-left:1.5rem!important}
+/* Email capture: hidden until SMTP configured */
+.sly-email-capture{display:none!important}
+/* Category pages — mobile override with higher specificity to beat WC smallscreen.css */
+/* Selector ul.products.sly-shop-grid gives (0,4,3) vs WC's (0,3,2) — always wins */
+@media(max-width:900px){
+body.post-type-archive-product ul.products.sly-shop-grid li.product,
+body.tax-product_cat ul.products.sly-shop-grid li.product{border:none!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:0!important;outline:none!important}
+body.post-type-archive-product ul.products.sly-shop-grid .woocommerce-LoopProduct-link,
+body.tax-product_cat ul.products.sly-shop-grid .woocommerce-LoopProduct-link{background:transparent!important;border-radius:0!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product a img,
+body.tax-product_cat ul.products.sly-shop-grid li.product a img{border:none!important;border-radius:0!important;box-shadow:none!important;outline:none!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .woocommerce-loop-product__title,
+body.tax-product_cat ul.products.sly-shop-grid li.product .woocommerce-loop-product__title{font-size:11px!important;font-weight:500!important;line-height:1.3!important;margin:0.3rem 0 0.1rem!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .price,
+body.tax-product_cat ul.products.sly-shop-grid li.product .price{display:block!important;font-size:11px!important;font-weight:600!important;margin:0 0 0.25rem!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .price .woocommerce-price-suffix,
+body.post-type-archive-product ul.products.sly-shop-grid li.product .price small,
+body.tax-product_cat ul.products.sly-shop-grid li.product .price .woocommerce-price-suffix,
+body.tax-product_cat ul.products.sly-shop-grid li.product .price small{display:inline!important;font-size:9px!important;font-weight:400!important;white-space:nowrap!important;opacity:0.65!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .button,
+body.post-type-archive-product ul.products.sly-shop-grid li.product .added_to_cart,
+body.tax-product_cat ul.products.sly-shop-grid li.product .button,
+body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display:none!important}
+}
