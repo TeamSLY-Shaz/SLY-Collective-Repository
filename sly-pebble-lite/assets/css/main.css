@@ -483,3 +483,5 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display
 /* Hero h1: reduce by 30% — desktop 72px→50px, mobile clamp -30% */
 @media(min-width:901px){.hero-full h1{font-size:50px!important}}
 @media(max-width:900px){.hero-full h1{font-size:clamp(20px,5vw,27px)!important}}
+/* ════════════════════════ v103 ════════════════════════ */
+.sly-pd-title{letter-spacing:0!important}
