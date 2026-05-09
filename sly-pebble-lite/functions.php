@@ -187,7 +187,7 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			.sly-pd-home-btn { margin-top:2rem!important; padding-top:1.5rem!important; border-top:1px solid var(--sly-line)!important; text-align:center!important; }
 			.sly-pd-home-btn .sly-button { background:var(--sly-ink)!important; color:#fff!important; border:1px solid var(--sly-ink)!important; width:50%!important; max-width:50%!important; }
 			.sly-pd-home-btn .sly-button:hover { background:var(--sly-accent)!important; border-color:var(--sly-accent)!important; }
-			.sly-pd-wc .single_add_to_cart_button { border:2px solid var(--sly-accent)!important; color:#fff!important; background:var(--sly-accent)!important; }
+			.sly-pd-wc .single_add_to_cart_button { border:2px solid #000!important; color:#fff!important; background:#000!important; }
 			.sly-bb__note { display:none!important; font-size:10px!important; font-weight:400!important; }
 			.sly-bb__card { position:relative!important; }
 			.sly-bb__card::after { content:"Discount applied automatically at checkout"; position:absolute!important; inset:0!important; border-radius:8px!important; background:rgba(0,0,0,0.72)!important; color:#fff!important; display:flex!important; align-items:center!important; justify-content:center!important; font-size:10px!important; font-weight:400!important; text-align:center!important; padding:0.75rem!important; opacity:0!important; transition:opacity 0.2s ease!important; pointer-events:none!important; line-height:1.3!important; }
