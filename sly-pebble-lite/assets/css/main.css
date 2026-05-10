@@ -485,3 +485,26 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display
 @media(max-width:900px){.hero-full h1{font-size:clamp(20px,5vw,27px)!important}}
 /* ════════════════════════ v103 ════════════════════════ */
 .sly-pd-title{letter-spacing:0!important}
+/* ════════════════════════ v106 ════════════════════════ */
+@media(max-width:900px){
+body.post-type-archive-product ul.products.sly-shop-grid li.product,
+body.tax-product_cat ul.products.sly-shop-grid li.product{border:none!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:0!important;outline:none!important;overflow:visible!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .sly-shop-card__media,
+body.tax-product_cat ul.products.sly-shop-grid li.product .sly-shop-card__media{border:none!important;border-radius:0!important;overflow:hidden!important}
+body.post-type-archive-product ul.products.sly-shop-grid .woocommerce-LoopProduct-link,
+body.tax-product_cat ul.products.sly-shop-grid .woocommerce-LoopProduct-link{background:transparent!important;border:none!important;border-radius:0!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product a img,
+body.tax-product_cat ul.products.sly-shop-grid li.product a img{border:none!important;border-radius:0!important;box-shadow:none!important;outline:none!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .woocommerce-loop-product__title,
+body.tax-product_cat ul.products.sly-shop-grid li.product .woocommerce-loop-product__title{font-size:18px!important;font-weight:500!important;line-height:1.25!important;text-transform:none!important;letter-spacing:-0.01em!important;min-height:0!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .price,
+body.tax-product_cat ul.products.sly-shop-grid li.product .price{display:block!important;font-size:14px!important;font-weight:600!important;margin:0.3rem 0 0.25rem!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .price .woocommerce-price-suffix,
+body.post-type-archive-product ul.products.sly-shop-grid li.product .price small,
+body.tax-product_cat ul.products.sly-shop-grid li.product .price .woocommerce-price-suffix,
+body.tax-product_cat ul.products.sly-shop-grid li.product .price small{display:inline!important;font-size:10px!important;font-weight:400!important;white-space:nowrap!important;opacity:0.65!important}
+body.post-type-archive-product ul.products.sly-shop-grid li.product .button,
+body.post-type-archive-product ul.products.sly-shop-grid li.product .added_to_cart,
+body.tax-product_cat ul.products.sly-shop-grid li.product .button,
+body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display:none!important}
+}
