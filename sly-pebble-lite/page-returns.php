@@ -81,8 +81,8 @@ add_action( 'wp_head', function () {
 	.sly-rp-card a{color:var(--sly-accent);font-weight:600}
 
 	/* ── Address card ──────────────────────────────────────────────── */
-	.sly-rp-address-wrap{margin-top:1.75rem}
-	.sly-rp-address{display:inline-block;background:var(--sly-ink);color:#fff;border-radius:var(--sly-radius-sm);padding:1.75rem 2.25rem;font-size:.95rem;line-height:2;font-family:var(--sly-font-family)}
+	.sly-rp-address-wrap{margin-top:1.75rem;text-align:center}
+	.sly-rp-address{display:inline-block;background:var(--sly-ink);color:#fff;border-radius:var(--sly-radius-sm);padding:1.75rem 2.25rem;font-size:.95rem;line-height:2;font-family:var(--sly-font-family);text-align:center}
 	.sly-rp-address strong{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sly-accent);margin-bottom:.65rem;line-height:1}
 
 	/* ── Comfort guarantee ─────────────────────────────────────────── */
@@ -172,7 +172,6 @@ get_header();
 <!-- ── Comfort Guarantee ─────────────────────────────────────────────────── -->
 <section class="container sly-rp-section" data-reveal>
 	<h2>The SLY Comfort Guarantee</h2>
-	<p class="sly-rp-section__sub">Buy with confidence. Fit feels off? We'll fix it.</p>
 
 	<div class="sly-rp-guarantee" data-reveal>
 		<div class="sly-rp-guarantee__icon">🛡️</div>
@@ -189,10 +188,10 @@ get_header();
 	<p class="sly-rp-section__sub">No worries. Here's what needs to be true before you post anything back.</p>
 
 	<ul class="sly-rp-checklist">
-		<li>Items must be <strong>unused and unwashed</strong> with <strong>original tags still attached</strong>. If the pouch has seen any action, we can't take it back — that's just basic hygiene.</li>
-		<li>Items must be posted back <strong>within 30 days of your delivery date</strong>, with your proof of purchase included in the parcel.</li>
-		<li>Only <strong>regular-priced items</strong> are eligible for a refund. Sale items are final — a discount was applied at checkout, and that decision sticks.</li>
-		<li><strong>Return postage is covered by the buyer</strong> for refunds. We recommend using tracked postage — we can't process what we haven't received, and "it got lost" is a rough situation for everyone.</li>
+		<li><span>Items must be <strong>unused and unwashed</strong> with <strong>original tags still attached</strong>. If the pouch has seen any action, we can't take it back — that's just basic hygiene.</span></li>
+		<li><span>Items must be posted back <strong>within 30 days of your delivery date</strong>, with your proof of purchase included in the parcel.</span></li>
+		<li><span>Only <strong>regular-priced items</strong> are eligible for a refund. Sale items are final — a discount was applied at checkout, and that decision sticks.</span></li>
+		<li><span><strong>Return postage is covered by the buyer</strong> for refunds. We recommend using tracked postage — we can't process what we haven't received, and "it got lost" is a rough situation for everyone.</span></li>
 	</ul>
 </section>
 
@@ -273,10 +272,10 @@ get_header();
 	</div>
 
 	<ul class="sly-rp-checklist" style="margin-top:1.5rem">
-		<li>Item must be unused, unwashed, and have original tags attached — same rules as refunds.</li>
-		<li>Posted back within 30 days of delivery with proof of purchase in the parcel.</li>
-		<li>For size exchanges, <strong>return postage is covered by SLY Collective</strong>.</li>
-		<li>Not sure which size to order next time? Our <a href="<?php echo esc_url( home_url( '/size_chart/size-guide/' ) ); ?>">Size Guide</a> will sort you out — measure once, order right.</li>
+		<li><span>Item must be unused, unwashed, and have original tags attached — same rules as refunds.</span></li>
+		<li><span>Posted back within 30 days of delivery with proof of purchase in the parcel.</span></li>
+		<li><span>For size exchanges, <strong>return postage is covered by SLY Collective</strong>.</span></li>
+		<li><span>Not sure which size to order next time? Our <a href="<?php echo esc_url( home_url( '/size_chart/size-guide/' ) ); ?>">Size Guide</a> will sort you out — measure once, order right.</span></li>
 	</ul>
 </section>
 
@@ -364,7 +363,7 @@ get_header();
 		<p class="sly-rp-cta__sub">Drop us an email and we'll handle the rest. Or if you're already eyeing the next pair, the shop is right there.</p>
 		<div class="sly-rp-cta__btns">
 			<a href="mailto:sales@slycollective.com" class="sly-button">Email Us Now</a>
-			<a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="sly-button sly-button--ghost">Back to Shop</a>
+			<a href="https://slycollective.com/" class="sly-button sly-button--ghost">Back to Shop</a>
 		</div>
 	</div>
 </section>
