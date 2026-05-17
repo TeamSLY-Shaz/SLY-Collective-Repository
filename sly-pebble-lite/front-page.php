@@ -3,6 +3,20 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
+add_action('wp_head', function () {
+	?>
+	<style>
+	.sly-anim-wrap{width:100%;display:flex;justify-content:center;margin:2rem 0}
+	.sly-anim-square{position:relative;width:70%;aspect-ratio:1/1;overflow:hidden}
+	.sly-anim-square img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none;pointer-events:none}
+	.sly-base{z-index:1}
+	.sly-overlay{z-index:2;transform:translateY(-115%);opacity:1;animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) forwards;will-change:transform}
+	@keyframes slyDropIn{0%{transform:translateY(-115%)}82%{transform:translateY(2%)}100%{transform:translateY(0)}}
+	@media(max-width:768px){.sly-anim-square{width:100%}}
+	</style>
+	<?php
+}, 10);
+
 get_header();
 
 $hero_kicker    = '> NO CHAFE. NO COMPROMISE. NO EXCEPTIONS.';
@@ -350,6 +364,14 @@ if ($hero_image_id) {
 		</div>
 	</section>
 <?php endif; ?>
+
+<!-- ── Drop-in animation ──────────────────────────────────────────────────── -->
+<div class="sly-anim-wrap">
+	<div class="sly-anim-square">
+		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-1-copy.jpg" alt="Base garment image">
+		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-2-copy.png" alt="Animated insert panel">
+	</div>
+</div>
 
 <section class="feature-tiles container">
 	<?php foreach ($home_feature_tiles as $feature_tile) : ?>
