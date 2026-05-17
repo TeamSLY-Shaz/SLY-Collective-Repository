@@ -352,6 +352,10 @@ if ($hero_image_id) {
 <?php endif; ?>
 
 <!-- ── Drop-in animation ──────────────────────────────────────────────────── -->
+<style>
+@keyframes slyDropIn{0%{transform:translateY(-115%)}82%{transform:translateY(2%)}100%{transform:translateY(0)}}
+.sly-overlay{animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;will-change:transform}
+</style>
 <div class="sly-anim-wrap">
 	<div class="sly-anim-square">
 		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-1-copy.jpg" alt="Base garment image">

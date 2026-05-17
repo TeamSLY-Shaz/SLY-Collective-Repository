@@ -514,6 +514,5 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display
 .sly-anim-square{position:relative!important;width:70%!important;aspect-ratio:1/1!important;overflow:hidden!important}
 .sly-anim-square img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;display:block!important;user-select:none!important;pointer-events:none!important}
 .sly-base{z-index:1!important;transform:none!important}
-.sly-overlay{z-index:2!important;opacity:1!important;animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 0.5s both!important;will-change:transform}
-@keyframes slyDropIn{0%{transform:translateY(-115%)}82%{transform:translateY(2%)}100%{transform:translateY(0)}}
+.sly-overlay{z-index:2!important;opacity:1!important}
 @media(max-width:768px){.sly-anim-square{width:100%!important}}
