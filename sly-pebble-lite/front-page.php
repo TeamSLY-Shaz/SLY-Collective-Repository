@@ -354,11 +354,11 @@ if ($hero_image_id) {
 <!-- ── Drop-in animation ──────────────────────────────────────────────────── -->
 <style>
 @keyframes slyDropIn{0%{transform:translateY(-115%)}82%{transform:translateY(2%)}100%{transform:translateY(0)}}
-.sly-overlay{animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 2s both;will-change:transform}
 @keyframes slyLabelFade{0%{opacity:1}100%{opacity:0}}
-.sly-text-overlay{animation:slyLabelFade 1s ease-in 2s forwards}
+.sly-anim-ready .sly-overlay{animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 2s both;will-change:transform}
+.sly-anim-ready .sly-text-overlay{animation:slyLabelFade 1s ease-in 2s forwards}
 </style>
-<div class="sly-anim-wrap">
+<div class="sly-anim-wrap" data-sly-anim>
 	<div class="sly-anim-square">
 		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-1-copy.jpg" alt="Base garment image">
 		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-2-2.png" alt="Animated insert panel">
@@ -369,6 +369,16 @@ if ($hero_image_id) {
 		</div>
 	</div>
 </div>
+<script>
+(function(){
+	var w=document.querySelector('[data-sly-anim]');
+	if(!w)return;
+	if(!('IntersectionObserver' in window)){w.classList.add('sly-anim-ready');return;}
+	new IntersectionObserver(function(e,o){
+		if(e[0].isIntersecting){w.classList.add('sly-anim-ready');o.disconnect();}
+	},{threshold:0.25}).observe(w);
+})();
+</script>
 
 <section class="feature-tiles container">
 	<?php foreach ($home_feature_tiles as $feature_tile) : ?>
