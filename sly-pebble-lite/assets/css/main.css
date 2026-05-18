@@ -509,9 +509,13 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .button,
 body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display:none!important}
 }
 
-/* ════════════════════════ v112 drop-in animation ════════════════════════ */
+/* ════════════════════════ v115 drop-in animation ════════════════════════ */
 .sly-anim-wrap{width:100%!important;display:flex!important;justify-content:center!important;margin:2rem 0!important}
 .sly-anim-square{position:relative!important;width:70%!important;overflow:hidden!important;background:#f4f4f4!important;transform:translateZ(0)!important}
 .sly-base{display:block!important;width:100%!important;height:auto!important;position:relative!important;z-index:1!important;user-select:none!important;pointer-events:none!important}
 .sly-overlay{display:block!important;width:100%!important;height:auto!important;position:absolute!important;top:0!important;left:0!important;z-index:2!important;user-select:none!important;pointer-events:none!important}
-@media(max-width:768px){.sly-anim-square{width:100%!important}}
+.sly-text-overlay{position:absolute!important;inset:0!important;z-index:3!important;pointer-events:none!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:1.25rem!important}
+.sly-tl,.sly-tr{font-size:0.8rem!important;font-weight:700!important;color:#fff!important;background:rgba(0,0,0,0.55)!important;padding:0.35rem 0.65rem!important;border-radius:6px!important;max-width:28%!important;line-height:1.45!important;text-align:left!important}
+.sly-tr{text-align:right!important}
+.sly-tc{position:absolute!important;bottom:1.1rem!important;left:50%!important;transform:translateX(-50%)!important;white-space:nowrap!important;font-size:0.8rem!important;font-weight:700!important;color:#fff!important;background:rgba(0,0,0,0.6)!important;padding:0.4rem 1rem!important;border-radius:20px!important;letter-spacing:0.01em!important}
+@media(max-width:768px){.sly-anim-square{width:100%!important}.sly-tl,.sly-tr{display:none!important}}

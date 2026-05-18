@@ -354,12 +354,19 @@ if ($hero_image_id) {
 <!-- ── Drop-in animation ──────────────────────────────────────────────────── -->
 <style>
 @keyframes slyDropIn{0%{transform:translateY(-115%)}82%{transform:translateY(2%)}100%{transform:translateY(0)}}
-.sly-overlay{animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;will-change:transform}
+.sly-overlay{animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 2s both;will-change:transform}
+@keyframes slyLabelFade{0%{opacity:1}100%{opacity:0}}
+.sly-text-overlay{animation:slyLabelFade 1s ease-in 2s forwards}
 </style>
 <div class="sly-anim-wrap">
 	<div class="sly-anim-square">
 		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-1-copy.jpg" alt="Base garment image">
 		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-2-2.png" alt="Animated insert panel">
+		<div class="sly-text-overlay">
+			<p class="sly-tl">Constantly adjusting<br>dangling nads</p>
+			<p class="sly-tc">Regular undies with standard pouch construction</p>
+			<p class="sly-tr">Squished and<br>sweaty balls.</p>
+		</div>
 	</div>
 </div>
 
