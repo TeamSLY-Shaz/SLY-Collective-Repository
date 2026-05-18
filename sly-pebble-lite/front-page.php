@@ -359,7 +359,7 @@ if ($hero_image_id) {
 <div class="sly-anim-wrap">
 	<div class="sly-anim-square">
 		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-1-copy.jpg" alt="Base garment image">
-		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-2-copy.png" alt="Animated insert panel">
+		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-2-2.png" alt="Animated insert panel">
 	</div>
 </div>
 
