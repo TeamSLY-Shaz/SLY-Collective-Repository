@@ -171,9 +171,10 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 				.sly-pd-wc form.cart:not(.variations_form) { display:flex!important; flex-direction:column!important; flex-wrap:nowrap!important; align-items:flex-start!important; }
 				.sly-pd-wc .single_add_to_cart_button,
 				.sly-pd-wc .sly-buy-now { width:100%!important; flex:none!important; box-sizing:border-box!important; }
-				.sly-pd-var-row { flex-wrap:nowrap!important; align-items:center!important; gap:0.4rem!important; }
-				.sly-pd-var-row .sly-size-boxes { flex:1 1 auto!important; min-width:0!important; flex-wrap:nowrap!important; overflow-x:auto!important; }
-				.sly-pd-var-row .quantity { flex:0 0 auto!important; width:auto!important; }
+				.sly-pd-var-row { flex-wrap:wrap!important; align-items:flex-start!important; gap:0.6rem!important; }
+				.sly-pd-var-row .sly-size-boxes { flex:0 0 100%!important; min-width:0!important; flex-wrap:wrap!important; overflow-x:visible!important; }
+				.sly-pd-var-row .quantity { flex:0 0 100%!important; width:100%!important; }
+				.sly-pd-var-row .sly-qty-stepper { flex:0 0 100%!important; width:100%!important; }
 			}
 			.sly-qty-box { height:auto!important; border:1.5px solid var(--sly-line)!important; border-radius:6px!important; }
 			.sly-qty-btn { flex:0 0 auto!important; height:auto!important; padding:0.4rem 0.42rem!important; font-size:0.82rem!important; font-weight:600!important; line-height:1.2!important; }
