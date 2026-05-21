@@ -509,22 +509,9 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .button,
 body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display:none!important}
 }
 
-/* ════════════════════════ v118 drop-in animation ════════════════════════ */
+/* ════════════════════════ v121 drop-in animation ════════════════════════ */
 .sly-anim-wrap{width:100%!important;display:flex!important;justify-content:center!important;margin:2rem 0!important}
 .sly-anim-square{position:relative!important;width:70%!important;overflow:hidden!important;background:#f4f4f4!important}
 .sly-base{display:block!important;width:100%!important;height:auto!important;position:relative!important;z-index:1!important;user-select:none!important;pointer-events:none!important}
 .sly-overlay{display:block!important;width:100%!important;height:auto!important;position:absolute!important;top:0!important;left:0!important;z-index:2!important;user-select:none!important;pointer-events:none!important}
-/* Pic 1 problem annotations */
-.sly-text-overlay{position:absolute!important;inset:0!important;z-index:3!important;pointer-events:none!important}
-.sly-leader-svg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;overflow:visible!important;pointer-events:none!important}
-.sly-p1{position:absolute!important;font-size:0.78rem!important;font-weight:800!important;color:#111!important;line-height:1.3!important;letter-spacing:0.04em!important;text-transform:uppercase!important}
-.sly-p1-tl{top:2%!important;left:2%!important;text-align:left!important}
-.sly-p1-tr{top:22%!important;right:2%!important;text-align:right!important}
-/* Pic 2 solution annotations */
-.sly-text-overlay2{position:absolute!important;inset:0!important;z-index:4!important;pointer-events:none!important;opacity:0!important}
-.sly-p2{position:absolute!important;background:#111!important;color:#fff!important;border-radius:10px!important;padding:0.65rem 0.9rem!important;max-width:44%!important}
-.sly-p2-head{display:block!important;font-size:0.8rem!important;font-weight:800!important;letter-spacing:0.04em!important;text-transform:uppercase!important;margin:0 0 0.3rem!important;color:#fff!important;line-height:1.2!important}
-.sly-p2-body{display:block!important;font-size:0.7rem!important;font-weight:400!important;line-height:1.55!important;color:#fff!important;margin:0!important}
-.sly-p2-tr{top:3%!important;right:2%!important}
-.sly-p2-bl{bottom:8%!important;left:2%!important}
-@media(max-width:768px){.sly-anim-square{width:100%!important}.sly-p1{font-size:0.62rem!important}.sly-p2{max-width:52%!important;padding:0.5rem 0.7rem!important}.sly-p2-head{font-size:0.65rem!important}.sly-p2-body{font-size:0.58rem!important}}
+@media(max-width:768px){.sly-anim-square{width:100%!important}}

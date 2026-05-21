@@ -354,36 +354,12 @@ if ($hero_image_id) {
 <!-- ── Drop-in animation ──────────────────────────────────────────────────── -->
 <style>
 @keyframes slyDropIn{0%{transform:translateY(-115%)}82%{transform:translateY(2%)}100%{transform:translateY(0)}}
-@keyframes slyLabelFade{0%{opacity:1}100%{opacity:0}}
-@keyframes slyLabelAppear{0%{opacity:0}100%{opacity:1}}
 .sly-anim-wrap.is-visible .sly-overlay{animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 2s both}
-.sly-anim-wrap.is-visible .sly-text-overlay{animation:slyLabelFade 1s ease-in 2s forwards}
-.sly-anim-wrap.is-visible .sly-text-overlay2{animation:slyLabelAppear 0.7s ease-out 3.8s forwards}
 </style>
 <div class="sly-anim-wrap" data-reveal>
 	<div class="sly-anim-square">
-		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-1-copy.jpg" alt="Base garment image">
-		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Pic-2-2.png" alt="Animated insert panel">
-		<!-- Pic 1 — problem annotations (fade out as panel drops) -->
-		<div class="sly-text-overlay">
-			<svg class="sly-leader-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-				<line x1="22%" y1="22%" x2="37%" y2="52%" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/>
-				<line x1="69%" y1="35%" x2="57%" y2="52%" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/>
-			</svg>
-			<div class="sly-p1 sly-p1-tl">SLIPPING &amp;<br>UNCONTAINED<br>CARGO ?</div>
-			<div class="sly-p1 sly-p1-tr">CHAFE THAT<br>RUINS<br>YOUR<br>DAY !</div>
-		</div>
-		<!-- Pic 2 — solution annotations (fade in after panel lands) -->
-		<div class="sly-text-overlay2">
-			<div class="sly-p2 sly-p2-tr">
-				<strong class="sly-p2-head">LOSE THE CHAFE</strong>
-				<span class="sly-p2-body">No Rub. No rash.<br>No walking like a<br>cowboy drama.</span>
-			</div>
-			<div class="sly-p2 sly-p2-bl">
-				<strong class="sly-p2-head">LOCK IN THE LADS</strong>
-				<span class="sly-p2-body">Stop the<br>downstairs<br>dangle.</span>
-			</div>
-		</div>
+		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy-2.jpg" alt="Old Pouch — standard construction">
+		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy.jpg" alt="New Pouch — SLY construction">
 	</div>
 </div>
 
