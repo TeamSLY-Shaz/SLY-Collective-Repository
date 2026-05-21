@@ -240,7 +240,7 @@ body.single-product .sly-pd-price .woocommerce-price-suffix,body.single-product 
 .sly-pd-var-row .qty::-webkit-inner-spin-button,.sly-pd-var-row .qty::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .sly-pd-wc .woocommerce-variation-add-to-cart,.sly-pd-wc .variations_button,.sly-pd-wc form.cart:not(.variations_form){display:flex!important;flex-direction:row!important;gap:0.5rem!important;align-items:stretch!important;flex-wrap:nowrap!important}
 .sly-pd-wc .quantity{display:none!important}
-@media(max-width:900px){.sly-pd-var-row{flex-wrap:wrap!important}.sly-pd-var-row .quantity{width:100%!important;flex:0 0 100%!important}.sly-pd-var-row .sly-size-boxes{flex:0 0 100%!important}}
+@media(max-width:900px){.sly-pd-var-row{flex-wrap:wrap!important}.sly-pd-var-row .quantity{width:100%!important;flex:0 0 100%!important}.sly-pd-var-row .sly-size-boxes{flex:0 0 100%!important}.sly-pd-var-row .sly-qty-stepper{flex:0 0 100%!important}}
 /* v78: bulk buy promo block */
 .sly-pd-bulkbuy{margin-top:1rem;padding:0.85rem 1rem;border:1.5px solid var(--sly-accent);border-radius:6px;background:rgba(25,126,146,0.04)}
 .sly-pd-bulkbuy__heading{font-size:0.72rem!important;font-weight:700!important;text-transform:uppercase;letter-spacing:0.07em;color:var(--sly-accent);margin:0 0 0.6rem!important}
