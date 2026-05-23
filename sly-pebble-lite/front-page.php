@@ -84,7 +84,7 @@ $home_feature_tiles            = array(
 	),
 	array(
 		'title' => get_theme_mod('sly_home_feature_2_title', 'SUPPORTIVE POUCH'),
-		'text'  => get_theme_mod('sly_home_feature_2_text', 'Specially designed pouch gives the boys their own room to breathe, lifts and separates where it matters, helping reduce crowding, sweat and overheating.'),
+		'text'  => get_theme_mod('sly_home_feature_2_text', 'Built to lift, support and keep the boys in their comfort zone — secure, comfortable and ready for workouts, ageing bodies, and recovery days that need a little extra TLC.'),
 	),
 	array(
 		'title' => get_theme_mod('sly_home_feature_3_title', 'ROOM TO BREATHE'),
