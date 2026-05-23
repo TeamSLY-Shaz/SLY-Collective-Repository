@@ -351,16 +351,15 @@ if ($hero_image_id) {
 	</section>
 <?php endif; ?>
 
-<!-- ── Drop-in animation ──────────────────────────────────────────────────── -->
+<!-- ── Pouch comparison ──────────────────────────────────────────────────── -->
 <style>
-@keyframes slyDropIn{0%{transform:translateY(-115%)}82%{transform:translateY(2%)}100%{transform:translateY(0)}}
-.sly-anim-wrap.is-visible .sly-overlay{animation:slyDropIn 1.8s cubic-bezier(0.22,1,0.36,1) 2s both}
+.sly-pouch-wrap{width:70%;max-width:900px;margin:2rem auto;display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.sly-pouch-wrap img{width:100%;height:auto;display:block}
+@media(max-width:600px){.sly-pouch-wrap{grid-template-columns:1fr}}
 </style>
-<div class="sly-anim-wrap" data-reveal>
-	<div class="sly-anim-square">
-		<img class="sly-base" src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy-2.jpg" alt="Old Pouch — standard construction">
-		<img class="sly-overlay" src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy.jpg" alt="New Pouch — SLY construction">
-	</div>
+<div class="sly-pouch-wrap">
+	<img src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy-2.jpg" alt="Old Pouch — standard construction">
+	<img src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy.jpg" alt="New Pouch — SLY construction">
 </div>
 
 <section class="feature-tiles container">
