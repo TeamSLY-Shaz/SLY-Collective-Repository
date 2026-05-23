@@ -162,6 +162,19 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			.sly-shop-grid .price small { display:inline!important; font-size:9px!important; font-weight:400!important; opacity:0.65!important; margin:0!important; padding:0!important; white-space:nowrap!important; vertical-align:baseline!important; }
 		');
 
+		// Hero + product card overrides — bypasses WP Rocket CSS combining.
+		wp_add_inline_style('sly-pebble-lite-main', '
+			.hero-full .hero__kicker { font-size:0.78rem!important; font-weight:700!important; color:#197E92!important; letter-spacing:0.18em!important; text-transform:uppercase!important; margin:0!important; }
+			.hero-full .hero__text { font-size:1.05rem!important; font-weight:300!important; line-height:1.6!important; color:rgba(255,255,255,0.85)!important; }
+			@media(max-width:600px){
+				.hero-full .hero__kicker { font-size:0.78rem!important; font-weight:700!important; color:#197E92!important; letter-spacing:0.18em!important; }
+				.hero-full .hero__text { font-size:0.95rem!important; font-weight:300!important; color:rgba(255,255,255,0.85)!important; }
+			}
+			.sly-product-card__title, .sly-product-card__title a,
+			.sly-product-card h3, .sly-product-card h3 a { font-size:18px!important; font-weight:500!important; text-transform:none!important; letter-spacing:-0.01em!important; line-height:1.25!important; }
+			.sly-product-card__price, .sly-product-card .price { font-size:16px!important; font-weight:600!important; }
+		');
+
 		// Product page overrides — third call, last in HTML output, beats all main.css rules.
 		wp_add_inline_style('sly-pebble-lite-main', '
 			@media(max-width:900px){
