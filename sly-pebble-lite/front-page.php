@@ -87,8 +87,8 @@ $home_feature_tiles            = array(
 		'text'  => get_theme_mod('sly_home_feature_2_text', 'Specially designed pouch gives the boys their own room to breathe, lifts and separates where it matters, helping reduce crowding, sweat and overheating.'),
 	),
 	array(
-		'title' => get_theme_mod('sly_home_feature_3_title', 'Fast Dispatch'),
-		'text'  => get_theme_mod('sly_home_feature_3_text', 'Lean operations for quick turnaround and reliable order updates.'),
+		'title' => get_theme_mod('sly_home_feature_3_title', 'ROOM TO BREATHE'),
+		'text'  => get_theme_mod('sly_home_feature_3_text', 'Extra space up front means less sticking and less squeezing because downstairs traffic jams are not a vibe.'),
 	),
 );
 $home_best_sellers_heading     = get_theme_mod('sly_home_best_sellers_heading', 'Best Sellers');
