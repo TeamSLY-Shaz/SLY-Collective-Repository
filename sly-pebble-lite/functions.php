@@ -218,6 +218,14 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			@media(max-width:600px){
 				body.home .hero-full .hero__kicker { font-size:0.78rem!important; font-weight:700!important; }
 				body.home .hero-full .hero__text { font-size:0.95rem!important; font-weight:300!important; }
+				body .sly-product-card .sly-product-card__title,
+				body .sly-product-card .sly-product-card__title a,
+				body .sly-product-card h3,
+				body .sly-product-card h3 a { font-size:13px!important; line-height:1.3!important; letter-spacing:0!important; }
+				body .sly-product-card .sly-product-card__price,
+				body .sly-product-card .price { font-size:13px!important; }
+				body .sly-product-card .price .woocommerce-price-suffix,
+				body .sly-product-card .sly-product-card__price .woocommerce-price-suffix { display:inline!important; font-size:11px!important; font-weight:400!important; }
 			}
 			body.single-product a { font-weight:700!important; }
 		');
