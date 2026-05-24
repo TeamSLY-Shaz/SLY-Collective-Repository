@@ -219,6 +219,7 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 				body.home .hero-full .hero__kicker { font-size:0.78rem!important; font-weight:700!important; }
 				body.home .hero-full .hero__text { font-size:0.95rem!important; font-weight:300!important; }
 			}
+			body.single-product a { font-weight:700!important; }
 		');
 
 		wp_enqueue_script(

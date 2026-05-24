@@ -300,7 +300,7 @@ $short_desc = trim( (string) $short_desc );
 						<span class="sly-pd-tab-icon" aria-hidden="true">+</span>
 					</button>
 					<div class="sly-pd-tab-content" hidden>
-						<p><?php esc_html_e( '95% Bamboo, 5% Elastane. Our signature SLY-Flex fabric is engineered for all-day comfort with exceptional stretch recovery. The four-way stretch eliminates ride-up and maintains its shape through hundreds of washes.', 'sly-pebble-lite' ); ?></p>
+						<p><?php esc_html_e( '95% Polyester 5% Elastane. Our signature SLY-Flex fabric is engineered for all-day comfort with exceptional stretch recovery. The four-way stretch eliminates ride-up and maintains its shape through hundreds of washes.', 'sly-pebble-lite' ); ?></p>
 					</div>
 				</div>
 
@@ -328,6 +328,13 @@ $short_desc = trim( (string) $short_desc );
 					</button>
 					<div class="sly-pd-tab-content" hidden>
 						<p><?php esc_html_e( '30-day returns on unworn, unwashed items in original packaging. Simply contact our team and we\'ll arrange a hassle-free return or exchange. Hygiene items must be tried on over underwear.', 'sly-pebble-lite' ); ?></p>
+						<p><?php printf(
+							wp_kses(
+								__( 'View our full <a href="%s" target="_blank" rel="noopener noreferrer">Returns &amp; Refunds Policy</a> for complete details.', 'sly-pebble-lite' ),
+								[ 'a' => [ 'href' => [], 'target' => [], 'rel' => [] ] ]
+							),
+							esc_url( 'https://slycollective.com/refund-returns-policy/' )
+						); ?></p>
 					</div>
 				</div>
 
