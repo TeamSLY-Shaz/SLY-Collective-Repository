@@ -358,8 +358,8 @@ if ($hero_image_id) {
 @media(max-width:600px){.sly-pouch-wrap{grid-template-columns:1fr}}
 </style>
 <div class="sly-pouch-wrap">
-	<img src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy-2.jpg" alt="Old Pouch — standard construction">
-	<img src="https://slycollective.com/wp-content/uploads/2026/05/Old-Pouch-1-copy.jpg" alt="New Pouch — SLY construction">
+	<img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-1.webp" alt="Old Pouch — standard construction">
+	<img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-2.webp" alt="New Pouch — SLY construction">
 </div>
 
 <section class="feature-tiles container">
