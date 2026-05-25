@@ -409,38 +409,30 @@ if ($hero_image_id) {
     </p>
     <div class="sly-compare-grid">
       <article class="sly-pouch-card-v2 sly-card-old-v2">
-        <div class="sly-card-top-v2">
-          <span>01</span>
-          <strong>OLD POUCH</strong>
-        </div>
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-1.webp" alt="Old pouch underwear showing poor support, friction and loose fit">
+          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-3.1.jpg" alt="Old pouch underwear showing friction zone and unsupported fit">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Loose. Flat. Friction-prone.</h3>
           <p>Standard pouch underwear can leave the boys shifting around, rubbing against the legs and creating all-day downstairs drama.</p>
           <ul>
-            <li><strong>Poor Support</strong> — lets everything move around</li>
-            <li><strong>Friction Zone</strong> — where rubbing and chafe can kick in</li>
-            <li><strong>Loose Fit</strong> — more sticking, sweat and readjusting</li>
+            <li><strong>Unsupported</strong> — lets everything move around freely</li>
+            <li><strong>Friction Zone</strong> — rubbing and chafe-prone against the legs</li>
+            <li><strong>Loose Fit</strong> — more sticking, sweat and constant readjusting</li>
           </ul>
         </div>
       </article>
       <article class="sly-pouch-card-v2 sly-card-new-v2">
-        <div class="sly-card-top-v2">
-          <span>02</span>
-          <strong>SLY ADAPTIVE POUCH</strong>
-        </div>
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-2.webp" alt="SLY adaptive pouch underwear showing lift, support, separation and movement">
+          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-3.jpg" alt="SLY adaptive pouch showing lift, support and separation zone">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Lifted. Separated. Supported.</h3>
           <p>SLY's adaptive pouch gives the boys a secure drop zone, helping them stay supported, separated and comfortably in place.</p>
           <ul>
-            <li><strong>Lift + Support</strong> — keeps the boys sitting where they should</li>
-            <li><strong>Separation Zone</strong> — helps reduce skin-on-skin rubbing</li>
-            <li><strong>Moves With You</strong> — comfort that keeps up with your day</li>
+            <li><strong>Lift &amp; Support</strong> — keeps the boys sitting where they should</li>
+            <li><strong>Separation Zone</strong> — helps reduce skin-on-skin rubbing and chafe</li>
+            <li><strong>Moves With You</strong> — adaptive comfort that keeps up with your day</li>
           </ul>
         </div>
       </article>
