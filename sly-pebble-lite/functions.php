@@ -207,6 +207,7 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			.sly-bb__card { position:relative!important; }
 			.sly-bb__card::after { content:"Discount applied automatically at checkout"; position:absolute!important; inset:0!important; border-radius:8px!important; background:rgba(0,0,0,0.72)!important; color:#fff!important; display:flex!important; align-items:center!important; justify-content:center!important; font-size:10px!important; font-weight:400!important; text-align:center!important; padding:0.75rem!important; opacity:0!important; transition:opacity 0.2s ease!important; pointer-events:none!important; line-height:1.3!important; }
 			.sly-bb__card:hover::after { opacity:1!important; }
+			.sly-title-short { display:none; }
 			body .sly-product-card .sly-product-card__title,
 			body .sly-product-card .sly-product-card__title a,
 			body .sly-product-card h3,
@@ -218,6 +219,9 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			@media(max-width:600px){
 				body.home .hero-full .hero__kicker { font-size:0.78rem!important; font-weight:700!important; }
 				body.home .hero-full .hero__text { font-size:0.95rem!important; font-weight:300!important; }
+				body.home .sly-title-full { display:none!important; }
+				body.home .sly-title-short { display:inline!important; }
+				body.home .sly-product-card .sly-button { display:none!important; }
 				body .sly-product-card .sly-product-card__title,
 				body .sly-product-card .sly-product-card__title a,
 				body .sly-product-card h3,

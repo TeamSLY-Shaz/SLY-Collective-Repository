@@ -50,7 +50,11 @@ if (!function_exists('sly_pebble_lite_product_card')) {
 				<?php endif; ?>
 			</a>
 			<div class="sly-product-card__body">
-				<h3 class="sly-product-card__title"><a href="<?php echo esc_url(get_permalink($product_id)); ?>"><?php echo esc_html($product->get_name()); ?></a></h3>
+				<?php
+				$full_title  = $product->get_name();
+				$short_title = trim( preg_replace( '/\b(trunks|boxer\s+briefs)\b.*/i', '$1', $full_title ) );
+				?>
+				<h3 class="sly-product-card__title"><a href="<?php echo esc_url(get_permalink($product_id)); ?>"><span class="sly-title-full"><?php echo esc_html($full_title); ?></span><span class="sly-title-short"><?php echo esc_html($short_title); ?></span></a></h3>
 				<?php if ($rating_count > 0) : ?>
 					<div class="sly-product-card__rating">
 						<span class="sly-stars" aria-label="<?php echo esc_attr(sprintf(__('Rated %s out of 5', 'sly-pebble-lite'), number_format($avg_rating, 1))); ?>">
