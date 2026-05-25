@@ -358,7 +358,7 @@ if ($hero_image_id) {
 .sly-pouch-compare .sly-eyebrow{margin:0 0 12px;font-size:13px!important;font-weight:700!important;letter-spacing:2px;text-transform:uppercase;color:#0bbfc6}
 .sly-pouch-compare h2{margin:0 0 18px;font-size:32px;line-height:1.15;font-weight:600;letter-spacing:0.06em;color:#111;text-transform:uppercase;font-family:Poppins,Arial,sans-serif}
 .sly-pouch-compare .sly-intro{max-width:780px;margin:0 auto 42px;font-size:17px!important;line-height:1.7;color:#333;font-weight:400!important}
-.sly-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.sly-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch;width:70%;margin:0 auto}
 .sly-pouch-card-v2{overflow:hidden;background:#fff;border-radius:22px;box-shadow:0 14px 34px rgba(0,0,0,0.08);text-align:left;border:1px solid rgba(0,0,0,0.08);display:flex;flex-direction:column}
 .sly-card-top-v2{display:flex;align-items:center;gap:12px;padding:16px 22px;font-size:12px;letter-spacing:1.3px;text-transform:uppercase}
 .sly-card-top-v2 span{font-size:28px;font-weight:800;line-height:1;opacity:0.35}
@@ -382,7 +382,7 @@ if ($hero_image_id) {
   .sly-pouch-compare{padding:48px 14px}
   .sly-pouch-compare h2{font-size:28px}
   .sly-pouch-compare .sly-intro{font-size:15.5px!important;margin-bottom:28px}
-  .sly-compare-grid{grid-template-columns:1fr;gap:22px}
+  .sly-compare-grid{grid-template-columns:1fr;gap:22px;width:70%;margin:0 auto}
   .sly-card-copy-v2{padding:22px 20px 26px}
   .sly-card-copy-v2 h3{font-size:20px}
   .sly-pouch-compare .sly-bottom-copy{font-size:16px!important}
