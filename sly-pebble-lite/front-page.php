@@ -362,6 +362,82 @@ if ($hero_image_id) {
 	<img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-2.webp" alt="New Pouch — SLY construction">
 </div>
 
+<!-- ── Pouch comparison v2 ────────────────────────────────────────────────── -->
+<style>
+.sly-pouch-compare{width:100%;padding:70px 18px;background:#f5f5f5;box-sizing:border-box;font-family:Poppins,Arial,sans-serif}
+.sly-pc-inner{max-width:1180px;margin:0 auto;text-align:center}
+.sly-pouch-compare .sly-eyebrow{margin:0 0 12px;font-size:13px!important;font-weight:700!important;letter-spacing:2px;text-transform:uppercase;color:#0bbfc6}
+.sly-pouch-compare h2{margin:0 0 18px;font-size:32px;line-height:1.15;font-weight:800;letter-spacing:-0.5px;color:#111;text-transform:none}
+.sly-pouch-compare .sly-intro{max-width:780px;margin:0 auto 42px;font-size:17px!important;line-height:1.7;color:#333;font-weight:400!important}
+.sly-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.sly-compare-card{position:relative;overflow:hidden;background:#fff;border-radius:22px;box-shadow:0 14px 34px rgba(0,0,0,0.08);text-align:left;border:1px solid rgba(0,0,0,0.08)}
+.sly-card-label{position:absolute;top:18px;left:18px;z-index:2;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+.sly-old .sly-card-label{background:#111;color:#fff}
+.sly-new .sly-card-label{background:#0bbfc6;color:#000}
+.sly-compare-card img{display:block;width:100%;height:auto;background:#fff}
+.sly-card-content{padding:26px 28px 30px}
+.sly-card-content h3{margin:0 0 16px;font-size:22px;line-height:1.25;font-weight:800;color:#111;text-transform:none}
+.sly-card-content ul{margin:0;padding-left:20px}
+.sly-card-content li{margin-bottom:10px;font-size:15.5px;line-height:1.55;color:#333}
+.sly-pouch-compare .sly-bottom-copy{max-width:720px;margin:34px auto 22px;font-size:18px!important;line-height:1.6;font-weight:600!important;color:#111}
+.sly-compare-btn-wrap{text-align:center}
+.sly-compare-btn{display:inline-block;padding:14px 30px;border-radius:999px;background:#000;color:#fff!important;font-size:15px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;text-decoration:none;transition:transform 0.2s ease,background 0.2s ease}
+.sly-compare-btn:hover{background:#0bbfc6;color:#000!important;transform:translateY(-2px)}
+@media(max-width:780px){
+  .sly-pouch-compare{padding:48px 14px}
+  .sly-pouch-compare h2{font-size:28px}
+  .sly-pouch-compare .sly-intro{font-size:15.5px!important;margin-bottom:28px}
+  .sly-compare-grid{grid-template-columns:1fr;gap:22px}
+  .sly-card-content{padding:22px 20px 26px}
+  .sly-card-content h3{font-size:20px}
+  .sly-pouch-compare .sly-bottom-copy{font-size:16px!important}
+}
+</style>
+<section class="sly-pouch-compare">
+  <div class="sly-pc-inner">
+    <p class="sly-eyebrow">POUCH UNDERWEAR, DONE PROPERLY</p>
+    <h2>Old Pouch vs SLY Pouch</h2>
+    <p class="sly-intro">
+      Not all pouch underwear is built the same. Standard pouches can let the boys shift, stick and rub.
+      SLY's adaptive pouch is built to lift, separate and support — helping keep everything comfortably in its own lane.
+    </p>
+    <div class="sly-compare-grid">
+      <div class="sly-compare-card sly-old">
+        <div class="sly-card-label">OLD POUCH</div>
+        <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-1.webp" alt="Old pouch underwear showing poor support, slippage and friction">
+        <div class="sly-card-content">
+          <h3>Loose. Flat. Friction-prone.</h3>
+          <ul>
+            <li>Poor support lets the boys shift</li>
+            <li>Skin-on-skin rubbing can cause chafe</li>
+            <li>More sticking, sweat and awkward readjustments</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sly-compare-card sly-new">
+        <div class="sly-card-label">SLY ADAPTIVE POUCH</div>
+        <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-2.webp" alt="SLY adaptive pouch underwear showing support, separation and reduced leg contact">
+        <div class="sly-card-content">
+          <h3>Lifted. Separated. Supported.</h3>
+          <ul>
+            <li>Adaptive pouch moves with your body</li>
+            <li>Secure drop zone for support and separation</li>
+            <li>Helps reduce leg contact, rubbing and chafe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="sly-bottom-copy">
+      The result? Less downstairs drama, more all-day comfort, and a pouch that actually does its job.
+    </p>
+    <div class="sly-compare-btn-wrap">
+      <a href="https://slycollective.com/product-category/men-underwear/mens-pouch-underwear/" class="sly-compare-btn">
+        Upgrade the Boys
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="feature-tiles container">
 	<?php foreach ($home_feature_tiles as $feature_tile) : ?>
 		<article class="feature-tile" data-reveal>
