@@ -332,7 +332,7 @@ if ($hero_image_id) {
 		<div class="product-grid">
 			<?php
 			$products = wc_get_products(array(
-				'limit'      => 8,
+				'limit'      => 6,
 				'status'     => 'publish',
 				'orderby'    => 'date',
 				'order'      => 'DESC',
@@ -365,11 +365,11 @@ if ($hero_image_id) {
 .sly-card-top-v2 strong{font-size:12px;font-weight:800;letter-spacing:1.3px}
 .sly-card-old-v2 .sly-card-top-v2{background:#111;color:#fff}
 .sly-card-new-v2 .sly-card-top-v2{background:#0bbfc6;color:#000}
-.sly-image-frame-v2{width:70%;margin:0 auto;overflow:hidden}
+.sly-image-frame-v2{width:70%;margin:0 auto;overflow:hidden;padding-top:20px}
 .sly-image-frame-v2 img{display:block;width:100%;height:auto}
 .sly-card-copy-v2{padding:26px 28px 30px;flex:1}
-.sly-card-copy-v2 h3{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:600;color:#111;text-transform:uppercase;letter-spacing:0.05em;font-family:Poppins,Arial,sans-serif}
-.sly-card-copy-v2 p{font-size:15px!important;font-weight:400!important;line-height:1.6;color:#555;margin:0 0 16px}
+.sly-card-copy-v2 h3{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:600;color:#111;text-transform:uppercase;letter-spacing:0.05em;font-family:Poppins,Arial,sans-serif;text-align:center}
+.sly-card-copy-v2 p{font-size:15px!important;font-weight:400!important;line-height:1.6;color:#555;margin:0 0 16px;text-align:center}
 .sly-card-copy-v2 ul{margin:0;padding-left:0;list-style:none}
 .sly-card-copy-v2 li{margin-bottom:10px;font-size:14.5px;line-height:1.5;color:#333;padding-left:18px;position:relative}
 .sly-card-copy-v2 li::before{content:"→";position:absolute;left:0;color:#0bbfc6;font-weight:700}
