@@ -238,6 +238,22 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 				body .sly-product-card .price .woocommerce-price-suffix,
 				body .sly-product-card .sly-product-card__price .woocommerce-price-suffix { display:inline!important; font-size:11px!important; font-weight:400!important; }
 			}
+			@media(max-width:900px){
+				.sly-shop-grid li.product,
+				.sly-shop-grid .sly-shop-card { border:none!important; border-radius:0!important; box-shadow:none!important; padding:0!important; background:transparent!important; outline:none!important; }
+				.sly-shop-grid .sly-shop-card__media { border-radius:0!important; border:none!important; overflow:hidden!important; }
+				.sly-shop-grid .sly-shop-card__media img,
+				.sly-shop-grid li.product a img { border:none!important; border-radius:0!important; box-shadow:none!important; outline:none!important; }
+				.sly-shop-grid .woocommerce-loop-product__title,
+				.sly-shop-grid .woocommerce-loop-product__title a { font-size:12px!important; font-weight:500!important; letter-spacing:0!important; line-height:1.3!important; text-transform:none!important; }
+				.sly-shop-grid .price { font-size:11px!important; font-weight:600!important; display:inline-flex!important; align-items:baseline!important; flex-wrap:wrap!important; gap:0.25em!important; }
+				.sly-shop-grid .price .woocommerce-price-suffix,
+				.sly-shop-grid .price small { display:inline!important; font-size:9px!important; font-weight:400!important; opacity:0.65!important; }
+				.sly-shop-grid .sly-shop-card .button,
+				.sly-shop-grid .sly-shop-card a.button,
+				.sly-shop-grid .sly-shop-card .add_to_cart_button,
+				.sly-shop-grid .sly-shop-card .added_to_cart { display:none!important; }
+			}
 			body.single-product a { font-weight:700!important; }
 		');
 
