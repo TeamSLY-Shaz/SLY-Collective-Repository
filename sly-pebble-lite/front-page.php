@@ -332,7 +332,7 @@ if ($hero_image_id) {
 		<div class="product-grid">
 			<?php
 			$products = wc_get_products(array(
-				'limit'      => 6,
+				'limit'      => 8,
 				'status'     => 'publish',
 				'orderby'    => 'date',
 				'order'      => 'DESC',
@@ -395,6 +395,11 @@ if ($hero_image_id) {
     <p class="sly-intro">
       Not all underwear is built the same. The old type of standard pouch lets the boys chafe, stick and dangle. SLY's adaptive pouch is built to cool, separate and support — with a flexible hammock pouch that moves with you.
     </p>
+    <div class="sly-compare-btn-wrap">
+      <a href="https://slycollective.com/product-category/men-underwear/mens-pouch-underwear/" class="sly-compare-btn">
+        Upgrade the Boys
+      </a>
+    </div>
     <div class="sly-compare-grid">
       <article class="sly-pouch-card-v2 sly-card-old-v2">
         <div class="sly-image-frame-v2">
@@ -424,14 +429,6 @@ if ($hero_image_id) {
           </ul>
         </div>
       </article>
-    </div>
-    <p class="sly-bottom-copy">
-      The result? Less downstairs drama, more all-day comfort, and a pouch that actually does its job.
-    </p>
-    <div class="sly-compare-btn-wrap">
-      <a href="https://slycollective.com/product-category/men-underwear/mens-pouch-underwear/" class="sly-compare-btn">
-        Upgrade the Boys
-      </a>
     </div>
   </div>
 </section>

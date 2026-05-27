@@ -221,7 +221,11 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 				body.home .hero-full .hero__kicker { font-size:0.78rem!important; font-weight:700!important; color:#fff!important; }
 				body.home .hero-full h1 { letter-spacing:0.1em!important; }
 				body.home .hero-full .hero__text { font-size:0.95rem!important; font-weight:700!important; }
-				body.home .product-grid { grid-template-columns:1fr!important; }
+				body.home .product-grid { grid-template-columns:1fr!important; gap:0!important; }
+				body.home .product-grid .sly-product-card { margin:0!important; padding:0!important; border-radius:0!important; border:none!important; box-shadow:none!important; }
+				body.home .product-grid .sly-product-card__body { display:none!important; }
+				body.home .product-grid .sly-product-card__media { width:85%!important; margin:0 auto!important; display:block!important; }
+				body.home .product-grid .sly-product-card:nth-child(n+7) { display:none!important; }
 				body.home .sly-title-full { display:none!important; }
 				body.home .sly-title-short { display:inline!important; }
 				body.home .sly-product-card .sly-button { display:none!important; }
