@@ -357,10 +357,10 @@ if ($hero_image_id) {
 .sly-pc-inner{max-width:1180px;margin:0 auto;text-align:center}
 .sly-pouch-compare .sly-eyebrow{margin:0 0 12px;font-size:13px!important;font-weight:700!important;letter-spacing:2px;text-transform:uppercase;color:#0bbfc6}
 .sly-pouch-compare h2{margin:0 0 18px;font-size:32px;line-height:1.15;font-weight:600;letter-spacing:0.06em;color:#fff;text-transform:uppercase;font-family:Poppins,Arial,sans-serif}
-.sly-pouch-compare .sly-intro{max-width:780px;margin:0 auto 12px;font-size:15px!important;line-height:1.6;color:rgba(255,255,255,0.8);font-weight:400!important}
-.sly-compare-btn-wrap{text-align:center;margin-bottom:40px}
-.sly-compare-btn{display:inline-block;padding:14px 30px;border-radius:999px;background:transparent;color:#fff!important;border:2px solid #fff;font-size:15px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;font-family:Poppins,Arial,sans-serif;transition:transform 0.2s ease,background 0.2s ease,color 0.2s ease}
-.sly-compare-btn:hover{background:#0bbfc6;border-color:#0bbfc6;color:#000!important;transform:translateY(-2px)}
+.sly-pouch-compare .sly-intro{max-width:780px;margin:0 auto 12px;font-size:15px!important;line-height:1.3;color:rgba(255,255,255,0.8);font-weight:400!important}
+.sly-compare-btn-wrap{text-align:center;margin-bottom:12px}
+.sly-compare-btn{display:inline-block;padding:14px 30px;border-radius:999px;background:#0bbfc6;color:#000!important;border:2px solid #0bbfc6;font-size:15px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;font-family:Poppins,Arial,sans-serif;transition:transform 0.2s ease,background 0.2s ease,color 0.2s ease}
+.sly-compare-btn:hover{background:#fff;border-color:#fff;color:#000!important;transform:translateY(-2px)}
 .sly-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
 .sly-pouch-card-v2{overflow:hidden;background:#000;border-radius:0;box-shadow:none;text-align:left;border:none;display:flex;flex-direction:column}
 .sly-card-top-v2{display:flex;align-items:center;gap:12px;padding:16px 22px;font-size:12px;letter-spacing:1.3px;text-transform:uppercase}
@@ -368,13 +368,14 @@ if ($hero_image_id) {
 .sly-card-top-v2 strong{font-size:12px;font-weight:800;letter-spacing:1.3px}
 .sly-card-old-v2 .sly-card-top-v2{background:#111;color:#fff}
 .sly-card-new-v2 .sly-card-top-v2{background:#0bbfc6;color:#000}
-.sly-image-frame-v2{width:90%;margin:0 auto;overflow:hidden;padding-top:20px}
+.sly-image-frame-v2{width:100%;margin:0 auto;overflow:hidden;padding-top:0}
 .sly-image-frame-v2 img{display:block;width:100%;height:auto}
 .sly-card-copy-v2{padding:26px 28px 30px;flex:1}
 .sly-card-copy-v2 h3{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:0.05em;font-family:Poppins,Arial,sans-serif;text-align:center}
-.sly-card-copy-v2 p{font-size:15px!important;font-weight:400!important;line-height:1.6;color:rgba(255,255,255,0.7);margin:0 0 16px;text-align:center}
+.sly-card-new-v2 .sly-card-copy-v2 h3{color:#0bbfc6!important}
+.sly-card-copy-v2 p{font-size:15px!important;font-weight:400!important;line-height:1.3;color:rgba(255,255,255,0.7);margin:0 0 16px;text-align:center}
 .sly-card-copy-v2 ul{margin:0;padding-left:20px;list-style:none}
-.sly-card-copy-v2 li{margin-bottom:8px;font-size:14.5px;line-height:1.3;color:rgba(255,255,255,0.75);padding-left:18px;position:relative}
+.sly-card-copy-v2 li{margin-bottom:8px;font-size:14.5px;line-height:1.2;color:rgba(255,255,255,0.75);padding-left:18px;position:relative}
 .sly-card-copy-v2 li::before{content:"→";position:absolute;left:0;color:#0bbfc6;font-weight:700}
 .sly-card-copy-v2 li strong{font-weight:700;color:#fff}
 .sly-pouch-compare .sly-bottom-copy{max-width:720px;margin:34px auto 22px;font-size:18px!important;line-height:1.6;font-weight:600!important;color:#fff}
@@ -403,7 +404,7 @@ if ($hero_image_id) {
     <div class="sly-compare-grid">
       <article class="sly-pouch-card-v2 sly-card-old-v2">
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-12.A.webp" alt="Old pouch underwear showing friction zone and unsupported fit">
+          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-13.2.webp" alt="Old pouch underwear showing friction zone and unsupported fit">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Loose. Flat. Friction-prone.</h3>
@@ -417,7 +418,7 @@ if ($hero_image_id) {
       </article>
       <article class="sly-pouch-card-v2 sly-card-new-v2">
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-12.B.webp" alt="SLY adaptive pouch showing lift, support and separation zone">
+          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-13.1.webp" alt="SLY adaptive pouch showing lift, support and separation zone">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Lifted. Separated. Supported.</h3>
