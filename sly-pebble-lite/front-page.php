@@ -403,7 +403,7 @@ if ($hero_image_id) {
     <div class="sly-compare-grid">
       <article class="sly-pouch-card-v2 sly-card-old-v2">
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-3.1.jpg" alt="Old pouch underwear showing friction zone and unsupported fit">
+          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-12.A.webp" alt="Old pouch underwear showing friction zone and unsupported fit">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Loose. Flat. Friction-prone.</h3>
@@ -417,7 +417,7 @@ if ($hero_image_id) {
       </article>
       <article class="sly-pouch-card-v2 sly-card-new-v2">
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-3.jpg" alt="SLY adaptive pouch showing lift, support and separation zone">
+          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-12.B.webp" alt="SLY adaptive pouch showing lift, support and separation zone">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Lifted. Separated. Supported.</h3>
