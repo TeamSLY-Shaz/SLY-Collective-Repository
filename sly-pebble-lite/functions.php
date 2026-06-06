@@ -130,6 +130,7 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			file_exists($css_file) ? (string) filemtime($css_file) : SLY_PEBBLE_LITE_VERSION
 		);
 
+
 		// Inline overrides — bypasses all caching layers
 		wp_add_inline_style('sly-pebble-lite-main', '
 			.sly-product-card h3,
@@ -323,6 +324,19 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 	}
 }
 add_action('wp_enqueue_scripts', 'sly_pebble_lite_enqueue_assets');
+
+// Enqueued at priority 9999 — AFTER WooCommerce (priority 10) — so this
+// stylesheet's <link> appears last in the <head> and its rules win.
+add_action('wp_enqueue_scripts', function() {
+	$shop_mobile_file = get_template_directory() . '/assets/css/shop-mobile.css';
+	wp_enqueue_style(
+		'sly-shop-mobile',
+		get_template_directory_uri() . '/assets/css/shop-mobile.css',
+		array(),
+		file_exists($shop_mobile_file) ? (string) filemtime($shop_mobile_file) : SLY_PEBBLE_LITE_VERSION,
+		'all'
+	);
+}, 9999);
 
 if (!function_exists('sly_pebble_lite_body_classes')) {
 	function sly_pebble_lite_body_classes($classes) {
