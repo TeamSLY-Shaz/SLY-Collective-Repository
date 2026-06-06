@@ -267,6 +267,9 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 				body.woocommerce-page .sly-shop-grid li.product .button { display:none!important; }
 			}
 			body.single-product a { font-weight:700!important; }
+			body.single-product { padding-bottom:90px!important; }
+			body.single-product .woocommerce-store-notice,
+			body.single-product .demo_store { bottom:72px!important; }
 		');
 
 		wp_enqueue_script(
