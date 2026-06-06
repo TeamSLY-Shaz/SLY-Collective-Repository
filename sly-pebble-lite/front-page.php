@@ -379,6 +379,7 @@ if ($hero_image_id) {
 .sly-card-copy-v2 li::before{content:"→";position:absolute;left:0;color:#0bbfc6;font-weight:700}
 .sly-card-copy-v2 li strong{font-weight:700;color:#fff}
 .sly-pouch-compare .sly-bottom-copy{max-width:720px;margin:34px auto 22px;font-size:18px!important;line-height:1.6;font-weight:600!important;color:#fff}
+.sly-pouch-spacer{height:60px}
 @media(max-width:780px){
   .sly-pouch-compare{padding:48px 14px}
   .sly-pouch-compare h2{font-size:28px}
@@ -387,11 +388,12 @@ if ($hero_image_id) {
   .sly-card-copy-v2{padding:22px 20px 26px}
   .sly-card-copy-v2 h3{font-size:20px}
   .sly-pouch-compare .sly-bottom-copy{font-size:16px!important}
+  .sly-pouch-spacer{height:40px}
 }
 </style>
 <section class="sly-pouch-compare">
   <div class="sly-pc-inner">
-    <p class="sly-eyebrow">POUCH UNDERWEAR, DONE PROPERLY</p>
+    <p class="sly-eyebrow">Pouch Underwear built for the way men actually move.</p>
     <h2>Old Pouch vs SLY Pouch</h2>
     <p class="sly-intro">
       Not all underwear is built the same. The old type of standard pouch lets the boys chafe, stick and dangle. SLY's adaptive pouch is built to cool, separate and support — with a flexible hammock pouch that moves with you.
@@ -404,7 +406,7 @@ if ($hero_image_id) {
     <div class="sly-compare-grid">
       <article class="sly-pouch-card-v2 sly-card-old-v2">
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-13.2.webp" alt="Old pouch underwear showing friction zone and unsupported fit">
+          <img src="https://slycollective.com/wp-content/uploads/2026/06/Old-New-13-Black-3.1.jpg" alt="Old pouch underwear showing friction zone and unsupported fit">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Loose. Flat. Friction-prone.</h3>
@@ -418,7 +420,7 @@ if ($hero_image_id) {
       </article>
       <article class="sly-pouch-card-v2 sly-card-new-v2">
         <div class="sly-image-frame-v2">
-          <img src="https://slycollective.com/wp-content/uploads/2026/05/Old-New-13.1.webp" alt="SLY adaptive pouch showing lift, support and separation zone">
+          <img src="https://slycollective.com/wp-content/uploads/2026/06/Old-New-13-Black-4.1.webp" alt="SLY adaptive pouch showing lift, support and separation zone">
         </div>
         <div class="sly-card-copy-v2">
           <h3>Lifted. Separated. Supported.</h3>
@@ -433,6 +435,7 @@ if ($hero_image_id) {
     </div>
   </div>
 </section>
+<div class="sly-pouch-spacer"></div>
 
 <section class="feature-tiles container">
 	<?php foreach ($home_feature_tiles as $feature_tile) : ?>
