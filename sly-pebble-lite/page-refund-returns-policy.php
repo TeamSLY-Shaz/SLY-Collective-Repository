@@ -124,7 +124,7 @@ get_header();
 <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
 <section class="sly-rrp-hero" data-reveal>
 	<div class="container sly-rrp-hero__inner">
-		<p class="sly-rrp-hero__kicker">Straight Answers. No Fine Print Games.</p>
+		<p class="sly-rrp-hero__kicker">No Drama. Just Solutions.</p>
 		<h1 class="sly-rrp-hero__title">Refund &amp; Returns Policy</h1>
 		<p class="sly-rrp-hero__sub">Everything you need to know about returns, exchanges and refunds at SLY Collective — laid out clearly below, exactly as written.</p>
 		<div class="sly-rrp-chips">
