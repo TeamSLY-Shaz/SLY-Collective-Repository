@@ -33,9 +33,11 @@ add_action( 'wp_head', function () {
 	.sly-rrp-hero__title{font-size:clamp(2.2rem,5.5vw,3.8rem)!important;font-weight:900;text-transform:uppercase;color:#fff;margin:0 0 1rem;letter-spacing:.04em;line-height:1.1}
 	.sly-rrp-hero__sub{font-size:1.05rem!important;color:rgba(255,255,255,.88);opacity:1;margin:0 auto;max-width:62ch;font-weight:300}
 
-	/* ── Quick-glance chips ────────────────────────────────────────── */
+	/* ── Quick-glance chips — teal stays dominant; lime + coral land as small accent pops ── */
 	.sly-rrp-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1.75rem;position:relative;z-index:1}
 	.sly-rrp-chip{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.02em;backdrop-filter:blur(4px)}
+	.sly-rrp-chip--lime{background:#D7E05A;border-color:#D7E05A;color:#146a7b}
+	.sly-rrp-chip--coral{background:#FF6F5B;border-color:#FF6F5B;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.18)}
 
 	/* ── Content shell ─────────────────────────────────────────────── */
 	.sly-rrp-wrap{max-width:880px;margin:0 auto;padding:3.5rem 1.5rem 4.5rem}
@@ -85,10 +87,15 @@ add_action( 'wp_head', function () {
 	.sly-rrp-card .entry-content hr{border:none;border-top:1px solid var(--sly-line);margin:2.5rem 0}
 	.sly-rrp-card .entry-content strong{font-weight:700;color:var(--sly-ink)}
 
-	/* ── CTA — gradient teal ───────────────────────────────────────── */
+	/* ── CTA — gradient teal, with a tiny lime/coral accent-dot flourish ── */
 	.sly-rrp-cta{padding:0 0 4.5rem}
 	.sly-rrp-cta__inner{max-width:880px;margin:0 auto;padding:0 1.5rem}
 	.sly-rrp-cta__panel{background:linear-gradient(120deg,#146a7b 0%,#197E92 50%,#1a8fa5 100%);border-radius:var(--sly-radius);padding:3rem 2.5rem;text-align:center;color:#fff}
+	.sly-rrp-cta__dots{display:flex;justify-content:center;align-items:center;gap:.4rem;margin:0 0 1rem}
+	.sly-rrp-cta__dots span{display:inline-block;width:8px;height:8px;border-radius:50%}
+	.sly-rrp-cta__dots span:nth-child(1){background:rgba(255,255,255,.85)}
+	.sly-rrp-cta__dots span:nth-child(2){background:#D7E05A}
+	.sly-rrp-cta__dots span:nth-child(3){background:#FF6F5B}
 	.sly-rrp-cta__title{font-size:clamp(1.5rem,3.5vw,2.2rem)!important;font-weight:900;text-transform:uppercase;letter-spacing:.04em;margin:0 0 .65rem;color:#fff;line-height:1.2}
 	.sly-rrp-cta__sub{font-size:1rem!important;opacity:.9;margin:0 0 1.75rem;color:#fff;font-weight:300}
 	.sly-rrp-cta__btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
@@ -122,8 +129,8 @@ get_header();
 		<p class="sly-rrp-hero__sub">Everything you need to know about returns, exchanges and refunds at SLY Collective — laid out clearly below, exactly as written.</p>
 		<div class="sly-rrp-chips">
 			<span class="sly-rrp-chip">⏱ 30-Day Window</span>
-			<span class="sly-rrp-chip">🔄 Free Size Exchanges</span>
-			<span class="sly-rrp-chip">🛡 12-Month Warranty</span>
+			<span class="sly-rrp-chip sly-rrp-chip--lime">🔄 Free Size Exchanges</span>
+			<span class="sly-rrp-chip sly-rrp-chip--coral">🛡 12-Month Warranty</span>
 		</div>
 	</div>
 </section>
@@ -143,6 +150,7 @@ get_header();
 <section class="sly-rrp-cta">
 	<div class="sly-rrp-cta__inner">
 		<div class="sly-rrp-cta__panel" data-reveal>
+			<div class="sly-rrp-cta__dots" aria-hidden="true"><span></span><span></span><span></span></div>
 			<p class="sly-rrp-cta__title">Got a Question About Your Order?</p>
 			<p class="sly-rrp-cta__sub">Drop us an email and we'll sort it — no guilt trips, no lectures, just a fix.</p>
 			<div class="sly-rrp-cta__btns">
