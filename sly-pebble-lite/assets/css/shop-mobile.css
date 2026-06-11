@@ -1,16 +1,21 @@
 /*
  * Mobile category/shop page overrides.
- * Loaded at priority 9999 — after WooCommerce — so these rules are last.
- * All rules use !important + highest-available specificity.
+ * Loaded at priority 9999 — after WooCommerce and main.css — so these rules
+ * are last in source order.
+ *
+ * IMPORTANT: these selectors deliberately do NOT depend on .sly-shop-grid,
+ * .sly-shop-card, or body classes. The theme's root woocommerce.php takes
+ * priority over archive-product.php in WooCommerce's template loader, so
+ * category pages can render the default WC loop where those classes never
+ * exist. Repeating .product inflates specificity to (0,5,4)+ which beats the
+ * strongest competing rule in main.css (v106 block, (0,5,3)) regardless of
+ * which markup is live.
  */
 
 @media (max-width: 900px) {
 
-	/* ── Card shell ───────────────────────────────────────────────── */
-	body.woocommerce ul.products.sly-shop-grid li.product,
-	body.woocommerce-page ul.products.sly-shop-grid li.product,
-	body.tax-product_cat ul.products.sly-shop-grid li.product,
-	body.post-type-archive-product ul.products.sly-shop-grid li.product {
+	/* ── Card shell — no borders, no card chrome at all ───────────── */
+	html body ul.products li.product.product.product.product {
 		border: none !important;
 		border-radius: 0 !important;
 		box-shadow: none !important;
@@ -19,25 +24,25 @@
 		outline: none !important;
 	}
 
-	/* ── Image wrapper ────────────────────────────────────────────── */
-	body.woocommerce ul.products.sly-shop-grid li.product .sly-shop-card__media,
-	body.woocommerce-page ul.products.sly-shop-grid li.product .sly-shop-card__media,
-	body.woocommerce ul.products.sly-shop-grid li.product a img,
-	body.woocommerce-page ul.products.sly-shop-grid li.product a img {
-		border-radius: 0 !important;
+	/* ── Link wrapper + image — kill inherited card styling ──────── */
+	html body ul.products li.product.product.product.product .woocommerce-LoopProduct-link,
+	html body ul.products li.product.product.product.product .sly-shop-card__media {
+		background: transparent !important;
 		border: none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+	}
+	html body ul.products li.product.product.product.product img {
+		border: none !important;
+		border-radius: 0 !important;
 		box-shadow: none !important;
 		outline: none !important;
 	}
 
 	/* ── Product title — 14px ─────────────────────────────────────── */
-	body.woocommerce ul.products.sly-shop-grid li.product .woocommerce-loop-product__title,
-	body.woocommerce ul.products.sly-shop-grid li.product .woocommerce-loop-product__title a,
-	body.woocommerce ul.products.sly-shop-grid li.product h2,
-	body.woocommerce-page ul.products.sly-shop-grid li.product .woocommerce-loop-product__title,
-	body.woocommerce-page ul.products.sly-shop-grid li.product h2,
-	body.tax-product_cat ul.products.sly-shop-grid li.product .woocommerce-loop-product__title,
-	body.post-type-archive-product ul.products.sly-shop-grid li.product .woocommerce-loop-product__title {
+	html body ul.products li.product.product.product.product .woocommerce-loop-product__title,
+	html body ul.products li.product.product.product.product .woocommerce-loop-product__title a,
+	html body ul.products li.product.product.product.product h2 {
 		font-size: 14px !important;
 		font-weight: 500 !important;
 		letter-spacing: 0 !important;
@@ -47,27 +52,24 @@
 	}
 
 	/* ── Price ────────────────────────────────────────────────────── */
-	body.woocommerce ul.products.sly-shop-grid li.product .price,
-	body.woocommerce-page ul.products.sly-shop-grid li.product .price,
-	body.tax-product_cat ul.products.sly-shop-grid li.product .price {
+	html body ul.products li.product.product.product.product .price {
 		font-size: 12px !important;
 		font-weight: 600 !important;
 		margin: 0.2rem 0 !important;
 	}
+	html body ul.products li.product.product.product.product .price .woocommerce-price-suffix,
+	html body ul.products li.product.product.product.product .price small {
+		display: inline !important;
+		font-size: 9px !important;
+		font-weight: 400 !important;
+		opacity: 0.65 !important;
+	}
 
-	/* ── Hide ATC / Select Options button ────────────────────────── */
-	body.woocommerce ul.products.sly-shop-grid li.product a.button,
-	body.woocommerce ul.products.sly-shop-grid li.product .button,
-	body.woocommerce ul.products.sly-shop-grid li.product .add_to_cart_button,
-	body.woocommerce ul.products.sly-shop-grid li.product .added_to_cart,
-	body.woocommerce-page ul.products.sly-shop-grid li.product a.button,
-	body.woocommerce-page ul.products.sly-shop-grid li.product .button,
-	body.woocommerce-page ul.products.sly-shop-grid li.product .add_to_cart_button,
-	body.woocommerce-page ul.products.sly-shop-grid li.product .added_to_cart,
-	body.tax-product_cat ul.products.sly-shop-grid li.product a.button,
-	body.tax-product_cat ul.products.sly-shop-grid li.product .button,
-	body.post-type-archive-product ul.products.sly-shop-grid li.product a.button,
-	body.post-type-archive-product ul.products.sly-shop-grid li.product .button {
+	/* ── Hide ATC / Select Options button ─────────────────────────── */
+	html body ul.products li.product.product.product.product .button,
+	html body ul.products li.product.product.product.product a.button,
+	html body ul.products li.product.product.product.product .add_to_cart_button,
+	html body ul.products li.product.product.product.product .added_to_cart {
 		display: none !important;
 	}
 
