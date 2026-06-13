@@ -338,6 +338,79 @@ add_action('wp_enqueue_scripts', function() {
 	);
 }, 9999);
 
+// Last-resort inline override — printed directly in the page footer, after
+// every enqueued stylesheet (including any combined/cached CSS file from
+// caching plugins). Inline <style> tags are not touched by CSS file
+// combiners, so these rules are guaranteed to be the literal last CSS in
+// the document and win every tie via source order, plus !important + high
+// specificity for outright conflicts. Covers both the theme's custom
+// .sly-shop-grid/.sly-shop-card markup AND a plain WooCommerce loop, in
+// case the active archive template ever differs from archive-product.php.
+add_action('wp_footer', function() {
+	if (!is_shop() && !is_product_category() && !is_product_tag() && !is_post_type_archive('product')) {
+		return;
+	}
+	?>
+	<style id="sly-shop-mobile-final">
+	@media (max-width: 900px) {
+		html body ul.products li.product,
+		html body ul.products li.product.product,
+		html body ul.products li.product.sly-shop-card {
+			border: 0 !important;
+			border-width: 0 !important;
+			border-style: none !important;
+			border-radius: 0 !important;
+			box-shadow: none !important;
+			padding: 0 !important;
+			background: transparent !important;
+			outline: 0 !important;
+		}
+		html body ul.products li.product .woocommerce-LoopProduct-link,
+		html body ul.products li.product .sly-shop-card__media,
+		html body ul.products li.product a,
+		html body ul.products li.product img {
+			border: 0 !important;
+			border-width: 0 !important;
+			border-style: none !important;
+			border-radius: 0 !important;
+			box-shadow: none !important;
+			outline: 0 !important;
+			background: transparent !important;
+		}
+		html body ul.products li.product .woocommerce-loop-product__title,
+		html body ul.products li.product .woocommerce-loop-product__title a,
+		html body ul.products li.product h2 {
+			font-size: 14px !important;
+			font-weight: 500 !important;
+			letter-spacing: 0 !important;
+			line-height: 1.3 !important;
+			text-transform: none !important;
+			min-height: 0 !important;
+		}
+		html body ul.products li.product .price {
+			font-size: 12px !important;
+			font-weight: 600 !important;
+			margin: 0.2rem 0 !important;
+		}
+		html body ul.products li.product .price .woocommerce-price-suffix,
+		html body ul.products li.product .price small {
+			display: inline !important;
+			font-size: 9px !important;
+			font-weight: 400 !important;
+			opacity: 0.65 !important;
+		}
+		html body ul.products li.product .button,
+		html body ul.products li.product a.button,
+		html body ul.products li.product .add_to_cart_button,
+		html body ul.products li.product .added_to_cart {
+			display: none !important;
+		}
+	}
+	</style>
+	<?php
+}, 9999);
+
+
 if (!function_exists('sly_pebble_lite_body_classes')) {
 	function sly_pebble_lite_body_classes($classes) {
 		if (is_front_page()) {
