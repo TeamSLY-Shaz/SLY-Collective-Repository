@@ -79,18 +79,9 @@ if (!function_exists('sly_pebble_lite_remove_block_styles')) {
 }
 add_action('wp_enqueue_scripts', 'sly_pebble_lite_remove_block_styles', 100);
 
-// Remove jQuery Migrate (~10 KB) — not needed by this theme
-if (!function_exists('sly_pebble_lite_remove_jquery_migrate')) {
-	function sly_pebble_lite_remove_jquery_migrate($scripts) {
-		if (!is_admin() && isset($scripts->registered['jquery'])) {
-			$scripts->registered['jquery']->deps = array_diff(
-				$scripts->registered['jquery']->deps,
-				array('jquery-migrate')
-			);
-		}
-	}
-}
-add_action('wp_default_scripts', 'sly_pebble_lite_remove_jquery_migrate');
+// jQuery Migrate is intentionally kept: WooCommerce payment gateway scripts
+// (Stripe, PayPal, etc.) on the checkout page depend on its compatibility
+// shims, and stripping it caused the "Payment methods" box to spin forever.
 
 // Preload hero image in <head> — must be early so browser fetches it immediately
 if (!function_exists('sly_pebble_lite_preload_hero_image')) {
