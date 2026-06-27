@@ -191,7 +191,7 @@ if ($hero_image_id) {
 	<div class="hero-full__overlay"></div>
 	<div class="hero-full__content container">
 		<p class="hero__kicker"><?php echo esc_html($hero_kicker); ?></p>
-		<h1><span class="hero__arrow">&rsaquo;</span> STOP ADJUSTING.<br/><span class="hero__arrow">&rsaquo;</span> START LIVING.</h1>
+		<h1 class="hero__title--bold"><span class="hero__line">STOP ADJUSTING.</span><span class="hero__line hero__line--accent">START LIVING.</span></h1>
 		<p class="hero__text"><?php echo esc_html($hero_text); ?></p>
 		<div class="hero__actions">
 			<a class="sly-button" href="<?php echo esc_url($hero_cta_url); ?>"><?php echo esc_html($hero_cta_label); ?></a>

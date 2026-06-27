@@ -510,3 +510,10 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display
 }
 
 /* v123: pouch comparison — CSS in front-page.php inline style */
+
+/* v158: HOMEPAGE HERO — bold stacked cream/orange headline */
+.hero-full h1.hero__title--bold{display:flex;flex-direction:column;gap:0;font-size:clamp(40px,8.5vw,92px)!important;line-height:0.98;letter-spacing:-0.02em;font-weight:900;margin:0.5rem 0 0}
+.hero-full h1.hero__title--bold .hero__line{color:#F4EFE6}
+.hero-full h1.hero__title--bold .hero__line--accent{color:#FF4419}
+.hero-full .hero__text{color:rgba(255,255,255,0.6);font-size:1rem;font-weight:300;margin-top:1.5rem}
+@media (max-width:782px){.hero-full h1.hero__title--bold{font-size:clamp(32px,11vw,52px)!important}}
