@@ -521,7 +521,7 @@ body .hero-full .hero__actions{text-align:left!important;justify-content:flex-st
 body .hero-full h1.hero__title--bold{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:0!important;width:100%!important;font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(40px,8.5vw,92px)!important;line-height:0.92!important;letter-spacing:-0.01em!important;font-weight:400!important;margin:0.5rem 0 0!important}
 body .hero-full h1.hero__title--bold .hero__line{display:block!important;text-align:left!important;color:#fff!important;letter-spacing:-0.01em!important}
 body .hero-full h1.hero__title--bold .hero__line--accent{color:#FF4419!important}
-body .hero-full .hero__text{text-align:left!important;color:rgba(255,255,255,0.6)!important;font-size:1rem!important;font-weight:300!important;letter-spacing:0.01em!important;margin-top:1.5rem!important;text-transform:none!important}
+body .hero-full .hero__text{text-align:left!important;color:#fff!important;font-size:0.78rem!important;font-weight:600!important;letter-spacing:0.18em!important;margin-top:1.5rem!important;text-transform:uppercase!important}
 body .hero-full .hero__actions a.sly-button{border-radius:5px!important;background:#fff!important;color:#FF4419!important;border:none!important}
 body .hero-full .hero__actions a.sly-button:hover{background:#FF4419!important;color:#fff!important}
 body .hero-full__overlay{background:linear-gradient(180deg,rgba(0,0,0,0.76) 0%,rgba(0,0,0,0.62) 60%,rgba(0,0,0,0.32) 100%)!important}
