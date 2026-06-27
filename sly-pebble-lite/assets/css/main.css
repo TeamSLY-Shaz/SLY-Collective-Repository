@@ -511,10 +511,17 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display
 
 /* v123: pouch comparison — CSS in front-page.php inline style */
 
-/* v159: HOMEPAGE HERO — bold stacked white/orange headline, left-aligned */
-.hero-full,.hero-full__content,.hero-full h1.hero__title--bold,.hero-full .hero__kicker,.hero-full .hero__text,.hero-full .hero__actions{text-align:left}
-.hero-full h1.hero__title--bold{display:flex;flex-direction:column;gap:0;font-size:clamp(40px,8.5vw,92px)!important;line-height:0.98;letter-spacing:-0.02em;font-weight:900;margin:0.5rem 0 0}
-.hero-full h1.hero__title--bold .hero__line{color:#fff}
-.hero-full h1.hero__title--bold .hero__line--accent{color:#FF4419}
-.hero-full .hero__text{color:rgba(255,255,255,0.6);font-size:1rem;font-weight:300;margin-top:1.5rem;text-transform:none}
-@media (max-width:782px){.hero-full h1.hero__title--bold{font-size:clamp(32px,11vw,52px)!important}}
+/* v160: HOMEPAGE HERO — bold stacked white/orange headline, forced left-align + tight tracking */
+body .hero-full,
+body .hero-full__content,
+body .hero-full h1.hero__title--bold,
+body .hero-full .hero__kicker,
+body .hero-full .hero__text,
+body .hero-full .hero__actions{text-align:left!important;align-items:flex-start!important;justify-content:flex-start!important;justify-items:start!important}
+body .hero-full__content{margin:0!important;margin-inline:0!important}
+body .hero-full h1.hero__title--bold{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:0!important;width:100%!important;font-size:clamp(40px,8.5vw,92px)!important;line-height:0.92!important;letter-spacing:-0.035em!important;font-weight:900!important;margin:0.5rem 0 0!important}
+body .hero-full h1.hero__title--bold .hero__line{display:block!important;text-align:left!important;color:#fff!important;letter-spacing:-0.035em!important}
+body .hero-full h1.hero__title--bold .hero__line--accent{color:#FF4419!important}
+body .hero-full .hero__text{text-align:left!important;color:rgba(255,255,255,0.6)!important;font-size:1rem!important;font-weight:300!important;letter-spacing:0.01em!important;margin-top:1.5rem!important;text-transform:none!important}
+body .hero-full .hero__actions{justify-content:flex-start!important}
+@media (max-width:782px){body .hero-full h1.hero__title--bold{font-size:clamp(32px,11vw,52px)!important;letter-spacing:-0.025em!important}}
