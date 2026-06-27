@@ -511,17 +511,18 @@ body.tax-product_cat ul.products.sly-shop-grid li.product .added_to_cart{display
 
 /* v123: pouch comparison — CSS in front-page.php inline style */
 
-/* v160: HOMEPAGE HERO — bold stacked white/orange headline, forced left-align + tight tracking */
-body .hero-full,
-body .hero-full__content,
+/* v161: HOMEPAGE HERO — Anton display font, vertical centering, darker overlay, rectangular CTAs */
+body .hero-full{align-items:center!important;justify-content:flex-start!important}
+body .hero-full__content{text-align:left!important;margin:0!important;margin-inline:0!important;align-self:center!important}
 body .hero-full h1.hero__title--bold,
 body .hero-full .hero__kicker,
 body .hero-full .hero__text,
-body .hero-full .hero__actions{text-align:left!important;align-items:flex-start!important;justify-content:flex-start!important;justify-items:start!important}
-body .hero-full__content{margin:0!important;margin-inline:0!important}
-body .hero-full h1.hero__title--bold{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:0!important;width:100%!important;font-size:clamp(40px,8.5vw,92px)!important;line-height:0.92!important;letter-spacing:-0.035em!important;font-weight:900!important;margin:0.5rem 0 0!important}
-body .hero-full h1.hero__title--bold .hero__line{display:block!important;text-align:left!important;color:#fff!important;letter-spacing:-0.035em!important}
+body .hero-full .hero__actions{text-align:left!important;justify-content:flex-start!important}
+body .hero-full h1.hero__title--bold{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:0!important;width:100%!important;font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(40px,8.5vw,92px)!important;line-height:0.92!important;letter-spacing:-0.01em!important;font-weight:400!important;margin:0.5rem 0 0!important}
+body .hero-full h1.hero__title--bold .hero__line{display:block!important;text-align:left!important;color:#fff!important;letter-spacing:-0.01em!important}
 body .hero-full h1.hero__title--bold .hero__line--accent{color:#FF4419!important}
 body .hero-full .hero__text{text-align:left!important;color:rgba(255,255,255,0.6)!important;font-size:1rem!important;font-weight:300!important;letter-spacing:0.01em!important;margin-top:1.5rem!important;text-transform:none!important}
-body .hero-full .hero__actions{justify-content:flex-start!important}
-@media (max-width:782px){body .hero-full h1.hero__title--bold{font-size:clamp(32px,11vw,52px)!important;letter-spacing:-0.025em!important}}
+body .hero-full .hero__actions a.sly-button{border-radius:5px!important;background:#fff!important;color:#FF4419!important;border:none!important}
+body .hero-full .hero__actions a.sly-button:hover{background:#FF4419!important;color:#fff!important}
+body .hero-full__overlay{background:linear-gradient(180deg,rgba(0,0,0,0.76) 0%,rgba(0,0,0,0.62) 60%,rgba(0,0,0,0.32) 100%)!important}
+@media (max-width:782px){body .hero-full h1.hero__title--bold{font-size:clamp(32px,11vw,52px)!important;letter-spacing:-0.005em!important}}
