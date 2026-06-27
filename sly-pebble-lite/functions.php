@@ -83,6 +83,37 @@ add_action('wp_enqueue_scripts', 'sly_pebble_lite_remove_block_styles', 100);
 // (Stripe, PayPal, etc.) on the checkout page depend on its compatibility
 // shims, and stripping it caused the "Payment methods" box to spin forever.
 
+/**
+ * Stripe.js (js.stripe.com/v3) must always be fetched live and must never be
+ * combined, minified, or cached — Stripe ships breaking API updates (e.g. the
+ * "Basil" release required by initCheckout) through that same URL. SiteGround
+ * Optimizer's JS combine/cache feature was serving a stale cached copy,
+ * causing "IntegrationError: You must upgrade to the Basil release..." and a
+ * payment widget that spins forever. Exclude it from optimization and force
+ * a fresh fetch on every page load.
+ */
+if (!function_exists('sly_pebble_lite_exclude_stripe_js_from_sg_optimizer')) {
+	function sly_pebble_lite_exclude_stripe_js_from_sg_optimizer($excluded) {
+		$excluded[] = 'js.stripe.com';
+		return $excluded;
+	}
+}
+add_filter('sgo_javascript_combine_exclude_list', 'sly_pebble_lite_exclude_stripe_js_from_sg_optimizer');
+add_filter('sgo_javascript_minify_exclude_list', 'sly_pebble_lite_exclude_stripe_js_from_sg_optimizer');
+add_filter('sg_cachepress_minify_javascript_exclude', 'sly_pebble_lite_exclude_stripe_js_from_sg_optimizer');
+
+if (!function_exists('sly_pebble_lite_bust_stripe_js_cache')) {
+	function sly_pebble_lite_bust_stripe_js_cache($tag, $handle, $src) {
+		if (strpos((string) $src, 'js.stripe.com') === false) {
+			return $tag;
+		}
+
+		$fresh_src = add_query_arg('sly_cache_bust', (string) time(), $src);
+		return str_replace($src, $fresh_src, $tag);
+	}
+}
+add_filter('script_loader_tag', 'sly_pebble_lite_bust_stripe_js_cache', 10, 3);
+
 // Preload hero image in <head> — must be early so browser fetches it immediately
 if (!function_exists('sly_pebble_lite_preload_hero_image')) {
 	function sly_pebble_lite_preload_hero_image() {
