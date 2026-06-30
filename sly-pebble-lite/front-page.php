@@ -295,11 +295,13 @@ if ($hero_image_id) {
 <!-- ── Benefits / Adaptive pouch split ───────────────────────────────────── -->
 <style>
 .sly-pouch-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;font-family:Poppins,Arial,sans-serif}
-.sly-pouch-split__left{background:#fff;padding:70px 40px;box-sizing:border-box;display:flex;align-items:center}
+.sly-pouch-split__left{background:#fff;padding:32px;box-sizing:border-box;display:flex;align-items:center}
 .sly-pouch-split__right{background:#000;padding:70px 40px;box-sizing:border-box;text-align:center}
-.sly-pouch-split .sly-benefits__grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;width:100%;max-width:560px;margin:0 auto}
+.sly-pouch-split .sly-benefits__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;width:100%;max-width:420px;margin:0 auto}
+.sly-pouch-split .sly-benefit{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;text-align:center}
+.sly-pouch-split .sly-benefit__note{width:70%!important;margin:0 auto}
 .sly-pouch-split .sly-benefit__note img{display:block;width:100%;height:auto}
-.sly-pouch-split .sly-benefit__desc{margin:12px 0 0;font-size:14px!important;line-height:1.35;font-weight:400!important;color:#222}
+.sly-pouch-split .sly-benefit__desc{margin:8px 0 0;font-size:13px!important;line-height:1.3;font-weight:400!important;color:#222}
 .sly-pouch-split__right .sly-eyebrow{margin:0 0 12px;font-size:13px!important;font-weight:700!important;letter-spacing:2px;text-transform:uppercase;color:#0bbfc6}
 .sly-pouch-split__right h2{margin:0 0 28px;font-size:30px;line-height:1.15;font-weight:600;letter-spacing:0.06em;color:#fff;text-transform:uppercase;font-family:Poppins,Arial,sans-serif}
 .sly-pouch-split__right .sly-image-frame-v2{width:100%;max-width:480px;margin:0 auto 28px;overflow:hidden}
@@ -312,8 +314,9 @@ if ($hero_image_id) {
 .sly-pouch-split__right li strong{font-weight:700;color:#fff}
 @media(max-width:780px){
   .sly-pouch-split{grid-template-columns:1fr}
-  .sly-pouch-split__left,.sly-pouch-split__right{padding:48px 20px}
-  .sly-pouch-split .sly-benefits__grid{gap:22px}
+  .sly-pouch-split__left{padding:24px 16px}
+  .sly-pouch-split__right{padding:48px 20px}
+  .sly-pouch-split .sly-benefits__grid{gap:14px 18px}
 }
 </style>
 <section class="sly-pouch-split" data-reveal>
