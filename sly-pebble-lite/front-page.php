@@ -200,6 +200,70 @@ if ($hero_image_id) {
 	</div>
 </section>
 
+<!-- ── The Problem section ───────────────────────────────────────────────── -->
+<style>
+.sly-problem{background:#111;padding:72px 0 64px;font-family:Poppins,Arial,sans-serif}
+.sly-problem__eyebrow{margin:0 0 18px;font-size:12px!important;font-weight:700!important;letter-spacing:3px;text-transform:uppercase;color:#FF4419}
+.sly-problem__headline{margin:0 0 56px;font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(38px,6vw,80px)!important;font-weight:400!important;line-height:1.0!important;letter-spacing:-0.01em!important;text-transform:uppercase!important;color:#fff!important}
+.sly-problem__headline .strike{color:#555;text-decoration:line-through;text-decoration-color:#FF4419;text-decoration-thickness:3px}
+.sly-problem__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,0.1)}
+.sly-problem__card{padding:32px 28px;border-right:1px solid rgba(255,255,255,0.1)}
+.sly-problem__card:last-child{border-right:none}
+.sly-problem__icon{margin-bottom:20px;color:#FF4419;font-size:22px;line-height:1}
+.sly-problem__card-title{margin:0 0 10px;font-size:17px!important;font-weight:700!important;line-height:1.25;color:#fff;text-transform:none;letter-spacing:0}
+.sly-problem__card-text{margin:0;font-size:13.5px!important;font-weight:300!important;line-height:1.55;color:rgba(255,255,255,0.55)}
+@media(max-width:860px){
+  .sly-problem{padding:52px 0 48px}
+  .sly-problem__grid{grid-template-columns:repeat(2,1fr)}
+  .sly-problem__card{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding:28px 20px}
+  .sly-problem__card:nth-child(odd){border-right:1px solid rgba(255,255,255,0.1)}
+  .sly-problem__card:nth-last-child(-n+2){border-bottom:none}
+}
+@media(max-width:480px){
+  .sly-problem{padding:40px 0 36px}
+  .sly-problem__headline{margin-bottom:36px}
+  .sly-problem__grid{grid-template-columns:1fr}
+  .sly-problem__card{border-right:none!important;border-bottom:1px solid rgba(255,255,255,0.1);padding:24px 0}
+  .sly-problem__card:last-child{border-bottom:none}
+}
+</style>
+<section class="sly-problem">
+  <div class="container">
+    <p class="sly-problem__eyebrow">The Problem</p>
+    <h2 class="sly-problem__headline">Standard Underwear <span class="strike">Lies</span> Fails You.</h2>
+    <div class="sly-problem__grid">
+      <div class="sly-problem__card">
+        <div class="sly-problem__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="sly-problem__card-title">Skin-on-skin friction</h3>
+        <p class="sly-problem__card-text">Everything bunches, sticks and slides. By midday you've adjusted three times — and you're still not comfortable.</p>
+      </div>
+      <div class="sly-problem__card">
+        <div class="sly-problem__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3 class="sly-problem__card-title">Trapped heat</h3>
+        <p class="sly-problem__card-text">Cotton traps moisture. Synthetic locks heat. Either way, your boys are cooking — and it's not doing anything for performance.</p>
+      </div>
+      <div class="sly-problem__card">
+        <div class="sly-problem__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+        </div>
+        <h3 class="sly-problem__card-title">Constant readjusting</h3>
+        <p class="sly-problem__card-text">"Pocket pool." Everyone does it. Nobody wants to. But standard flat-front underwear leaves you no choice.</p>
+      </div>
+      <div class="sly-problem__card">
+        <div class="sly-problem__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h3 class="sly-problem__card-title">Zero support structure</h3>
+        <p class="sly-problem__card-text">Everything dangles. Nothing is held. Gravity wins by 3pm, and the chafe that follows lasts until you change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Hidden until images/content are ready -->
 <?php if (false) : ?>
 <section class="interactive-focus container" data-interactive-focus data-reveal>
