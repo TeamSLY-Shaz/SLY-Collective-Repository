@@ -59,6 +59,7 @@ if (!defined('ABSPATH')) {
 			<?php endif; ?>
 		</div>
 	</div>
+	<div class="sly-tagline-strip">POUCH UNDERWEAR BUILT FOR THE WAY MEN ACTUALLY MOVE</div>
 </header>
 
 <main id="primary" class="site-main">
