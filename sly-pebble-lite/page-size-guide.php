@@ -233,59 +233,59 @@ get_header();
 			<tbody>
 				<tr>
 					<td data-label="SLY Size"><strong>XS</strong></td>
-					<td data-label="Waist (cm)">71–76</td>
-					<td data-label="Waist (in)">28–30&Prime;</td>
-					<td data-label="Hip (cm)">86–91</td>
-					<td data-label="Hip (in)">34–36&Prime;</td>
-					<td data-label="AU Clothing">XS&nbsp;/&nbsp;6–8</td>
+					<td data-label="Waist (cm)">76–81</td>
+					<td data-label="Waist (in)">30–32&Prime;</td>
+					<td data-label="Hip (cm)">91–96</td>
+					<td data-label="Hip (in)">36–38&Prime;</td>
+					<td data-label="AU Clothing">XS</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>S</strong></td>
-					<td data-label="Waist (cm)">76–82</td>
-					<td data-label="Waist (in)">30–32&Prime;</td>
-					<td data-label="Hip (cm)">91–97</td>
-					<td data-label="Hip (in)">36–38&Prime;</td>
-					<td data-label="AU Clothing">S&nbsp;/&nbsp;8–10</td>
+					<td data-label="Waist (cm)">81–86</td>
+					<td data-label="Waist (in)">32–34&Prime;</td>
+					<td data-label="Hip (cm)">96–101</td>
+					<td data-label="Hip (in)">38–40&Prime;</td>
+					<td data-label="AU Clothing">S</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>M</strong></td>
-					<td data-label="Waist (cm)">82–88</td>
-					<td data-label="Waist (in)">32–34½&Prime;</td>
-					<td data-label="Hip (cm)">97–103</td>
-					<td data-label="Hip (in)">38–40½&Prime;</td>
-					<td data-label="AU Clothing">M&nbsp;/&nbsp;10–12</td>
+					<td data-label="Waist (cm)">86–91</td>
+					<td data-label="Waist (in)">34–36&Prime;</td>
+					<td data-label="Hip (cm)">101–106</td>
+					<td data-label="Hip (in)">40–42&Prime;</td>
+					<td data-label="AU Clothing">M</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>L</strong></td>
-					<td data-label="Waist (cm)">88–95</td>
-					<td data-label="Waist (in)">34½–37½&Prime;</td>
-					<td data-label="Hip (cm)">103–109</td>
-					<td data-label="Hip (in)">40½–43&Prime;</td>
-					<td data-label="AU Clothing">L&nbsp;/&nbsp;12–14</td>
+					<td data-label="Waist (cm)">91–97</td>
+					<td data-label="Waist (in)">36–38&Prime;</td>
+					<td data-label="Hip (cm)">106–112</td>
+					<td data-label="Hip (in)">42–44&Prime;</td>
+					<td data-label="AU Clothing">L</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>XL</strong></td>
-					<td data-label="Waist (cm)">95–102</td>
-					<td data-label="Waist (in)">37½–40&Prime;</td>
-					<td data-label="Hip (cm)">109–115</td>
-					<td data-label="Hip (in)">43–45½&Prime;</td>
-					<td data-label="AU Clothing">XL&nbsp;/&nbsp;14–16</td>
+					<td data-label="Waist (cm)">97–102</td>
+					<td data-label="Waist (in)">38–40&Prime;</td>
+					<td data-label="Hip (cm)">112–117</td>
+					<td data-label="Hip (in)">44–46&Prime;</td>
+					<td data-label="AU Clothing">XL</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>2XL</strong></td>
-					<td data-label="Waist (cm)">102–110</td>
-					<td data-label="Waist (in)">40–43½&Prime;</td>
-					<td data-label="Hip (cm)">115–122</td>
-					<td data-label="Hip (in)">45½–48&Prime;</td>
-					<td data-label="AU Clothing">2XL&nbsp;/&nbsp;16–18</td>
+					<td data-label="Waist (cm)">102–107</td>
+					<td data-label="Waist (in)">40–42&Prime;</td>
+					<td data-label="Hip (cm)">117–122</td>
+					<td data-label="Hip (in)">46–48&Prime;</td>
+					<td data-label="AU Clothing">2XL</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>3XL</strong></td>
-					<td data-label="Waist (cm)">110–118</td>
-					<td data-label="Waist (in)">43½–46½&Prime;</td>
-					<td data-label="Hip (cm)">122–130</td>
-					<td data-label="Hip (in)">48–51&Prime;</td>
-					<td data-label="AU Clothing">3XL&nbsp;/&nbsp;18–20</td>
+					<td data-label="Waist (cm)">107–112</td>
+					<td data-label="Waist (in)">42–44&Prime;</td>
+					<td data-label="Hip (cm)">122–127</td>
+					<td data-label="Hip (in)">48–50&Prime;</td>
+					<td data-label="AU Clothing">3XL</td>
 				</tr>
 			</tbody>
 		</table>
