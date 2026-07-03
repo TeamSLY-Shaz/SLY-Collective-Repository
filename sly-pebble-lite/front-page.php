@@ -187,6 +187,19 @@ if ($hero_image_id) {
 	$hero_bg_mobile  = wp_get_attachment_image_url($hero_image_id, 'large') ?: $hero_bg_mobile;
 }
 ?>
+<!-- ── Global homepage Poppins override ──────────────────────────────────── -->
+<style>
+.home .site-main p,
+.home .site-main li,
+.home .site-main span:not(.brandmark__primary):not(.brandmark__secondary),
+.home .site-main a,
+.home .site-main label,
+.home .site-main small,
+.home .site-main td,
+.home .site-main th,
+.home .site-main blockquote,
+.home .site-main figcaption{font-family:"Poppins",Arial,sans-serif!important}
+</style>
 <section class="hero-full" style="background-image:url('<?php echo esc_url($hero_bg_desktop); ?>');" data-reveal>
 	<div class="hero-full__overlay"></div>
 	<div class="hero-full__content container">
