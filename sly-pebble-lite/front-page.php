@@ -192,7 +192,7 @@ if ($hero_image_id) {
 	<div class="hero-full__content container">
 		<p class="hero__kicker"><?php echo esc_html($hero_kicker); ?></p>
 		<h1 class="hero__title--bold"><span class="hero__line">STOP ADJUSTING.</span><span class="hero__line hero__line--accent">START LIVING.</span></h1>
-		<p class="hero__text"><?php echo esc_html($hero_text); ?></p>
+
 		<div class="hero__actions">
 			<a class="sly-button" href="<?php echo esc_url($hero_cta_url); ?>"><?php echo esc_html($hero_cta_label); ?></a>
 			<a class="sly-button sly-button--ghost hero-ghost" href="<?php echo esc_url(get_theme_mod('sly_hero_cta2_url', home_url('/about-us'))); ?>"><?php echo esc_html(get_theme_mod('sly_hero_cta2_label', 'Why SLY?')); ?></a>
