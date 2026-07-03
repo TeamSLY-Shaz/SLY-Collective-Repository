@@ -276,7 +276,7 @@ if ($hero_image_id) {
 <section class="sly-upgrade">
   <div class="container">
     <p class="sly-upgrade__eyebrow">Lifted. Separated. Supported.</p>
-    <h2 class="sly-upgrade__headline">The Upgrade Your Drawer Has Needed.</h2>
+    <h2 class="sly-upgrade__headline">The Upgrade Your Drawer Needs.</h2>
     <p class="sly-upgrade__body">SLY Collective underwear isn't about fashion. It's about solving a problem that every man has but nobody talks about. Built by Australians, for Australians — and anyone else who's done with discomfort.</p>
   </div>
 </section>
