@@ -285,8 +285,8 @@ if ($hero_image_id) {
 <!-- ── Benefits + Product split ───────────────────────────────────────────── -->
 <style>
 .sly-benefits-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:0}
-.sly-benefits-split__left{background:#fff;padding:48px 16px 48px 40px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
-.sly-benefits-split__right{overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:flex-start;background:#fff;padding-left:0}
+.sly-benefits-split__left{background:#fff;padding:48px 0 48px 40px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.sly-benefits-split__right{overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:flex-start;background:#fff}
 .sly-benefits-split__right img{display:block;width:70%;height:auto;object-fit:contain}
 .sly-benefits-split .sly-benefits__grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 40px;width:100%;max-width:460px}
 .sly-benefits-split .sly-benefit{display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -295,12 +295,13 @@ if ($hero_image_id) {
 .sly-benefits-split .sly-benefit__desc{margin:10px 0 0;font-family:"Poppins",Arial,sans-serif;font-size:13px;font-weight:400;line-height:1.45;color:#444;text-align:center}
 @media(max-width:780px){
   .sly-benefits-split{grid-template-columns:1fr}
-  .sly-benefits-split__left{padding:40px 20px}
-  .sly-benefits-split__right{min-height:320px}
+  .sly-benefits-split__left{padding:40px 20px;justify-content:center}
+  .sly-benefits-split__right{min-height:320px;justify-content:center}
+  .sly-benefits-split__right img{margin:0 auto}
   .sly-benefits-split .sly-benefits__grid{gap:24px 28px;max-width:100%}
 }
 @media(max-width:480px){
-  .sly-benefits-split__left{padding:32px 16px}
+  .sly-benefits-split__left{padding:32px 16px;justify-content:center}
   .sly-benefits-split .sly-benefits__grid{gap:20px 20px}
   .sly-benefits-split .sly-benefit__note{width:80%}
 }
