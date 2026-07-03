@@ -244,7 +244,7 @@ if ($hero_image_id) {
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
         <h3 class="sly-problem__card-title">Trapped heat</h3>
-        <p class="sly-problem__card-text">Cotton traps moisture. Synthetic locks heat. Either way, your boys are cooking — and it's not doing anything for performance.</p>
+        <p class="sly-problem__card-text">Cotton holds the sweat. Synthetics trap the heat. Either way, the boys are slow-roasting — and performance is off the menu.</p>
       </div>
       <div class="sly-problem__card">
         <div class="sly-problem__icon">
