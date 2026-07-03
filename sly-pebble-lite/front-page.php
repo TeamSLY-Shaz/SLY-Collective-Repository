@@ -284,9 +284,9 @@ if ($hero_image_id) {
 <?php $benefits_img = get_template_directory_uri() . '/assets/images/benefits/'; ?>
 <!-- ── Benefits + Product split ───────────────────────────────────────────── -->
 <style>
-.sly-benefits-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
-.sly-benefits-split__left{background:#fff;padding:48px 40px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
-.sly-benefits-split__right{overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:center;background:#fff}
+.sly-benefits-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:0}
+.sly-benefits-split__left{background:#fff;padding:48px 16px 48px 40px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.sly-benefits-split__right{overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:flex-start;background:#fff;padding-left:0}
 .sly-benefits-split__right img{display:block;width:70%;height:auto;object-fit:contain}
 .sly-benefits-split .sly-benefits__grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 40px;width:100%;max-width:460px}
 .sly-benefits-split .sly-benefit{display:flex;flex-direction:column;align-items:center;text-align:center}
