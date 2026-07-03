@@ -305,10 +305,7 @@ if ($hero_image_id) {
 }
 </style>
 <?php
-$benefits_product_img = get_theme_mod('sly_benefits_product_image', '');
-if (!$benefits_product_img) {
-	$benefits_product_img = get_template_directory_uri() . '/assets/images/hero-model.webp';
-}
+$benefits_product_img = get_theme_mod('sly_benefits_product_image', 'https://slycollective.com/wp-content/uploads/2026/07/ChatGPT-Pouch-1.jpg');
 ?>
 <section class="sly-benefits-split">
   <div class="sly-benefits-split__left">
