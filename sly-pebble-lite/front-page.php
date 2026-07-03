@@ -281,6 +281,69 @@ if ($hero_image_id) {
   </div>
 </section>
 
+<!-- ── Benefits + Product split ───────────────────────────────────────────── -->
+<style>
+.sly-benefits-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.sly-benefits-split__left{background:#fff;padding:48px 40px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.sly-benefits-split__right{overflow:hidden;min-height:480px}
+.sly-benefits-split__right img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.sly-benefits-split .sly-benefits__grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 40px;width:100%;max-width:460px}
+.sly-benefits-split .sly-benefit{display:flex;flex-direction:column;align-items:center;text-align:center}
+.sly-benefits-split .sly-benefit__note{width:75%;margin:0 auto}
+.sly-benefits-split .sly-benefit__note img{display:block;width:100%;height:auto}
+.sly-benefits-split .sly-benefit__desc{margin:10px 0 0;font-family:"Poppins",Arial,sans-serif;font-size:13px;font-weight:400;line-height:1.45;color:#444;text-align:center}
+@media(max-width:780px){
+  .sly-benefits-split{grid-template-columns:1fr}
+  .sly-benefits-split__left{padding:40px 20px}
+  .sly-benefits-split__right{min-height:320px}
+  .sly-benefits-split .sly-benefits__grid{gap:24px 28px;max-width:100%}
+}
+@media(max-width:480px){
+  .sly-benefits-split__left{padding:32px 16px}
+  .sly-benefits-split .sly-benefits__grid{gap:20px 20px}
+  .sly-benefits-split .sly-benefit__note{width:80%}
+}
+</style>
+<?php
+$benefits_product_img = get_theme_mod('sly_benefits_product_image', '');
+if (!$benefits_product_img) {
+	$benefits_product_img = get_template_directory_uri() . '/assets/images/hero-model.webp';
+}
+?>
+<section class="sly-benefits-split">
+  <div class="sly-benefits-split__left">
+    <div class="sly-benefits__grid">
+      <div class="sly-benefit">
+        <div class="sly-benefit__note">
+          <img src="<?php echo esc_url($benefits_img . 'no-ball-chafe.webp'); ?>" alt="No ball-chafe. EVER!" width="400" height="391" loading="lazy" decoding="async">
+        </div>
+        <p class="sly-benefit__desc">Cleverly designed inner pouch that separates. No leg contact. No chafe ever again.</p>
+      </div>
+      <div class="sly-benefit">
+        <div class="sly-benefit__note">
+          <img src="<?php echo esc_url($benefits_img . 'more-space.webp'); ?>" alt="More space... like a man-cave for your balls" width="400" height="383" loading="lazy" decoding="async">
+        </div>
+        <p class="sly-benefit__desc">Nothing worse than tight sweaty spaces. Our pouch rolls out the red carpet to spacious comfort.</p>
+      </div>
+      <div class="sly-benefit">
+        <div class="sly-benefit__note">
+          <img src="<?php echo esc_url($benefits_img . 'support.webp'); ?>" alt="Support. Especially during exercise" width="400" height="402" loading="lazy" decoding="async">
+        </div>
+        <p class="sly-benefit__desc">Proper structured scrotum support that keeps everything in place and reduces discomfort.</p>
+      </div>
+      <div class="sly-benefit">
+        <div class="sly-benefit__note">
+          <img src="<?php echo esc_url($benefits_img . 'sperm-health.webp'); ?>" alt="A better chance of healthier sperm" width="400" height="384" loading="lazy" decoding="async">
+        </div>
+        <p class="sly-benefit__desc">Prevent overheating. Regulates temperature. A crucial factor for the healthiest swimmers.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sly-benefits-split__right">
+    <img src="<?php echo esc_url($benefits_product_img); ?>" alt="SLY Collective pouch underwear" loading="lazy" decoding="async">
+  </div>
+</section>
+
 <!-- Hidden until images/content are ready -->
 <?php if (false) : ?>
 <section class="interactive-focus container" data-interactive-focus data-reveal>
