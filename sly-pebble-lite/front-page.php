@@ -343,6 +343,57 @@ $benefits_product_img = get_theme_mod('sly_benefits_product_image', 'https://sly
   </div>
 </section>
 
+<!-- ── Feature pillars ───────────────────────────────────────────────────── -->
+<style>
+.sly-pillars{background:#111;padding:72px 0;font-family:Poppins,Arial,sans-serif}
+.sly-pillars__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,0.08)}
+.sly-pillar{padding:36px 28px;border-right:1px solid rgba(255,255,255,0.08);position:relative}
+.sly-pillar:last-child{border-right:none}
+.sly-pillar__num{position:absolute;top:24px;right:20px;font-size:56px;font-weight:700;line-height:1;color:rgba(180,60,20,0.35);font-family:Poppins,Arial,sans-serif;letter-spacing:-0.02em}
+.sly-pillar__title{margin:0 0 16px;font-size:17px!important;font-weight:600!important;color:#fff;line-height:1.25;text-transform:none;letter-spacing:0;padding-right:48px}
+.sly-pillar__text{margin:0;font-size:13.5px!important;font-weight:300!important;line-height:1.65;color:rgba(255,255,255,0.5)}
+@media(max-width:860px){
+  .sly-pillars{padding:52px 0}
+  .sly-pillars__grid{grid-template-columns:repeat(2,1fr)}
+  .sly-pillar{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);padding:28px 20px}
+  .sly-pillar:nth-child(odd){border-right:1px solid rgba(255,255,255,0.08)}
+  .sly-pillar:nth-last-child(-n+2){border-bottom:none}
+}
+@media(max-width:480px){
+  .sly-pillars{padding:40px 0}
+  .sly-pillars__grid{grid-template-columns:1fr}
+  .sly-pillar{border-right:none!important;border-bottom:1px solid rgba(255,255,255,0.08);padding:24px 0}
+  .sly-pillar:last-child{border-bottom:none}
+  .sly-pillar__num{font-size:44px;top:16px;right:0}
+}
+</style>
+<section class="sly-pillars">
+  <div class="container">
+    <div class="sly-pillars__grid">
+      <div class="sly-pillar">
+        <span class="sly-pillar__num">01</span>
+        <h3 class="sly-pillar__title">Separation Technology</h3>
+        <p class="sly-pillar__text">The engineered inner pouch creates a dedicated zone for everything to sit — lifted, separated, supported. No leg contact. No friction. No chafe. Ever.</p>
+      </div>
+      <div class="sly-pillar">
+        <span class="sly-pillar__num">02</span>
+        <h3 class="sly-pillar__title">Bamboo Performance</h3>
+        <p class="sly-pillar__text">95% bamboo viscose. Naturally moisture-wicking. Antibacterial without chemical treatment. Thermo-regulating — keeps you cool in Queensland summers and warm in winter.</p>
+      </div>
+      <div class="sly-pillar">
+        <span class="sly-pillar__num">03</span>
+        <h3 class="sly-pillar__title">Built-in Pocket</h3>
+        <p class="sly-pillar__text">The only pouch underwear brand with a hidden stash pocket. Keys, cards, emergency cash — kept secure and out of your pockets. Perfect for the gym, travel, or a night out.</p>
+      </div>
+      <div class="sly-pillar">
+        <span class="sly-pillar__num">04</span>
+        <h3 class="sly-pillar__title">Australian Made</h3>
+        <p class="sly-pillar__text">Proudly manufactured in Australia. Reduced carbon footprint, exceptional quality control, and support for local industry. Some things are worth keeping local.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Hidden until images/content are ready -->
 <?php if (false) : ?>
 <section class="interactive-focus container" data-interactive-focus data-reveal>
