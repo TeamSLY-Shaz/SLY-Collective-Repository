@@ -266,10 +266,10 @@ if ($hero_image_id) {
 
 <!-- ── Upgrade section ───────────────────────────────────────────────────── -->
 <style>
-.sly-upgrade{background:#fff;padding:72px 0 64px;font-family:Poppins,Arial,sans-serif}
-.sly-upgrade__eyebrow{margin:0 0 18px;font-size:12px!important;font-weight:700!important;letter-spacing:3px;text-transform:uppercase;color:#0bbfc6}
-.sly-upgrade__headline{margin:0 0 28px;font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(38px,6vw,80px)!important;font-weight:400!important;line-height:1.0!important;letter-spacing:-0.01em!important;text-transform:uppercase!important;color:#000!important}
-.sly-upgrade__body{margin:0;font-family:"Poppins",Arial,sans-serif!important;font-size:16px!important;font-weight:400!important;line-height:1.65;color:#888;max-width:640px}
+.sly-upgrade{background:#fff;padding:72px 0 64px;font-family:Poppins,Arial,sans-serif;text-align:center}
+.sly-upgrade__eyebrow{margin:0 0 18px;font-size:15px!important;font-weight:700!important;letter-spacing:3px;text-transform:uppercase;color:#0bbfc6}
+.sly-upgrade__headline{margin:0 0 28px;font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(38px,6vw,80px)!important;font-weight:400!important;line-height:1.0!important;letter-spacing:-0.01em!important;text-transform:uppercase!important;color:#000!important;text-align:center!important}
+.sly-upgrade__body{margin:0 auto;font-family:"Poppins",Arial,sans-serif!important;font-size:16px!important;font-weight:400!important;line-height:1.65;color:#888;max-width:640px;text-align:center}
 @media(max-width:860px){.sly-upgrade{padding:52px 0 48px}.sly-upgrade__headline{font-size:clamp(32px,7vw,60px)!important}}
 @media(max-width:480px){.sly-upgrade{padding:40px 0 36px}.sly-upgrade__headline{margin-bottom:20px}}
 </style>
