@@ -211,7 +211,7 @@ if ($hero_image_id) {
 .sly-problem__card:last-child{border-right:none}
 .sly-problem__icon{margin-bottom:20px;color:#FF4419;font-size:22px;line-height:1}
 .sly-problem__card-title{margin:0 0 10px;font-size:17px!important;font-weight:700!important;line-height:1.25;color:#fff;text-transform:none;letter-spacing:0}
-.sly-problem__card-text{margin:0;font-size:13.5px!important;font-weight:300!important;line-height:1.55;color:rgba(255,255,255,0.55)}
+.sly-problem__card-text{margin:0;font-family:"Poppins",Arial,sans-serif!important;font-size:13.5px!important;font-weight:300!important;line-height:1.55;color:rgba(255,255,255,0.55)}
 @media(max-width:860px){
   .sly-problem{padding:52px 0 48px}
   .sly-problem__grid{grid-template-columns:repeat(2,1fr)}
@@ -237,7 +237,7 @@ if ($hero_image_id) {
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
         <h3 class="sly-problem__card-title">Skin-on-skin friction</h3>
-        <p class="sly-problem__card-text">Everything bunches, sticks and slides. By midday you've adjusted three times — and you're still not comfortable.</p>
+        <p class="sly-problem__card-text">Everything bunches, sticks and shifts. By midday, you're doing the undie shuffle - and downstairs is officially in crisis.</p>
       </div>
       <div class="sly-problem__card">
         <div class="sly-problem__icon">
