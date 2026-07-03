@@ -258,7 +258,7 @@ if ($hero_image_id) {
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
         </div>
         <h3 class="sly-problem__card-title">Zero support structure</h3>
-        <p class="sly-problem__card-text">Everything dangles. Nothing is held. Gravity wins by 3pm, and the chafe that follows lasts until you change.</p>
+        <p class="sly-problem__card-text">Everything dangles. Nothing supports. By 3pm, gravity's running the show — and the chafe won't clock off until your undies do.</p>
       </div>
     </div>
   </div>
