@@ -281,6 +281,7 @@ if ($hero_image_id) {
   </div>
 </section>
 
+<?php $benefits_img = get_template_directory_uri() . '/assets/images/benefits/'; ?>
 <!-- ── Benefits + Product split ───────────────────────────────────────────── -->
 <style>
 .sly-benefits-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
@@ -432,7 +433,6 @@ $benefits_product_img = get_theme_mod('sly_benefits_product_image', 'https://sly
 </section>
 <?php endif; ?>
 
-<?php $benefits_img = get_template_directory_uri() . '/assets/images/benefits/'; ?>
 <!-- ── Benefits / Adaptive pouch split ───────────────────────────────────── -->
 <style>
 .sly-pouch-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;font-family:Poppins,Arial,sans-serif}
