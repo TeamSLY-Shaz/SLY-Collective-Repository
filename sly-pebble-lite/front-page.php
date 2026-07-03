@@ -264,6 +264,23 @@ if ($hero_image_id) {
   </div>
 </section>
 
+<!-- ── Upgrade section ───────────────────────────────────────────────────── -->
+<style>
+.sly-upgrade{background:#fff;padding:72px 0 64px;font-family:Poppins,Arial,sans-serif}
+.sly-upgrade__eyebrow{margin:0 0 18px;font-size:12px!important;font-weight:700!important;letter-spacing:3px;text-transform:uppercase;color:#0bbfc6}
+.sly-upgrade__headline{margin:0 0 28px;font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(38px,6vw,80px)!important;font-weight:400!important;line-height:1.0!important;letter-spacing:-0.01em!important;text-transform:uppercase!important;color:#000!important}
+.sly-upgrade__body{margin:0;font-family:"Poppins",Arial,sans-serif!important;font-size:16px!important;font-weight:400!important;line-height:1.65;color:#888;max-width:640px}
+@media(max-width:860px){.sly-upgrade{padding:52px 0 48px}.sly-upgrade__headline{font-size:clamp(32px,7vw,60px)!important}}
+@media(max-width:480px){.sly-upgrade{padding:40px 0 36px}.sly-upgrade__headline{margin-bottom:20px}}
+</style>
+<section class="sly-upgrade">
+  <div class="container">
+    <p class="sly-upgrade__eyebrow">Lifted. Separated. Supported.</p>
+    <h2 class="sly-upgrade__headline">The Upgrade Your Drawer Has Needed.</h2>
+    <p class="sly-upgrade__body">SLY Collective underwear isn't about fashion. It's about solving a problem that every man has but nobody talks about. Built by Australians, for Australians — and anyone else who's done with discomfort.</p>
+  </div>
+</section>
+
 <!-- Hidden until images/content are ready -->
 <?php if (false) : ?>
 <section class="interactive-focus container" data-interactive-focus data-reveal>
