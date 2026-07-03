@@ -286,8 +286,8 @@ if ($hero_image_id) {
 <style>
 .sly-benefits-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
 .sly-benefits-split__left{background:#fff;padding:48px 40px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
-.sly-benefits-split__right{overflow:hidden;min-height:480px}
-.sly-benefits-split__right img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.sly-benefits-split__right{overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:center;background:#fff}
+.sly-benefits-split__right img{display:block;width:70%;height:auto;object-fit:contain}
 .sly-benefits-split .sly-benefits__grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 40px;width:100%;max-width:460px}
 .sly-benefits-split .sly-benefit{display:flex;flex-direction:column;align-items:center;text-align:center}
 .sly-benefits-split .sly-benefit__note{width:75%;margin:0 auto}
@@ -433,77 +433,6 @@ $benefits_product_img = get_theme_mod('sly_benefits_product_image', 'https://sly
 </section>
 <?php endif; ?>
 
-<!-- ── Benefits / Adaptive pouch split ───────────────────────────────────── -->
-<style>
-.sly-pouch-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;font-family:Poppins,Arial,sans-serif}
-.sly-pouch-split__left{background:#fff;padding:32px;box-sizing:border-box;display:flex;align-items:center}
-.sly-pouch-split__right{background:#000;padding:70px 40px;box-sizing:border-box;text-align:center}
-.sly-pouch-split .sly-benefits__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;width:100%;max-width:420px;margin:0 auto}
-.sly-pouch-split .sly-benefit{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;text-align:center}
-.sly-pouch-split .sly-benefit__note{width:70%!important;margin:0 auto}
-.sly-pouch-split .sly-benefit__note img{display:block;width:100%;height:auto}
-.sly-pouch-split .sly-benefit__desc{margin:8px 0 0;font-size:13px!important;line-height:1.3;font-weight:400!important;color:#222}
-.sly-pouch-split__right .sly-eyebrow{margin:0 0 12px;font-size:13px!important;font-weight:700!important;letter-spacing:2px;text-transform:uppercase;color:#0bbfc6}
-.sly-pouch-split__right h2{margin:0 0 28px;font-size:30px;line-height:1.15;font-weight:600;letter-spacing:0.06em;color:#fff;text-transform:uppercase;font-family:Poppins,Arial,sans-serif}
-.sly-pouch-split__right .sly-image-frame-v2{width:100%;max-width:480px;margin:0 auto 28px;overflow:hidden}
-.sly-pouch-split__right .sly-image-frame-v2 img{display:block;width:100%;height:auto}
-.sly-pouch-split__right h3{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:600;color:#0bbfc6;text-transform:uppercase;letter-spacing:0.05em;font-family:Poppins,Arial,sans-serif}
-.sly-pouch-split__right .sly-split-copy{font-size:15px!important;font-weight:400!important;line-height:1.3;color:rgba(255,255,255,0.7);margin:0 0 16px;max-width:480px;margin-inline:auto}
-.sly-pouch-split__right ul{margin:0 auto;padding:0;list-style:none;max-width:420px;text-align:left}
-.sly-pouch-split__right li{margin-bottom:8px;font-size:14.5px;line-height:1.2;color:rgba(255,255,255,0.75);padding-left:18px;position:relative}
-.sly-pouch-split__right li::before{content:"→";position:absolute;left:0;color:#0bbfc6;font-weight:700}
-.sly-pouch-split__right li strong{font-weight:700;color:#fff}
-@media(max-width:780px){
-  .sly-pouch-split{grid-template-columns:1fr}
-  .sly-pouch-split__left{padding:24px 16px}
-  .sly-pouch-split__right{padding:48px 20px}
-  .sly-pouch-split .sly-benefits__grid{gap:14px 18px}
-}
-</style>
-<section class="sly-pouch-split" data-reveal>
-	<div class="sly-pouch-split__left">
-		<div class="sly-benefits__grid">
-			<div class="sly-benefit" data-reveal>
-				<div class="sly-benefit__note">
-					<img src="<?php echo esc_url($benefits_img . 'no-ball-chafe.webp'); ?>" alt="No ball-chafe. EVER!" width="400" height="391" loading="lazy" decoding="async">
-				</div>
-				<p class="sly-benefit__desc">Cleverly designed inner pouch that separates. No leg contact. No chafe ever again.</p>
-			</div>
-			<div class="sly-benefit" data-reveal>
-				<div class="sly-benefit__note">
-					<img src="<?php echo esc_url($benefits_img . 'more-space.webp'); ?>" alt="More space... like a man-cave for your balls" width="400" height="383" loading="lazy" decoding="async">
-				</div>
-				<p class="sly-benefit__desc">Nothing worse than tight sweaty spaces. Our pouch rolls out the red carpet to spacious comfort.</p>
-			</div>
-			<div class="sly-benefit" data-reveal>
-				<div class="sly-benefit__note">
-					<img src="<?php echo esc_url($benefits_img . 'support.webp'); ?>" alt="Support. Especially during exercise" width="400" height="402" loading="lazy" decoding="async">
-				</div>
-				<p class="sly-benefit__desc">Proper structured scrotum support that keeps everything in place and reduces discomfort.</p>
-			</div>
-			<div class="sly-benefit" data-reveal>
-				<div class="sly-benefit__note">
-					<img src="<?php echo esc_url($benefits_img . 'sperm-health.webp'); ?>" alt="A better chance of healthier sperm" width="400" height="384" loading="lazy" decoding="async">
-				</div>
-				<p class="sly-benefit__desc">Prevent overheating. Regulates temperature. A crucial factor for the healthiest swimmers.</p>
-			</div>
-		</div>
-	</div>
-	<div class="sly-pouch-split__right">
-		<p class="sly-eyebrow">Pouch Underwear built for the way men actually move.</p>
-		<h2>SLY Adaptive Pouch</h2>
-		<div class="sly-image-frame-v2">
-			<img src="https://slycollective.com/wp-content/uploads/2026/06/Old-New-13-Black-4.1.webp" alt="SLY adaptive pouch showing lift, support and separation zone">
-		</div>
-		<h3>Lifted. Separated. Supported.</h3>
-		<p class="sly-split-copy">SLY's adaptive pouch gives the boys a secure drop zone, helping them stay supported, separated and comfortably in place.</p>
-		<ul>
-			<li><strong>Lift &amp; Support</strong> — keeps the boys sitting where they should</li>
-			<li><strong>Separation Zone</strong> — helps reduce skin-on-skin rubbing and chafe</li>
-			<li><strong>Moves With You</strong> — adaptive comfort that keeps up with your day</li>
-		</ul>
-	</div>
-</section>
 
 <?php if (class_exists('WooCommerce')) : ?>
 	<section class="container product-strip">
