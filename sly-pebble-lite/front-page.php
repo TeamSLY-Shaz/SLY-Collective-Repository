@@ -544,9 +544,9 @@ $benefits_product_img = get_theme_mod('sly_benefits_product_image', 'https://sly
 		<span class="social-proof-bar__label"><?php echo esc_html(get_theme_mod('sly_proof_rating_label', 'Average Rating')); ?></span>
 	</div>
 	<div class="social-proof-bar__item">
-		<span class="social-proof-bar__icon">&#10003;</span>
-		<span class="social-proof-bar__stat"><?php echo esc_html(get_theme_mod('sly_proof_customers', '12,000+')); ?></span>
-		<span class="social-proof-bar__label"><?php echo esc_html(get_theme_mod('sly_proof_customers_label', 'Happy Customers')); ?></span>
+		<span class="social-proof-bar__icon">&#128197;</span>
+		<span class="social-proof-bar__stat"><?php echo esc_html(get_theme_mod('sly_proof_customers', '20+ Years')); ?></span>
+		<span class="social-proof-bar__label"><?php echo esc_html(get_theme_mod('sly_proof_customers_label', 'Est. 2005')); ?></span>
 	</div>
 	<div class="social-proof-bar__item">
 		<span class="social-proof-bar__icon">&#128230;</span>

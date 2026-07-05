@@ -655,8 +655,8 @@ if (!function_exists('sly_pebble_lite_customize_register')) {
 		));
 		$add_text_control('sly_proof_rating', '4.8/5', __('Rating Stat', 'sly-pebble-lite'), 'sly_home_proof');
 		$add_text_control('sly_proof_rating_label', 'Average Rating', __('Rating Label', 'sly-pebble-lite'), 'sly_home_proof');
-		$add_text_control('sly_proof_customers', '12,000+', __('Customers Stat', 'sly-pebble-lite'), 'sly_home_proof');
-		$add_text_control('sly_proof_customers_label', 'Happy Customers', __('Customers Label', 'sly-pebble-lite'), 'sly_home_proof');
+		$add_text_control('sly_proof_customers', '20+ Years', __('Customers Stat', 'sly-pebble-lite'), 'sly_home_proof');
+		$add_text_control('sly_proof_customers_label', 'Est. 2005', __('Customers Label', 'sly-pebble-lite'), 'sly_home_proof');
 		$add_text_control('sly_proof_dispatch', '1-2 Days', __('Dispatch Stat', 'sly-pebble-lite'), 'sly_home_proof');
 		$add_text_control('sly_proof_dispatch_label', 'Fast Dispatch', __('Dispatch Label', 'sly-pebble-lite'), 'sly_home_proof');
 		$add_text_control('sly_proof_returns', '30 Days', __('Returns Stat', 'sly-pebble-lite'), 'sly_home_proof');
