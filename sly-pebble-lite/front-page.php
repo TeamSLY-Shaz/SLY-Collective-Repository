@@ -291,15 +291,18 @@ if ($hero_image_id) {
 .sly-benefits-split .sly-benefit__desc{margin:6px 0 0;font-family:"Poppins",Arial,sans-serif;font-size:12px;font-weight:400;line-height:1.35;color:#444;text-align:center}
 @media(max-width:780px){
   .sly-benefits-split{grid-template-columns:1fr}
-  .sly-benefits-split__left{padding:24px 16px;justify-content:center}
-  .sly-benefits-split__right{min-height:280px;justify-content:center}
+  .sly-benefits-split__left{padding:16px 12px;justify-content:center}
+  .sly-benefits-split__right{min-height:240px;justify-content:center}
   .sly-benefits-split__right img{margin:0 auto}
-  .sly-benefits-split .sly-benefits__grid{gap:14px 18px;max-width:100%}
+  .sly-benefits-split .sly-benefits__grid{gap:10px 14px;max-width:100%}
+  .sly-benefits-split .sly-benefit__note{width:58%}
+  .sly-benefits-split .sly-benefit__desc{font-size:11px;margin-top:4px}
 }
 @media(max-width:480px){
-  .sly-benefits-split__left{padding:20px 12px;justify-content:center}
-  .sly-benefits-split .sly-benefits__grid{gap:12px 14px}
-  .sly-benefits-split .sly-benefit__note{width:68%}
+  .sly-benefits-split__left{padding:12px 8px;justify-content:center}
+  .sly-benefits-split .sly-benefits__grid{gap:8px 10px}
+  .sly-benefits-split .sly-benefit__note{width:55%}
+  .sly-benefits-split .sly-benefit__desc{font-size:10.5px;margin-top:3px}
 }
 </style>
 <?php
