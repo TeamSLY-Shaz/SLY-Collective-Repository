@@ -224,7 +224,7 @@ if ($hero_image_id) {
 .sly-problem__card:last-child{border-right:none}
 .sly-problem__icon{margin-bottom:20px;color:#FF4419;font-size:22px;line-height:1}
 .sly-problem__card-title{margin:0 0 10px;font-size:17px!important;font-weight:700!important;line-height:1.25;color:#fff;text-transform:none;letter-spacing:0}
-.sly-problem__card-text{margin:0;font-family:"Poppins",Arial,sans-serif!important;font-size:13.5px!important;font-weight:300!important;line-height:1.55;color:rgba(255,255,255,0.55)}
+.sly-problem__card-text{margin:0;font-family:"Poppins",Arial,sans-serif!important;font-size:13.5px!important;font-weight:300!important;line-height:1.55;color:#fff!important}
 @media(max-width:860px){
   .sly-problem{padding:52px 0 20px}
   .sly-problem__grid{grid-template-columns:repeat(2,1fr)}
