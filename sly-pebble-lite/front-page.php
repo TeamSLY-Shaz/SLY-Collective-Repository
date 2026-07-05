@@ -215,7 +215,7 @@ if ($hero_image_id) {
 
 <!-- ── The Problem section ───────────────────────────────────────────────── -->
 <style>
-.sly-problem{background:#111;padding:72px 0 64px;font-family:Poppins,Arial,sans-serif}
+.sly-problem{background:#111;padding:72px 0 32px;font-family:Poppins,Arial,sans-serif}
 .sly-problem__eyebrow{margin:0 0 18px;font-size:12px!important;font-weight:700!important;letter-spacing:3px;text-transform:uppercase;color:#FF4419}
 .sly-problem__headline{margin:0 0 56px;font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(38px,6vw,80px)!important;font-weight:400!important;line-height:1.0!important;letter-spacing:-0.01em!important;text-transform:uppercase!important;color:#fff!important}
 .sly-problem__headline .strike{color:#555;text-decoration:line-through;text-decoration-color:#FF4419;text-decoration-thickness:3px}
@@ -226,14 +226,14 @@ if ($hero_image_id) {
 .sly-problem__card-title{margin:0 0 10px;font-size:17px!important;font-weight:700!important;line-height:1.25;color:#fff;text-transform:none;letter-spacing:0}
 .sly-problem__card-text{margin:0;font-family:"Poppins",Arial,sans-serif!important;font-size:13.5px!important;font-weight:300!important;line-height:1.55;color:rgba(255,255,255,0.55)}
 @media(max-width:860px){
-  .sly-problem{padding:52px 0 48px}
+  .sly-problem{padding:52px 0 20px}
   .sly-problem__grid{grid-template-columns:repeat(2,1fr)}
   .sly-problem__card{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding:28px 20px}
   .sly-problem__card:nth-child(odd){border-right:1px solid rgba(255,255,255,0.1)}
   .sly-problem__card:nth-last-child(-n+2){border-bottom:none}
 }
 @media(max-width:480px){
-  .sly-problem{padding:40px 0 36px}
+  .sly-problem{padding:40px 0 8px}
   .sly-problem__headline{margin-bottom:36px}
   .sly-problem__grid{grid-template-columns:1fr}
   .sly-problem__card{border-right:none!important;border-bottom:1px solid rgba(255,255,255,0.1);padding:24px 0}
