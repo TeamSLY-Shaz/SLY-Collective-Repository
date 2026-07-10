@@ -43,6 +43,8 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
 <style>
 /* Poppins override */
 .home .site-main p,.home .site-main li,.home .site-main span:not(.brandmark__primary):not(.brandmark__secondary),.home .site-main a,.home .site-main label,.home .site-main small,.home .site-main td,.home .site-main th,.home .site-main blockquote,.home .site-main figcaption{font-family:"Poppins",Arial,sans-serif!important}
+/* Hero title — Anton to match section headlines */
+.hero__title--bold,.hero__title--bold .hero__line{font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-weight:400!important;letter-spacing:-0.01em!important;text-transform:uppercase!important}
 /* Problem section */
 .sly-problem{background:#111;padding:72px 0 32px;font-family:Poppins,Arial,sans-serif}
 .sly-problem__eyebrow{margin:0 0 18px;font-size:12px!important;font-weight:700!important;letter-spacing:3px;text-transform:uppercase;color:#FF4419}
