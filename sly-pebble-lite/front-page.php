@@ -76,9 +76,9 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
 .sly-pillars__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,0.08)}
 .sly-pillar{padding:36px 28px;border-right:1px solid rgba(255,255,255,0.08);position:relative}
 .sly-pillar:last-child{border-right:none}
-.sly-pillar__num{position:absolute;top:24px;right:20px;font-size:56px;font-weight:700;line-height:1;color:rgba(180,60,20,0.35);font-family:Poppins,Arial,sans-serif;letter-spacing:-0.02em}
+.sly-pillar__num{position:absolute;top:24px;right:20px;font-size:56px;font-weight:700;line-height:1;color:#00b8c4;font-family:Poppins,Arial,sans-serif;letter-spacing:-0.02em}
 .sly-pillar__title{margin:0 0 16px;font-size:17px!important;font-weight:600!important;color:#fff;line-height:1.25;text-transform:none;letter-spacing:0;padding-right:48px}
-.sly-pillar__text{margin:0;font-size:13.5px!important;font-weight:300!important;line-height:1.65;color:rgba(255,255,255,0.5)}
+.sly-pillar__text{margin:0;font-size:13.5px!important;font-weight:300!important;line-height:1.65;color:#fff!important}
 /* Responsive */
 @media(max-width:860px){
   .sly-problem{padding:52px 0 20px}
