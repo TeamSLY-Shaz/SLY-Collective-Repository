@@ -79,6 +79,13 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
 .sly-pillar__num{position:absolute;top:24px;right:20px;font-size:56px;font-weight:700;line-height:1;color:#4E87A0;font-family:Poppins,Arial,sans-serif;letter-spacing:-0.02em}
 .sly-pillar__title{margin:0 0 16px;font-size:17px!important;font-weight:600!important;color:#fff;line-height:1.25;text-transform:none;letter-spacing:0;padding-right:48px;padding-bottom:12px;border-bottom:2px solid #4E87A0}
 .sly-pillar__text{margin:0;font-size:13.5px!important;font-weight:300!important;line-height:1.65;color:#fff!important}
+/* Customer review */
+.sly-review{background:#0d0d0d;padding:80px 0 72px}
+.sly-review__inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative}
+.sly-review__quote{font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(24px,3.8vw,52px)!important;font-weight:400!important;line-height:1.15!important;letter-spacing:0.01em!important;text-transform:uppercase!important;color:rgba(255,255,255,0.82)!important;margin:0 0 36px;position:relative;padding-top:40px}
+.sly-review__quote::before{content:'\201C';font-family:"Anton",Impact,sans-serif;font-size:120px;line-height:0.6;color:#4E87A0;position:absolute;top:0;left:-8px;opacity:0.9}
+.sly-review__attr{font-family:"Poppins",Arial,sans-serif!important;font-size:14px!important;font-weight:400!important;color:rgba(255,255,255,0.4)!important;letter-spacing:0.05em;text-transform:none}
+.sly-review__attr::before{content:'— '}
 /* Responsive */
 @media(max-width:860px){
   .sly-problem{padding:52px 0 20px}
@@ -120,6 +127,9 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
   .sly-pillar{border-right:none!important;border-bottom:1px solid rgba(255,255,255,0.08);padding:24px 0}
   .sly-pillar:last-child{border-bottom:none}
   .sly-pillar__num{font-size:44px;top:16px;right:0}
+  .sly-review{padding:56px 0 48px}
+  .sly-review__quote{font-size:clamp(20px,5.5vw,32px)!important;padding-top:32px}
+  .sly-review__quote::before{font-size:80px}
 }
 </style>
 
@@ -238,6 +248,13 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
         <p class="sly-pillar__text">Proudly manufactured in Australia. Reduced carbon footprint, exceptional quality control, and support for local industry. Some things are worth keeping local.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="sly-review">
+  <div class="sly-review__inner">
+    <p class="sly-review__quote">The fact that the family jewels are tucked into a supporting pouch, which affords the comfort that my usual briefs didn&#8217;t do. No more, one jewel hanging uncomfortably loose outside of the briefs. No more embarrassing attempts to &#8216;repack&#8217; the package!&#8221;</p>
+    <p class="sly-review__attr">Ben G &mdash; Morayfield</p>
   </div>
 </section>
 
