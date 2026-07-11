@@ -76,14 +76,14 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
 .sly-pillars__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,0.08)}
 .sly-pillar{padding:36px 28px;border-right:1px solid rgba(255,255,255,0.08);position:relative}
 .sly-pillar:last-child{border-right:none}
-.sly-pillar__num{position:absolute;top:24px;right:20px;font-size:56px;font-weight:700;line-height:1;color:#4E87A0;font-family:Poppins,Arial,sans-serif;letter-spacing:-0.02em}
-.sly-pillar__title{margin:0 0 16px;font-size:17px!important;font-weight:600!important;color:#fff;line-height:1.25;text-transform:none;letter-spacing:0;padding-right:48px;padding-bottom:12px;border-bottom:2px solid #4E87A0}
+.sly-pillar__num{position:absolute;top:24px;right:20px;font-size:56px;font-weight:700;line-height:1;color:#3789A3;font-family:Poppins,Arial,sans-serif;letter-spacing:-0.02em}
+.sly-pillar__title{margin:0 0 16px;font-size:17px!important;font-weight:600!important;color:#fff;line-height:1.25;text-transform:none;letter-spacing:0;padding-right:48px;padding-bottom:12px;border-bottom:2px solid #3789A3}
 .sly-pillar__text{margin:0;font-size:13.5px!important;font-weight:300!important;line-height:1.65;color:#fff!important}
 /* Customer review */
 .sly-review{background:#0d0d0d;padding:80px 0 72px}
 .sly-review__inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative}
 .sly-review__quote{font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-size:clamp(12px,1.9vw,26px)!important;font-weight:400!important;line-height:1.15!important;letter-spacing:0.01em!important;text-transform:uppercase!important;color:rgba(255,255,255,0.82)!important;margin:0 0 36px;position:relative;padding-top:40px}
-.sly-review__quote::before{content:'\201C';font-family:"Anton",Impact,sans-serif;font-size:120px;line-height:0.6;color:#4E87A0;position:absolute;top:0;left:-8px;opacity:0.9}
+.sly-review__quote::before{content:'\201C';font-family:"Anton",Impact,sans-serif;font-size:120px;line-height:0.6;color:#3789A3;position:absolute;top:0;left:-8px;opacity:0.9}
 .sly-review__attr{font-family:"Poppins",Arial,sans-serif!important;font-size:14px!important;font-weight:400!important;color:rgba(255,255,255,0.4)!important;letter-spacing:0.05em;text-transform:none}
 .sly-review__attr::before{content:'— '}
 /* Responsive */
