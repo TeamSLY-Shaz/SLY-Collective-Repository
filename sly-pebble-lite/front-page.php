@@ -128,7 +128,7 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
   .sly-pillar:last-child{border-bottom:none}
   .sly-pillar__num{font-size:44px;top:16px;right:0}
   .sly-review{padding:56px 0 48px}
-  .sly-review__quote{font-size:clamp(10px,2.75vw,16px)!important;padding-top:32px}
+  .sly-review__quote{font-size:clamp(20px,5.5vw,32px)!important;line-height:1.55!important;padding-top:32px}
   .sly-review__quote::before{font-size:80px}
 }
 </style>
