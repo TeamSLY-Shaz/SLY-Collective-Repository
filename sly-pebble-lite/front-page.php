@@ -42,7 +42,7 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
 <!-- ── All homepage styles (single block) ───────────────────────────────── -->
 <style>
 /* Poppins override */
-.home .site-main p,.home .site-main li,.home .site-main span:not(.brandmark__primary):not(.brandmark__secondary),.home .site-main a,.home .site-main label,.home .site-main small,.home .site-main td,.home .site-main th,.home .site-main blockquote,.home .site-main figcaption{font-family:"Poppins",Arial,sans-serif!important}
+.home .site-main p,.home .site-main li,.home .site-main span:not(.brandmark__primary):not(.brandmark__secondary):not(.hero__line),.home .site-main a,.home .site-main label,.home .site-main small,.home .site-main td,.home .site-main th,.home .site-main blockquote,.home .site-main figcaption{font-family:"Poppins",Arial,sans-serif!important}
 /* Hero title — Anton to match section headlines */
 .hero__title--bold,.hero__title--bold .hero__line{font-family:"Anton",Impact,"Arial Narrow",sans-serif!important;font-weight:400!important;letter-spacing:-0.01em!important;text-transform:uppercase!important}
 /* Problem section */
@@ -284,6 +284,7 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
     <p class="sly-review__attr">Ben G &mdash; Morayfield</p>
   </div>
 </section>
+<div style="height:64px"></div>
 
 <section class="feature-tiles container">
 	<?php foreach ($home_feature_tiles as $feature_tile) : ?>
