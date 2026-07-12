@@ -300,7 +300,12 @@ $short_desc = trim( (string) $short_desc );
 						<span class="sly-pd-tab-icon" aria-hidden="true">+</span>
 					</button>
 					<div class="sly-pd-tab-content" hidden>
-						<p><?php esc_html_e( '95% Polyester 5% Elastane. Our signature SLY-Flex fabric is engineered for all-day comfort with exceptional stretch recovery. The four-way stretch eliminates ride-up and maintains its shape through hundreds of washes.', 'sly-pebble-lite' ); ?></p>
+						<?php
+						$_fabric_text = ( stripos( get_the_title(), 'bamboo' ) !== false )
+							? '92% Bamboo 8% Elastane. Our signature SLY-Flex fabric is engineered for all-day comfort with exceptional stretch recovery. The four-way stretch eliminates ride-up and maintains its shape through hundreds of washes.'
+							: '95% Polyester 5% Elastane. Our signature SLY-Flex fabric is engineered for all-day comfort with exceptional stretch recovery. The four-way stretch eliminates ride-up and maintains its shape through hundreds of washes.';
+						?>
+						<p><?php echo esc_html( $_fabric_text ); ?></p>
 					</div>
 				</div>
 
