@@ -284,7 +284,7 @@ if (!function_exists('sly_pebble_lite_enqueue_assets')) {
 			wp_enqueue_script(
 				'sly-pebble-lite-checkout-guard',
 				get_template_directory_uri() . '/assets/js/checkout-guard.js',
-				array('jquery', 'wc-checkout'),
+				array(),
 				file_exists($checkout_js) ? (string) filemtime($checkout_js) : SLY_PEBBLE_LITE_VERSION,
 				true
 			);

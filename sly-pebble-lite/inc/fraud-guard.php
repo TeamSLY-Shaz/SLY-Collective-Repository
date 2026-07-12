@@ -274,19 +274,24 @@ if (!function_exists('sly_fg_checkout_process')) {
 		}
 
 		// Minimum time on checkout — guards against automated submissions.
-		// If session has no start time (race condition on fresh sessions), set it now
-		// and allow through rather than blocking the customer with "please refresh".
-		$started_at = sly_fg_has_wc_session() ? (int) WC()->session->get('sly_fg_started') : 0;
-		if ($started_at <= 0) {
-			// Session didn't persist the start time — set it back-dated so the
-			// time check passes. The honeypot + UA checks above already ran.
-			if (sly_fg_has_wc_session()) {
-				WC()->session->set('sly_fg_started', time() - $settings['min_checkout_seconds']);
+		// Priority 1: use the client-side timestamp injected by checkout-guard.js into the
+		// form POST as sly_fg_client_stamp (Unix seconds). This survives session resets and
+		// works regardless of whether the WC session cookie persisted.
+		// Priority 2: fall back to WC session value set on page load.
+		// If neither is available, skip the time check — honeypot + UA already ran.
+		$started_at = 0;
+		if (!empty($posted['sly_fg_client_stamp'])) {
+			$client_stamp = (int) $posted['sly_fg_client_stamp'];
+			// Sanity check: stamp must be within the last 2 hours and not in the future
+			if ($client_stamp > 0 && $client_stamp <= time() && $client_stamp >= (time() - 7200)) {
+				$started_at = $client_stamp;
 			}
-			$started_at = time() - $settings['min_checkout_seconds'];
+		}
+		if ($started_at <= 0 && sly_fg_has_wc_session()) {
+			$started_at = (int) WC()->session->get('sly_fg_started');
 		}
 
-		if ((time() - $started_at) < (int) $settings['min_checkout_seconds']) {
+		if ($started_at > 0 && (time() - $started_at) < (int) $settings['min_checkout_seconds']) {
 			wc_add_notice(__('Please review your details and submit checkout again.', 'sly-fraud-guard'), 'error');
 			return;
 		}
