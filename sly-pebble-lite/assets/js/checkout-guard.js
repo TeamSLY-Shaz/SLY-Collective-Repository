@@ -1,8 +1,6 @@
 (() => {
   const form = document.querySelector('form.checkout');
-  if (!form) {
-    return;
-  }
+  if (!form) return;
 
   const stampField = document.createElement('input');
   stampField.type = 'hidden';
@@ -10,15 +8,18 @@
   stampField.value = String(Date.now());
   form.appendChild(stampField);
 
-  form.addEventListener('submit', () => {
-    const placeOrderButton = form.querySelector('#place_order');
-    if (placeOrderButton) {
-      placeOrderButton.setAttribute('disabled', 'disabled');
-      placeOrderButton.classList.add('processing');
-      setTimeout(() => {
-        placeOrderButton.removeAttribute('disabled');
-        placeOrderButton.classList.remove('processing');
-      }, 12000);
+  // Re-enable the button whenever WooCommerce signals that the checkout
+  // has errored or been reset — avoids the form staying frozen after a
+  // failed payment attempt.
+  const unlock = () => {
+    const btn = form.querySelector('#place_order');
+    if (btn) {
+      btn.removeAttribute('disabled');
+      btn.classList.remove('processing');
     }
-  });
+  };
+
+  document.body.addEventListener('checkout_error', unlock);
+  document.body.addEventListener('payment_method_selected', unlock);
+  document.body.addEventListener('updated_checkout', unlock);
 })();
