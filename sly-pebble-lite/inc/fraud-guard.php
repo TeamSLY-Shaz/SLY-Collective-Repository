@@ -17,10 +17,10 @@ if (!function_exists('sly_fg_settings')) {
 	function sly_fg_settings() {
 		return array(
 			'rate_window_seconds'   => 10 * MINUTE_IN_SECONDS,
-			'ip_attempt_limit'      => 4,
-			'email_attempt_limit'   => 3,
+			'ip_attempt_limit'      => 8,   // raised from 4 — payment failures + retries are normal
+			'email_attempt_limit'   => 5,   // raised from 3
 			'ip_unique_email_limit' => 3,
-			'min_checkout_seconds'  => 12,
+			'min_checkout_seconds'  => 3,   // lowered from 12 — bots are blocked; real users shouldn't wait
 			'low_value_threshold'   => 30.00,
 			'block_score'           => 65,
 			'review_score'          => 30,
@@ -194,12 +194,12 @@ if (!function_exists('sly_fg_score')) {
 			$reasons[] = 'name_contains_digits';
 		}
 
-		if ($ip_attempts >= 4) {
+		if ($ip_attempts >= (int) $settings['ip_attempt_limit']) {
 			$score += 25;
 			$reasons[] = 'high_ip_attempt_volume';
 		}
 
-		if ($email_attempts >= 3) {
+		if ($email_attempts >= (int) $settings['email_attempt_limit']) {
 			$score += 20;
 			$reasons[] = 'high_email_attempt_volume';
 		}
@@ -261,20 +261,29 @@ if (!function_exists('sly_fg_checkout_process')) {
 		$email    = isset($posted['billing_email']) ? sanitize_email((string) $posted['billing_email']) : '';
 		$ua       = sly_fg_get_ua();
 
+		// Honeypot
 		if (!empty($posted['sly_fg_website'])) {
 			wc_add_notice(__('Checkout validation failed. Please refresh and try again.', 'sly-fraud-guard'), 'error');
 			return;
 		}
 
+		// Bad user agent (bots, headless browsers)
 		if (sly_fg_is_bad_ua($ua)) {
 			wc_add_notice(__('Checkout validation failed. Please refresh and try again.', 'sly-fraud-guard'), 'error');
 			return;
 		}
 
+		// Minimum time on checkout — guards against automated submissions.
+		// If session has no start time (race condition on fresh sessions), set it now
+		// and allow through rather than blocking the customer with "please refresh".
 		$started_at = sly_fg_has_wc_session() ? (int) WC()->session->get('sly_fg_started') : 0;
 		if ($started_at <= 0) {
-			wc_add_notice(__('Please refresh checkout and try again.', 'sly-fraud-guard'), 'error');
-			return;
+			// Session didn't persist the start time — set it back-dated so the
+			// time check passes. The honeypot + UA checks above already ran.
+			if (sly_fg_has_wc_session()) {
+				WC()->session->set('sly_fg_started', time() - $settings['min_checkout_seconds']);
+			}
+			$started_at = time() - $settings['min_checkout_seconds'];
 		}
 
 		if ((time() - $started_at) < (int) $settings['min_checkout_seconds']) {
@@ -282,11 +291,15 @@ if (!function_exists('sly_fg_checkout_process')) {
 			return;
 		}
 
+		// Disposable email
 		if (sly_fg_is_disposable_email($email)) {
 			wc_add_notice(__('Please use a permanent email address for your order.', 'sly-fraud-guard'), 'error');
 			return;
 		}
 
+		// Rate limiting — only counted AFTER all early-exit checks above.
+		// This prevents timer retries and WooCommerce validation failures from
+		// eating rate-limit tokens and locking out legitimate customers.
 		$ip_attempts = sly_fg_bump_counter(sly_fg_key('sly_fg_ip_', $ip), $settings['rate_window_seconds']);
 		if ($ip_attempts > (int) $settings['ip_attempt_limit']) {
 			wc_add_notice(__('Too many checkout attempts. Please wait 10 minutes and try again.', 'sly-fraud-guard'), 'error');

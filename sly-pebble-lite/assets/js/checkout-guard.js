@@ -1,4 +1,6 @@
 (() => {
+  if (typeof jQuery === 'undefined') return;
+
   const form = document.querySelector('form.checkout');
   if (!form) return;
 
@@ -8,9 +10,8 @@
   stampField.value = String(Date.now());
   form.appendChild(stampField);
 
-  // Re-enable the button whenever WooCommerce signals that the checkout
-  // has errored or been reset — avoids the form staying frozen after a
-  // failed payment attempt.
+  // WooCommerce fires all checkout events through jQuery.trigger(), which does NOT
+  // dispatch native DOM events — addEventListener() never fires. Must use jQuery.on().
   const unlock = () => {
     const btn = form.querySelector('#place_order');
     if (btn) {
@@ -19,7 +20,5 @@
     }
   };
 
-  document.body.addEventListener('checkout_error', unlock);
-  document.body.addEventListener('payment_method_selected', unlock);
-  document.body.addEventListener('updated_checkout', unlock);
+  jQuery(document.body).on('checkout_error payment_method_selected updated_checkout', unlock);
 })();
