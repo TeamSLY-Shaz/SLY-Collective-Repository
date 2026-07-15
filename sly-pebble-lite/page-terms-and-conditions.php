@@ -126,8 +126,10 @@ get_header();
 
 		<h2>4. Discount Codes &amp; Promotions</h2>
 		<ul>
+			<li><strong>One discount per purchase.</strong> Only one discount can be applied to any single order — full stop. Discount codes can't be stacked with each other, and a code can't be added on top of an automatic discount that's already applied to your order (for example, our bulk buy discount). If your order already benefits from a bulk buy or other automatic promotion, a coupon code can't be used on the same purchase.</li>
 			<li>Discount codes (including <strong>SLY20</strong>) apply only as described in the specific offer — SLY20 is for your first order, one use per customer.</li>
-			<li>Codes can't be combined with other codes or applied retroactively to earlier orders.</li>
+			<li>Codes can't be applied retroactively to earlier orders.</li>
+			<li>Where more than one discount could technically apply, the order will receive the single discount as determined by the checkout — we may remove or reverse stacked discounts applied in error.</li>
 			<li>We may withdraw or change a promotion at any time, but we'll always honour a code validly applied before the change.</li>
 		</ul>
 
