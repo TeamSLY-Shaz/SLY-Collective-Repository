@@ -10,6 +10,7 @@ if (!function_exists('sly_pebble_lite_fallback_menu')) {
 		echo '<li><a href="' . esc_url(home_url('/product-category/men-underwear/')) . '">Men Underwear</a></li>';
 		echo '<li><a href="' . esc_url(home_url('/about-us')) . '">About</a></li>';
 		echo '<li><a href="' . esc_url(home_url('/contact')) . '">Contact</a></li>';
+		echo '<li><a href="' . esc_url(home_url('/terms-and-conditions/')) . '">Terms &amp; Conditions</a></li>';
 		echo '</ul>';
 	}
 }
