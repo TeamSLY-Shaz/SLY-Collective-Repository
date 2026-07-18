@@ -39,9 +39,12 @@ add_action( 'wp_head', function () {
 	.sly-rrp-chip--lime{background:#D7E05A;border-color:#D7E05A;color:#146a7b}
 	.sly-rrp-chip--coral{background:#FF6F5B;border-color:#FF6F5B;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.18)}
 
-	/* ── Content shell ─────────────────────────────────────────────── */
-	.sly-rrp-wrap{max-width:880px;margin:0 auto;padding:3.5rem 1.5rem 4.5rem}
-	.sly-rrp-card{background:#fff;border:1px solid var(--sly-line);border-radius:var(--sly-radius);padding:clamp(1.75rem,4vw,3.25rem);box-shadow:var(--sly-shadow)}
+	/* ── Full-width page: hero flush under header, no outer card ───── */
+	.site-main{padding-top:0!important}
+
+	/* ── Content shell — full width, no container/border ───────────── */
+	.sly-rrp-wrap{width:100%;max-width:none;margin:0;padding:3rem clamp(1rem,4vw,3rem) 4rem}
+	.sly-rrp-card{background:transparent;border:none;border-radius:0;padding:0;box-shadow:none}
 
 	/* ── Enhance the_content() typography — preserves all text, restyles it ── */
 	.sly-rrp-card .entry-content{font-size:1rem;line-height:1.75;color:var(--sly-ink)}
@@ -87,10 +90,10 @@ add_action( 'wp_head', function () {
 	.sly-rrp-card .entry-content hr{border:none;border-top:1px solid var(--sly-line);margin:2.5rem 0}
 	.sly-rrp-card .entry-content strong{font-weight:700;color:var(--sly-ink)}
 
-	/* ── CTA — gradient teal, with a tiny lime/coral accent-dot flourish ── */
+	/* ── CTA — gradient teal, full width, with a tiny lime/coral accent-dot flourish ── */
 	.sly-rrp-cta{padding:0 0 4.5rem}
-	.sly-rrp-cta__inner{max-width:880px;margin:0 auto;padding:0 1.5rem}
-	.sly-rrp-cta__panel{background:linear-gradient(120deg,#146a7b 0%,#197E92 50%,#1a8fa5 100%);border-radius:var(--sly-radius);padding:3rem 2.5rem;text-align:center;color:#fff}
+	.sly-rrp-cta__inner{width:100%;max-width:none;margin:0;padding:0}
+	.sly-rrp-cta__panel{background:linear-gradient(120deg,#146a7b 0%,#197E92 50%,#1a8fa5 100%);border-radius:0;padding:3rem 2.5rem;text-align:center;color:#fff}
 	.sly-rrp-cta__dots{display:flex;justify-content:center;align-items:center;gap:.4rem;margin:0 0 1rem}
 	.sly-rrp-cta__dots span{display:inline-block;width:8px;height:8px;border-radius:50%}
 	.sly-rrp-cta__dots span:nth-child(1){background:rgba(255,255,255,.85)}
@@ -107,7 +110,7 @@ add_action( 'wp_head', function () {
 	/* ── Responsive ────────────────────────────────────────────────── */
 	@media(max-width:900px){
 		.sly-rrp-hero{padding:3.5rem 0 2.75rem}
-		.sly-rrp-card{padding:1.5rem}
+		.sly-rrp-wrap{padding:2.25rem 1rem 3rem}
 		.sly-rrp-cta__panel{padding:2.25rem 1.5rem}
 	}
 	@media(max-width:600px){

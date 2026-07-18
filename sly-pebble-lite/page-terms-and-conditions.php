@@ -38,9 +38,12 @@ add_action( 'wp_head', function () {
 	.sly-tc-chip{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.02em;backdrop-filter:blur(4px)}
 	.sly-tc-chip--lime{background:#D7E05A;border-color:#D7E05A;color:#146a7b}
 
-	/* ── Content card ──────────────────────────────────────────────── */
-	.sly-tc-wrap{max-width:880px;margin:0 auto;padding:3.5rem 1.5rem 0}
-	.sly-tc-card{background:#fff;border:1px solid var(--sly-line);border-radius:var(--sly-radius);padding:clamp(1.75rem,4vw,3.25rem);box-shadow:var(--sly-shadow)}
+	/* ── Full-width page: hero flush under header, no outer card ───── */
+	.site-main{padding-top:0!important}
+
+	/* ── Content — full width, no container/border ─────────────────── */
+	.sly-tc-wrap{width:100%;max-width:none;margin:0;padding:3rem clamp(1rem,4vw,3rem) 0}
+	.sly-tc-card{background:transparent;border:none;border-radius:0;padding:0;box-shadow:none}
 	.sly-tc-card .sly-tc-updated{font-size:.82rem!important;font-weight:600!important;text-transform:uppercase;letter-spacing:.08em;color:var(--sly-accent);margin:0 0 2rem}
 	.sly-tc-card p{font-size:1rem!important;line-height:1.75!important;font-weight:300!important;color:var(--sly-ink);margin:0 0 1.25rem}
 	.sly-tc-card h2{font-size:clamp(1.2rem,2.5vw,1.6rem)!important;font-weight:900!important;text-transform:uppercase;letter-spacing:.03em;color:var(--sly-ink);margin:2.5rem 0 .9rem;padding-bottom:.6rem;position:relative}
@@ -56,10 +59,10 @@ add_action( 'wp_head', function () {
 	.sly-tc-callout{margin:1.75rem 0;padding:1.4rem 1.6rem 1.4rem 1.75rem;border-left:4px solid #D7E05A;background:var(--sly-sand);border-radius:0 12px 12px 0;font-size:.95rem;line-height:1.7;color:var(--sly-ink)}
 	.sly-tc-callout p{margin:0!important;font-size:.95rem!important}
 
-	/* ── CTA ───────────────────────────────────────────────────────── */
+	/* ── CTA — full width ──────────────────────────────────────────── */
 	.sly-tc-cta{padding:3rem 0 4.5rem}
-	.sly-tc-cta__inner{max-width:880px;margin:0 auto;padding:0 1.5rem}
-	.sly-tc-cta__panel{background:linear-gradient(120deg,#146a7b 0%,#197E92 50%,#1a8fa5 100%);border-radius:var(--sly-radius);padding:3rem 2.5rem;text-align:center;color:#fff}
+	.sly-tc-cta__inner{width:100%;max-width:none;margin:0;padding:0}
+	.sly-tc-cta__panel{background:linear-gradient(120deg,#146a7b 0%,#197E92 50%,#1a8fa5 100%);border-radius:0;padding:3rem 2.5rem;text-align:center;color:#fff}
 	.sly-tc-cta__dots{display:flex;justify-content:center;align-items:center;gap:.4rem;margin:0 0 1rem}
 	.sly-tc-cta__dots span{display:inline-block;width:8px;height:8px;border-radius:50%}
 	.sly-tc-cta__dots span:nth-child(1){background:rgba(255,255,255,.85)}
@@ -76,7 +79,7 @@ add_action( 'wp_head', function () {
 	/* ── Responsive ────────────────────────────────────────────────── */
 	@media(max-width:900px){
 		.sly-tc-hero{padding:3.5rem 0 2.75rem}
-		.sly-tc-card{padding:1.5rem}
+		.sly-tc-wrap{padding:2.25rem 1rem 0}
 		.sly-tc-cta__panel{padding:2.25rem 1.5rem}
 	}
 	@media(max-width:600px){
