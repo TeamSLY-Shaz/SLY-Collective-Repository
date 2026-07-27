@@ -75,6 +75,8 @@ add_action( 'wp_head', function () {
 	?>
 	<style>
 	/* ── Size Guide Hero ──────────────────────────────────────────── */
+	/* ── Size Guide Hero — flush under header, no gap ─────────────── */
+	.site-main{padding-top:0!important}
 	.sly-sg-hero{background:var(--sly-sand);padding:4.5rem 0 3rem;text-align:center}
 	.sly-sg-hero__kicker{font-size:.78rem;font-weight:700;letter-spacing:.16em;color:var(--sly-accent);text-transform:uppercase;margin:0 0 .75rem}
 	.sly-sg-hero__title{font-size:clamp(2.2rem,5.5vw,3.8rem)!important;font-weight:900;text-transform:uppercase;color:var(--sly-ink);margin:0 0 1rem;letter-spacing:.04em;line-height:1.1}
@@ -234,7 +236,7 @@ get_header();
 				<tr>
 					<td data-label="SLY Size"><strong>XS</strong></td>
 					<td data-label="Waist (cm)">70–75</td>
-					<td data-label="Waist (in)">28–30&Prime;</td>
+					<td data-label="Waist (in)">27½–29½&Prime;</td>
 					<td data-label="Hip (cm)">76–81</td>
 					<td data-label="Hip (in)">30–32&Prime;</td>
 					<td data-label="AU Clothing">XS</td>
@@ -242,7 +244,7 @@ get_header();
 				<tr>
 					<td data-label="SLY Size"><strong>S</strong></td>
 					<td data-label="Waist (cm)">75–80</td>
-					<td data-label="Waist (in)">30–32&Prime;</td>
+					<td data-label="Waist (in)">29½–31½&Prime;</td>
 					<td data-label="Hip (cm)">81–86</td>
 					<td data-label="Hip (in)">32–34&Prime;</td>
 					<td data-label="AU Clothing">S</td>
@@ -250,40 +252,40 @@ get_header();
 				<tr>
 					<td data-label="SLY Size"><strong>M</strong></td>
 					<td data-label="Waist (cm)">80–85</td>
-					<td data-label="Waist (in)">32–34&Prime;</td>
+					<td data-label="Waist (in)">31½–33½&Prime;</td>
 					<td data-label="Hip (cm)">86–91</td>
 					<td data-label="Hip (in)">34–36&Prime;</td>
 					<td data-label="AU Clothing">M</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>L</strong></td>
-					<td data-label="Waist (cm)">85–91</td>
-					<td data-label="Waist (in)">34–36&Prime;</td>
-					<td data-label="Hip (cm)">91–97</td>
+					<td data-label="Waist (cm)">85–90</td>
+					<td data-label="Waist (in)">33½–35½&Prime;</td>
+					<td data-label="Hip (cm)">91–96</td>
 					<td data-label="Hip (in)">36–38&Prime;</td>
 					<td data-label="AU Clothing">L</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>XL</strong></td>
-					<td data-label="Waist (cm)">91–97</td>
-					<td data-label="Waist (in)">36–38&Prime;</td>
-					<td data-label="Hip (cm)">97–102</td>
+					<td data-label="Waist (cm)">90–95</td>
+					<td data-label="Waist (in)">35½–37½&Prime;</td>
+					<td data-label="Hip (cm)">96–101</td>
 					<td data-label="Hip (in)">38–40&Prime;</td>
 					<td data-label="AU Clothing">XL</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>2XL</strong></td>
-					<td data-label="Waist (cm)">97–102</td>
-					<td data-label="Waist (in)">38–40&Prime;</td>
-					<td data-label="Hip (cm)">102–107</td>
+					<td data-label="Waist (cm)">95–100</td>
+					<td data-label="Waist (in)">37½–39½&Prime;</td>
+					<td data-label="Hip (cm)">101–106</td>
 					<td data-label="Hip (in)">40–42&Prime;</td>
 					<td data-label="AU Clothing">2XL</td>
 				</tr>
 				<tr>
 					<td data-label="SLY Size"><strong>3XL</strong></td>
-					<td data-label="Waist (cm)">102–107</td>
-					<td data-label="Waist (in)">40–42&Prime;</td>
-					<td data-label="Hip (cm)">107–112</td>
+					<td data-label="Waist (cm)">100–105</td>
+					<td data-label="Waist (in)">39½–41½&Prime;</td>
+					<td data-label="Hip (cm)">106–111</td>
 					<td data-label="Hip (in)">42–44&Prime;</td>
 					<td data-label="AU Clothing">3XL</td>
 				</tr>
