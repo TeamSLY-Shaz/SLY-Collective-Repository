@@ -3,12 +3,60 @@
  * Template Name: Contact Us
  * Slug: contact-us-sly-collective-mens-underwear
  *
- * Contact page. Pulls the_content() to preserve any existing contact form,
- * then adds branded channel cards and a pre-contact FAQ strip.
+ * Contact page. Renders a self-contained, native contact form (no dependency
+ * on page content or a form plugin), plus branded channel cards and a
+ * pre-contact FAQ strip.
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+// ── Form handler — native submit, no plugin dependency ────────────────────────
+add_action( 'template_redirect', function () {
+	if ( ! is_page_template( 'page-contact-us-sly-collective-mens-underwear.php' ) ) {
+		return;
+	}
+	if ( ! isset( $_POST['sly_cu_submit'] ) ) {
+		return;
+	}
+
+	$redirect = get_permalink();
+
+	if ( ! isset( $_POST['sly_cu_nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['sly_cu_nonce'] ), 'sly_cu_contact' ) ) {
+		wp_safe_redirect( add_query_arg( 'sly_cu', 'error', $redirect ) );
+		exit;
+	}
+
+	// Honeypot — bots fill every field, humans never see this one.
+	if ( ! empty( $_POST['sly_cu_hp'] ) ) {
+		wp_safe_redirect( add_query_arg( 'sly_cu', 'sent', $redirect ) );
+		exit;
+	}
+
+	$name    = isset( $_POST['sly_cu_name'] ) ? sanitize_text_field( wp_unslash( $_POST['sly_cu_name'] ) ) : '';
+	$email   = isset( $_POST['sly_cu_email'] ) ? sanitize_email( wp_unslash( $_POST['sly_cu_email'] ) ) : '';
+	$subject = isset( $_POST['sly_cu_subject'] ) ? sanitize_text_field( wp_unslash( $_POST['sly_cu_subject'] ) ) : '';
+	$message = isset( $_POST['sly_cu_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['sly_cu_message'] ) ) : '';
+
+	if ( '' === $name || ! is_email( $email ) || '' === $message ) {
+		wp_safe_redirect( add_query_arg( 'sly_cu', 'error', $redirect ) );
+		exit;
+	}
+
+	$to           = 'sales@slycollective.com';
+	$mail_subject = '[Contact Form] ' . ( $subject ? $subject : 'New message from ' . $name );
+	$body         = "New enquiry from the SLY Collective contact page:\n\n"
+		. "Name: {$name}\n"
+		. "Email: {$email}\n"
+		. "Subject: " . ( $subject ? $subject : '(none)' ) . "\n\n"
+		. "Message:\n{$message}";
+	$headers      = array( 'Reply-To: ' . $name . ' <' . $email . '>' );
+
+	wp_mail( $to, $mail_subject, $body, $headers );
+
+	wp_safe_redirect( add_query_arg( 'sly_cu', 'sent', $redirect ) );
+	exit;
+} );
 
 // ── SEO meta ──────────────────────────────────────────────────────────────────
 add_action( 'wp_head', function () {
@@ -45,44 +93,44 @@ add_action( 'wp_head', function () {
 
 	/* ── Content card — full-width, transparent, no borders ───────── */
 	.sly-cu-wrap{width:100%;max-width:none;margin:0;padding:3rem clamp(1rem,4vw,3rem)}
-	.sly-cu-card{background:transparent;border:none;border-radius:0;padding:0;box-shadow:none}
-	.sly-cu-card .entry-content{font-size:1rem;line-height:1.75;color:var(--sly-ink)}
-	.sly-cu-card .entry-content > *:first-child{margin-top:0}
-	.sly-cu-card .entry-content p{font-size:1rem!important;line-height:1.75!important;font-weight:300!important;margin:0 0 1.25rem}
-	.sly-cu-card .entry-content h2{font-size:clamp(1.2rem,2.5vw,1.65rem)!important;font-weight:900!important;text-transform:uppercase;letter-spacing:.03em;color:var(--sly-ink);margin:2.5rem 0 .9rem;padding-bottom:.6rem;position:relative}
-	.sly-cu-card .entry-content h2::after{content:"";position:absolute;left:0;bottom:0;width:48px;height:4px;border-radius:999px;background:linear-gradient(100deg,#197E92,#1a8fa5)}
-	.sly-cu-card .entry-content > h2:first-child{margin-top:0}
-	.sly-cu-card .entry-content a{color:var(--sly-accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
-	.sly-cu-card .entry-content a:hover{color:var(--sly-accent-hover)}
-	/* Contact form fields — CF7 / WPForms / Gravity / native */
-	.sly-cu-card input[type=text],
-	.sly-cu-card input[type=email],
-	.sly-cu-card input[type=tel],
-	.sly-cu-card textarea,
-	.sly-cu-card select{width:100%;padding:.75rem 1rem;border:1px solid var(--sly-line);border-radius:10px;font-size:.95rem;color:var(--sly-ink);background:#fff;transition:all 0.3s ease;margin-bottom:1rem}
-	.sly-cu-card input[type=text]::placeholder,
-	.sly-cu-card input[type=email]::placeholder,
-	.sly-cu-card input[type=tel]::placeholder,
-	.sly-cu-card textarea::placeholder{color:rgba(0,0,0,0.4);transition:color 0.3s ease}
-	.sly-cu-card input[type=text]:focus,
-	.sly-cu-card input[type=email]:focus,
-	.sly-cu-card input[type=tel]:focus,
-	.sly-cu-card textarea:focus,
-	.sly-cu-card select:focus{outline:none;border-color:var(--sly-accent);box-shadow:0 0 0 3px rgba(25,126,146,.16);background:#f9fbfc}
-	.sly-cu-card input[type=text]:focus::placeholder,
-	.sly-cu-card input[type=email]:focus::placeholder,
-	.sly-cu-card input[type=tel]:focus::placeholder,
-	.sly-cu-card textarea:focus::placeholder{color:rgba(0,0,0,0.25)}
-	.sly-cu-card textarea{resize:vertical;min-height:140px}
-	.sly-cu-card input[type=submit],
-	.sly-cu-card .wpcf7-submit,
-	.sly-cu-card .wpforms-submit{background:linear-gradient(100deg,#197E92,#1a8fa5);color:#fff;border:none;padding:.85rem 2.25rem;border-radius:999px;font-size:.95rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 15px rgba(20,106,123,0.2)}
-	.sly-cu-card input[type=submit]:hover,
-	.sly-cu-card .wpcf7-submit:hover,
-	.sly-cu-card .wpforms-submit:hover{opacity:0.95;transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,106,123,0.3)}
-	.sly-cu-card input[type=submit]:active,
-	.sly-cu-card .wpcf7-submit:active,
-	.sly-cu-card .wpforms-submit:active{transform:translateY(0)}
+	.sly-cu-card{background:transparent;border:none;border-radius:0;padding:0;box-shadow:none;max-width:640px;margin:0 auto}
+
+	/* ── Status notices ─────────────────────────────────────────────── */
+	.sly-cu-notice{padding:1rem 1.25rem;border-radius:10px;font-size:.92rem;line-height:1.6;margin:0 0 1.75rem}
+	.sly-cu-notice--ok{background:rgba(215,224,90,.18);border-left:4px solid #D7E05A;color:var(--sly-ink)}
+	.sly-cu-notice--err{background:rgba(197,60,60,.08);border-left:4px solid #c53c3c;color:var(--sly-ink)}
+	.sly-cu-notice strong{font-weight:700}
+
+	/* ── Form heading ──────────────────────────────────────────────── */
+	.sly-cu-form__title{font-size:clamp(1.25rem,3vw,1.65rem)!important;font-weight:900;text-transform:uppercase;letter-spacing:.03em;color:var(--sly-ink);margin:0 0 .5rem;padding-bottom:.6rem;position:relative}
+	.sly-cu-form__title::after{content:"";position:absolute;left:0;bottom:0;width:48px;height:4px;border-radius:999px;background:linear-gradient(100deg,#197E92,#1a8fa5)}
+	.sly-cu-form__sub{font-size:.95rem;line-height:1.6;color:var(--sly-ink);opacity:.72;font-weight:300;margin:1rem 0 1.75rem}
+
+	/* ── Form layout ───────────────────────────────────────────────── */
+	.sly-cu-form__hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+	.sly-cu-form__row{display:grid;grid-template-columns:1fr 1fr;gap:0 1.25rem}
+	.sly-cu-form__field{margin-bottom:1.25rem}
+	.sly-cu-form__field label{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sly-ink);opacity:.65;margin:0 0 .45rem}
+
+	/* Fields */
+	.sly-cu-form input[type=text],
+	.sly-cu-form input[type=email],
+	.sly-cu-form textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--sly-line);border-radius:10px;font-size:.95rem;color:var(--sly-ink);background:#fff;transition:all 0.3s ease}
+	.sly-cu-form input[type=text]::placeholder,
+	.sly-cu-form input[type=email]::placeholder,
+	.sly-cu-form textarea::placeholder{color:rgba(0,0,0,0.35);transition:color 0.3s ease}
+	.sly-cu-form input[type=text]:focus,
+	.sly-cu-form input[type=email]:focus,
+	.sly-cu-form textarea:focus{outline:none;border-color:var(--sly-accent);box-shadow:0 0 0 3px rgba(25,126,146,.16);background:#f9fbfc}
+	.sly-cu-form input[type=text]:focus::placeholder,
+	.sly-cu-form input[type=email]:focus::placeholder,
+	.sly-cu-form textarea:focus::placeholder{color:rgba(0,0,0,0.22)}
+	.sly-cu-form textarea{resize:vertical;min-height:150px}
+
+	/* Submit */
+	.sly-cu-form__submit{display:inline-block;background:linear-gradient(100deg,#197E92,#1a8fa5);color:#fff;border:none;padding:.9rem 2.5rem;border-radius:999px;font-size:.95rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 15px rgba(20,106,123,0.2)}
+	.sly-cu-form__submit:hover{opacity:0.95;transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,106,123,0.3)}
+	.sly-cu-form__submit:active{transform:translateY(0)}
 
 	/* ── Contact channel cards ─────────────────────────────────────── */
 	.sly-cu-channels{width:100%;max-width:none;margin:0;padding:3rem clamp(1rem,4vw,3rem)}
@@ -158,6 +206,8 @@ add_action( 'wp_head', function () {
 		.sly-cu-faq__item{padding:1rem 1.25rem 1rem 1.35rem}
 		.sly-cu-cta__btns{flex-direction:column}
 		.sly-cu-cta__btns .sly-button{width:100%}
+		.sly-cu-form__row{grid-template-columns:1fr}
+		.sly-cu-form__submit{width:100%}
 	}
 	</style>
 	<?php
@@ -179,14 +229,50 @@ get_header();
 	</div>
 </section>
 
-<!-- ── Contact form — pulled directly from the page, nothing omitted ────── -->
+<!-- ── Contact form — native, self-contained, no plugin dependency ──────── -->
 <section class="sly-cu-wrap">
-	<div class="sly-cu-card">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
+	<div class="sly-cu-card" data-reveal>
+
+		<?php if ( isset( $_GET['sly_cu'] ) && 'sent' === $_GET['sly_cu'] ) : ?>
+			<div class="sly-cu-notice sly-cu-notice--ok" role="status">
+				<strong>Message sent.</strong> We'll get back to you within 24 hours — for real.
 			</div>
-		<?php endwhile; ?>
+		<?php elseif ( isset( $_GET['sly_cu'] ) && 'error' === $_GET['sly_cu'] ) : ?>
+			<div class="sly-cu-notice sly-cu-notice--err" role="alert">
+				<strong>Something didn't go through.</strong> Double-check your name, email, and message, then give it another shot.
+			</div>
+		<?php endif; ?>
+
+		<h2 class="sly-cu-form__title">Send Us a Message</h2>
+		<p class="sly-cu-form__sub">Fill it out, hit send, and a real human takes it from there.</p>
+
+		<form class="sly-cu-form" method="post" action="<?php echo esc_url( get_permalink() ); ?>">
+			<?php wp_nonce_field( 'sly_cu_contact', 'sly_cu_nonce' ); ?>
+			<input type="text" name="sly_cu_hp" value="" autocomplete="off" tabindex="-1" aria-hidden="true" class="sly-cu-form__hp">
+
+			<div class="sly-cu-form__row">
+				<div class="sly-cu-form__field">
+					<label for="sly_cu_name">Name</label>
+					<input type="text" id="sly_cu_name" name="sly_cu_name" placeholder="Your name" required>
+				</div>
+				<div class="sly-cu-form__field">
+					<label for="sly_cu_email">Email</label>
+					<input type="email" id="sly_cu_email" name="sly_cu_email" placeholder="you@email.com" required>
+				</div>
+			</div>
+
+			<div class="sly-cu-form__field">
+				<label for="sly_cu_subject">What's this about?</label>
+				<input type="text" id="sly_cu_subject" name="sly_cu_subject" placeholder="Order, sizing, returns — whatever">
+			</div>
+
+			<div class="sly-cu-form__field">
+				<label for="sly_cu_message">Message</label>
+				<textarea id="sly_cu_message" name="sly_cu_message" placeholder="Tell us what's going on..." required></textarea>
+			</div>
+
+			<button type="submit" name="sly_cu_submit" value="1" class="sly-cu-form__submit">Send It</button>
+		</form>
 	</div>
 </section>
 
