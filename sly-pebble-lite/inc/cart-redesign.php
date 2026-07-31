@@ -224,16 +224,16 @@ add_action( 'wp_footer', function () {
 
 	/* Coupon + update-cart row */
 	body.woocommerce-cart .coupon{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
-	body.woocommerce-cart .coupon .input-text{flex:1 1 160px;padding:.6rem .85rem;border:1.5px solid var(--sly-line);border-radius:10px;font-size:.82rem}
+	body.woocommerce-cart .coupon .input-text{flex:1 1 160px;padding:.6rem .85rem;border:1.5px solid var(--sly-line);border-radius:0;font-size:.82rem}
 	body.woocommerce-cart .coupon button,
-	body.woocommerce-cart table.cart button[name="update_cart"]{background:transparent;border:1.5px solid var(--sly-ink);color:var(--sly-ink);border-radius:999px;padding:.55rem 1.25rem;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;transition:all .25s ease}
+	body.woocommerce-cart table.cart button[name="update_cart"]{background:transparent;border:1.5px solid var(--sly-ink);color:var(--sly-ink);border-radius:0!important;padding:.55rem 1.25rem;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;transition:all .25s ease}
 	body.woocommerce-cart .coupon button:hover,
 	body.woocommerce-cart table.cart button[name="update_cart"]:hover{background:var(--sly-ink);color:#fff}
 
 	/* ── Order summary / collaterals sidebar ──────────────────────── */
 	body.woocommerce-cart .cart-collaterals{margin-top:1.5rem}
 	@media(min-width:900px){body.woocommerce-cart .cart-collaterals{margin-top:0}}
-	body.woocommerce-cart .cart_totals{background:#fff;border:1px solid var(--sly-line);border-radius:16px;padding:1.25rem 1.35rem;box-shadow:var(--sly-shadow)}
+	body.woocommerce-cart .cart_totals{background:#fff;border:1px solid var(--sly-line);border-radius:16px;padding:1.25rem 1.35rem 1.5rem;box-shadow:var(--sly-shadow);margin-bottom:1.5rem;overflow:hidden}
 	body.woocommerce-cart .cart_totals h2{font-size:.95rem!important;font-weight:900;text-transform:uppercase;letter-spacing:.03em;margin:0 0 .9rem;padding-bottom:.6rem;border-bottom:1px dashed var(--sly-line)}
 	body.woocommerce-cart .cart_totals table{width:100%;border:none}
 	body.woocommerce-cart .cart_totals table th,
@@ -241,9 +241,14 @@ add_action( 'wp_footer', function () {
 	body.woocommerce-cart .cart_totals table th{font-weight:500;opacity:.7}
 	body.woocommerce-cart .cart_totals .order-total th,
 	body.woocommerce-cart .cart_totals .order-total td{border-top:1px dashed var(--sly-line);padding-top:.75rem;font-size:.95rem!important;font-weight:800}
-	body.woocommerce-cart .wc-proceed-to-checkout{margin-top:1rem;padding:0}
-	body.woocommerce-cart .wc-proceed-to-checkout a.checkout-button{display:flex;justify-content:center;align-items:center;width:100%;background:linear-gradient(100deg,#197E92,#1a8fa5);color:#fff!important;border:none;border-radius:999px;padding:.9rem 1.5rem;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 15px rgba(20,106,123,.25)}
+	body.woocommerce-cart .wc-proceed-to-checkout{margin:1rem 0 0;padding:0;display:flex;flex-direction:column;gap:.6rem;overflow:visible}
+	body.woocommerce-cart .wc-proceed-to-checkout a.checkout-button{display:flex;justify-content:center;align-items:center;width:100%;background:linear-gradient(100deg,#197E92,#1a8fa5);color:#fff!important;border:none;border-radius:0!important;padding:.9rem 1.5rem;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 15px rgba(20,106,123,.25);position:relative;z-index:1;margin:0!important}
 	body.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,106,123,.35);opacity:.95}
+	/* Any express-payment buttons/logos a gateway plugin injects after the
+	   checkout button (PayPal, Apple Pay, Google Pay, etc.) get breathing
+	   room instead of crowding the button above them. */
+	body.woocommerce-cart .wc-proceed-to-checkout > *{border-radius:0!important}
+	body.woocommerce-cart .wc-proceed-to-checkout > * + *{margin-top:.5rem!important}
 
 	/* Continue-shopping style link near update cart */
 	body.woocommerce-cart .woocommerce-cart-form{margin-bottom:0}
@@ -253,7 +258,7 @@ add_action( 'wp_footer', function () {
 	body.woocommerce-cart .shipping-calculator-button{color:var(--sly-accent);font-weight:600;font-size:.78rem}
 
 	/* ── Trust badge band ─────────────────────────────────────────── */
-	.sly-cart-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:1.75rem;padding-top:1.5rem;border-top:1px dashed var(--sly-line)}
+	.sly-cart-trust{clear:both;display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:3rem;padding-top:1.5rem;border-top:1px dashed var(--sly-line)}
 	.sly-cart-trust__item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.35rem;padding:.9rem .5rem;background:var(--sly-sand);border-radius:12px;font-size:.72rem!important;font-weight:600;color:var(--sly-ink);transition:transform .25s ease}
 	.sly-cart-trust__item:hover{transform:translateY(-3px)}
 	.sly-cart-trust__icon{font-size:1.3rem;line-height:1}
@@ -263,7 +268,7 @@ add_action( 'wp_footer', function () {
 	.sly-cart-empty__icon{font-size:3rem;line-height:1;margin-bottom:1rem;animation:sly-cart-bounce 2.4s ease-in-out infinite}
 	.sly-cart-empty__title{font-size:1.35rem!important;font-weight:900;text-transform:uppercase;letter-spacing:.03em;margin:0 0 .6rem;color:var(--sly-ink)}
 	.sly-cart-empty__sub{font-size:.88rem!important;line-height:1.6;color:var(--sly-ink);opacity:.75;margin:0 0 1.75rem;font-weight:300}
-	.sly-cart-empty__btn{display:inline-block;background:linear-gradient(100deg,#197E92,#1a8fa5);color:#fff!important;border-radius:999px;padding:.85rem 2.25rem;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 15px rgba(20,106,123,.2)}
+	.sly-cart-empty__btn{display:inline-block;background:linear-gradient(100deg,#197E92,#1a8fa5);color:#fff!important;border-radius:0;padding:.85rem 2.25rem;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 15px rgba(20,106,123,.2)}
 	.sly-cart-empty__btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,106,123,.3);color:#fff!important}
 	@keyframes sly-cart-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
