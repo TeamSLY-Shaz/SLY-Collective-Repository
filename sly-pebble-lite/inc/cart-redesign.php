@@ -96,7 +96,10 @@ if ( ! function_exists( 'sly_cart_render_intel' ) ) {
 
 		?>
 		<div class="sly-cart-intel" data-reveal>
-			<p class="sly-cart-intel__count">🛒 <strong><?php echo absint( $count ); ?></strong> <?php echo esc_html( _n( 'item ready to ship', 'items ready to ship', $count, 'sly-pebble-lite' ) ); ?></p>
+			<div class="sly-cart-intel__head">
+				<p class="sly-cart-intel__count">🛒 <strong><?php echo absint( $count ); ?></strong> <?php echo esc_html( _n( 'item ready to ship', 'items ready to ship', $count, 'sly-pebble-lite' ) ); ?></p>
+				<span class="sly-cart-intel__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+			</div>
 
 			<div class="sly-cart-intel__row">
 				<p class="sly-cart-intel__label">
@@ -115,8 +118,8 @@ if ( ! function_exists( 'sly_cart_render_intel' ) ) {
 				<p class="sly-cart-intel__label">
 					<?php echo $bulk_won ? '🔥 ' : '📦 '; ?><?php echo esc_html( $next_msg ); ?>
 				</p>
-				<div class="sly-cart-intel__track sly-cart-intel__track--lime">
-					<div class="sly-cart-intel__fill sly-cart-intel__fill--lime" style="width:<?php echo esc_attr( round( $bulk_pct, 1 ) ); ?>%"></div>
+				<div class="sly-cart-intel__track">
+					<div class="sly-cart-intel__fill sly-cart-intel__fill--peach" style="width:<?php echo esc_attr( round( $bulk_pct, 1 ) ); ?>%"></div>
 				</div>
 			</div>
 		</div>
@@ -171,24 +174,42 @@ add_action( 'wp_footer', function () {
 	body.woocommerce-cart .site-main{padding-top:1.5rem}
 	body.woocommerce-cart .commerce-shell{font-size:13px}
 
-	/* ── Cart intel card ──────────────────────────────────────────── */
-	.sly-cart-intel{grid-column:1/-1;background:linear-gradient(120deg,#146a7b 0%,#197E92 55%,#1a8fa5 100%);border-radius:16px;padding:1.25rem 1.5rem;color:#fff;margin-bottom:1.5rem;position:relative;overflow:hidden}
-	.sly-cart-intel::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.14),transparent 55%);pointer-events:none}
-	.sly-cart-intel__count{position:relative;z-index:1;font-size:.85rem!important;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin:0 0 .9rem;color:#fff}
-	.sly-cart-intel__row{position:relative;z-index:1;margin-bottom:.7rem}
+	/* ── Cart intel card — fresh white card, lime + peach accents ──── */
+	.sly-cart-intel{grid-column:1/-1;background:#fff;border:1px solid var(--sly-line);border-radius:16px;padding:1.6rem 1.75rem 1.5rem;color:var(--sly-ink);margin-bottom:1.5rem;position:relative;overflow:hidden;box-shadow:var(--sly-shadow)}
+	.sly-cart-intel::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(100deg,#197E92,#D7E05A 55%,#FF6F5B)}
+	.sly-cart-intel__head{display:flex;align-items:center;gap:.6rem;margin:0 0 1.2rem}
+	.sly-cart-intel__count{font-size:1.5rem!important;font-weight:900;text-transform:uppercase;letter-spacing:.02em;margin:0;color:var(--sly-ink);line-height:1.15}
+	.sly-cart-intel__count strong{color:#197E92}
+	.sly-cart-intel__dots{display:inline-flex;align-items:center;gap:.3rem}
+	.sly-cart-intel__dots span{display:inline-block;width:7px;height:7px;border-radius:50%}
+	.sly-cart-intel__dots span:nth-child(1){background:#197E92}
+	.sly-cart-intel__dots span:nth-child(2){background:#D7E05A}
+	.sly-cart-intel__dots span:nth-child(3){background:#FF6F5B}
+	.sly-cart-intel__row{margin-bottom:.9rem}
 	.sly-cart-intel__row:last-child{margin-bottom:0}
-	.sly-cart-intel__label{font-size:.78rem!important;font-weight:500;margin:0 0 .35rem;color:rgba(255,255,255,.92)}
-	.sly-cart-intel__track{width:100%;height:7px;border-radius:999px;background:rgba(255,255,255,.22);overflow:hidden}
-	.sly-cart-intel__fill{height:100%;border-radius:999px;background:#fff;transition:width .5s cubic-bezier(.34,1.56,.64,1)}
-	.sly-cart-intel__fill--lime{background:#D7E05A}
+	.sly-cart-intel__label{font-size:.8rem!important;font-weight:600;margin:0 0 .4rem;color:var(--sly-ink);opacity:.8}
+	.sly-cart-intel__track{width:100%;height:8px;border-radius:999px;background:var(--sly-sand);overflow:hidden}
+	.sly-cart-intel__fill{height:100%;border-radius:999px;background:#D7E05A;transition:width .5s cubic-bezier(.34,1.56,.64,1)}
+	.sly-cart-intel__fill--peach{background:#FF6F5B}
 
 	/* ── Two-column desktop layout ────────────────────────────────── */
 	@media(min-width:900px){
 		body.woocommerce-cart .commerce-shell{display:grid;grid-template-columns:1fr 340px;gap:1.75rem;align-items:start}
 		body.woocommerce-cart .woocommerce-cart-form{grid-column:1}
-		body.woocommerce-cart .cart-collaterals{grid-column:2;position:sticky;top:6rem}
+		/* No position:sticky here — a sticky ancestor breaks the vertical
+		   layout of payment-gateway buttons (PayPal / Apple Pay / Google Pay)
+		   that render inside .cart-collaterals, causing them to stack on top
+		   of each other instead of one after another. Plain flow avoids it. */
+		body.woocommerce-cart .cart-collaterals{grid-column:2}
 		.sly-cart-trust{grid-column:1/-1}
 	}
+
+	/* Force every direct block inside the order-summary column to stack in
+	   normal flow — removes any float/absolute positioning a gateway plugin
+	   applies to its buttons, which is what causes the vertical overlap. */
+	body.woocommerce-cart .cart-collaterals{display:flex;flex-direction:column}
+	body.woocommerce-cart .cart-collaterals > *{position:static!important;float:none!important;width:100%;margin-left:0!important;margin-right:0!important}
+	body.woocommerce-cart .cart-collaterals > * + *{margin-top:1.25rem!important}
 
 	/* ── Cart items — card-ified table, both breakpoints ──────────── */
 	body.woocommerce-cart table.cart{display:block;width:100%;border:none;border-collapse:separate;border-spacing:0}
@@ -233,12 +254,13 @@ add_action( 'wp_footer', function () {
 	/* ── Order summary / collaterals sidebar ──────────────────────── */
 	body.woocommerce-cart .cart-collaterals{margin-top:1.5rem}
 	@media(min-width:900px){body.woocommerce-cart .cart-collaterals{margin-top:0}}
-	body.woocommerce-cart .cart_totals{background:#fff;border:1px solid var(--sly-line);border-radius:16px;padding:1.25rem 1.35rem 1.5rem;box-shadow:var(--sly-shadow);margin-bottom:1.5rem;overflow:hidden}
+	body.woocommerce-cart .cart_totals{background:#fff;border:1px solid var(--sly-line);border-radius:16px;padding:1.5rem 1.75rem 1.75rem;box-shadow:var(--sly-shadow);margin-bottom:1.5rem;overflow:hidden}
 	body.woocommerce-cart .cart_totals h2{font-size:.95rem!important;font-weight:900;text-transform:uppercase;letter-spacing:.03em;margin:0 0 .9rem;padding-bottom:.6rem;border-bottom:1px dashed var(--sly-line)}
 	body.woocommerce-cart .cart_totals table{width:100%;border:none}
 	body.woocommerce-cart .cart_totals table th,
-	body.woocommerce-cart .cart_totals table td{border:none;padding:.5rem 0;font-size:.8rem!important}
+	body.woocommerce-cart .cart_totals table td{border:none;padding:.6rem .35rem;font-size:.8rem!important}
 	body.woocommerce-cart .cart_totals table th{font-weight:500;opacity:.7}
+	body.woocommerce-cart .cart_totals table td{text-align:right}
 	body.woocommerce-cart .cart_totals .order-total th,
 	body.woocommerce-cart .cart_totals .order-total td{border-top:1px dashed var(--sly-line);padding-top:.75rem;font-size:.95rem!important;font-weight:800}
 	body.woocommerce-cart .wc-proceed-to-checkout{margin:1rem 0 0;padding:0;display:flex;flex-direction:column;gap:.6rem;overflow:visible}
