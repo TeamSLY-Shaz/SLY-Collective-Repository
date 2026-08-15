@@ -182,6 +182,33 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
   </div>
 </section>
 
+<?php if (class_exists('WooCommerce')) : ?>
+	<section class="container product-strip">
+		<div class="section-head" data-reveal>
+			<h2><?php echo esc_html($home_best_sellers_heading); ?></h2>
+			<a href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>"><?php echo esc_html($home_best_sellers_cta); ?></a>
+		</div>
+		<div class="product-grid">
+			<?php
+			$products = wc_get_products(array(
+				'limit'      => 8,
+				'status'     => 'publish',
+				'orderby'    => 'date',
+				'order'      => 'DESC',
+				'visibility' => 'visible',
+			));
+			if (!empty($products)) {
+				foreach ($products as $product) {
+					sly_pebble_lite_product_card($product->get_id());
+				}
+			} else {
+				echo '<p>' . esc_html($home_best_sellers_empty_text) . '</p>';
+			}
+			?>
+		</div>
+	</section>
+<?php endif; ?>
+
 <section class="sly-benefits-split">
   <div class="sly-benefits-split__left">
     <div class="sly-benefits__grid">
@@ -251,32 +278,6 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
   </div>
 </section>
 
-<?php if (class_exists('WooCommerce')) : ?>
-	<section class="container product-strip">
-		<div class="section-head" data-reveal>
-			<h2><?php echo esc_html($home_best_sellers_heading); ?></h2>
-			<a href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>"><?php echo esc_html($home_best_sellers_cta); ?></a>
-		</div>
-		<div class="product-grid">
-			<?php
-			$products = wc_get_products(array(
-				'limit'      => 8,
-				'status'     => 'publish',
-				'orderby'    => 'date',
-				'order'      => 'DESC',
-				'visibility' => 'visible',
-			));
-			if (!empty($products)) {
-				foreach ($products as $product) {
-					sly_pebble_lite_product_card($product->get_id());
-				}
-			} else {
-				echo '<p>' . esc_html($home_best_sellers_empty_text) . '</p>';
-			}
-			?>
-		</div>
-	</section>
-<?php endif; ?>
 
 <section class="sly-review">
   <div class="sly-review__inner">
