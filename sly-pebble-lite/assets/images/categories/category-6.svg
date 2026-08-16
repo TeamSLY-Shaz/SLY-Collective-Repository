@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Bamboo placeholder">
+  <rect width="1200" height="1500" fill="#eef5ea"/>
+  <rect x="275" y="260" width="650" height="870" rx="82" fill="#59764c"/>
+  <rect x="325" y="295" width="550" height="124" rx="40" fill="#425739"/>
+  <path d="M600 530 L675 650 L620 760 L700 860" stroke="#98b48d" stroke-width="30" fill="none" stroke-linecap="round"/>
+  <text x="600" y="1410" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" fill="#1c1c1c">BAMBOO</text>
+</svg>
