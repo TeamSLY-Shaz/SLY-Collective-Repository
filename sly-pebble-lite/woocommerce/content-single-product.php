@@ -79,21 +79,34 @@ if ( '' === $_sly_rev_summary ) {
 		? sprintf( '%s out of 5 (%d %s)', $_avg, $_count, _n( 'review', 'reviews', $_count, 'sly-pebble-lite' ) )
 		: '4.8 out of 5 (127 reviews)';
 }
+// Default reviews for products with "separation pouch" in the title
 $_sly_default_reviews = [
 	[ 'stars' => 5, 'quote' => 'The support pouch is a bloody big upgrade from regular briefs. No more awkward slipping, no more subtle public repacking missions.', 'author' => '— Trev, Melbourne' ],
 	[ 'stars' => 5, 'quote' => 'Finally found underwear that actually fits properly. The pouch support is next level — haven\'t looked back since.', 'author' => '— Jake, Brisbane' ],
 	[ 'stars' => 4, 'quote' => 'Super comfortable for long rides. The anti-chafe design actually works — wore these for 6 hours straight with zero complaints.', 'author' => '— Marcus, Perth' ],
 	[ 'stars' => 5, 'quote' => 'Great quality, fast shipping. My whole pack has converted. The fabric is so much better than the big brands.', 'author' => '— Dean, Sydney' ],
 ];
+
+// Default reviews for all other product pages — replace placeholder text as needed
+$_sly_default_reviews_alt = [
+	[ 'stars' => 5, 'quote' => 'Review 1 text to be added.', 'author' => '— Name, City' ],
+	[ 'stars' => 5, 'quote' => 'Review 2 text to be added.', 'author' => '— Name, City' ],
+	[ 'stars' => 5, 'quote' => 'Review 3 text to be added.', 'author' => '— Name, City' ],
+	[ 'stars' => 5, 'quote' => 'Review 4 text to be added.', 'author' => '— Name, City' ],
+];
+
+$_sly_is_pouch_product = ( stripos( get_the_title(), 'separation pouch' ) !== false );
+$_sly_active_defaults  = $_sly_is_pouch_product ? $_sly_default_reviews : $_sly_default_reviews_alt;
+
 $sly_reviews = [];
 for ( $__i = 1; $__i <= 4; $__i++ ) {
 	$__stars  = get_post_meta( $product->get_id(), "_sly_rv_{$__i}_stars", true );
 	$__quote  = get_post_meta( $product->get_id(), "_sly_rv_{$__i}_quote", true );
 	$__author = get_post_meta( $product->get_id(), "_sly_rv_{$__i}_author", true );
 	$sly_reviews[] = [
-		'stars'  => ( '' !== $__stars )  ? (int) $__stars  : $_sly_default_reviews[ $__i - 1 ]['stars'],
-		'quote'  => ( '' !== $__quote )  ? $__quote        : $_sly_default_reviews[ $__i - 1 ]['quote'],
-		'author' => ( '' !== $__author ) ? $__author       : $_sly_default_reviews[ $__i - 1 ]['author'],
+		'stars'  => ( '' !== $__stars )  ? (int) $__stars  : $_sly_active_defaults[ $__i - 1 ]['stars'],
+		'quote'  => ( '' !== $__quote )  ? $__quote        : $_sly_active_defaults[ $__i - 1 ]['quote'],
+		'author' => ( '' !== $__author ) ? $__author       : $_sly_active_defaults[ $__i - 1 ]['author'],
 	];
 }
 
