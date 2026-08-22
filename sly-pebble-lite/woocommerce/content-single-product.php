@@ -87,12 +87,12 @@ $_sly_default_reviews = [
 	[ 'stars' => 5, 'quote' => 'Great quality, fast shipping. My whole pack has converted. The fabric is so much better than the big brands.', 'author' => '— Dean, Sydney' ],
 ];
 
-// Default reviews for all other product pages — replace placeholder text as needed
+// Default reviews for all other product pages
 $_sly_default_reviews_alt = [
-	[ 'stars' => 5, 'quote' => 'Review 1 text to be added.', 'author' => '— Name, City' ],
-	[ 'stars' => 5, 'quote' => 'Review 2 text to be added.', 'author' => '— Name, City' ],
-	[ 'stars' => 5, 'quote' => 'Review 3 text to be added.', 'author' => '— Name, City' ],
-	[ 'stars' => 5, 'quote' => 'Review 4 text to be added.', 'author' => '— Name, City' ],
+	[ 'stars' => 5, 'quote' => 'The flatlock seams over the entire pair are of excellent quality, further reducing any chance of chafing.', 'author' => '— Basil, Auckland' ],
+	[ 'stars' => 5, 'quote' => 'These are the boxer briefs I make sure to put on when I\'m working outside.', 'author' => '— Jason, Adelaide' ],
+	[ 'stars' => 5, 'quote' => 'The waistband isn\'t quite as thick as other pairs, but I never experienced them rolling.', 'author' => '— Frank, Perth' ],
+	[ 'stars' => 5, 'quote' => 'The quick-dry version beats out the competition, leaving you feeling drier down south as well, especially when you\'re handling a sunny day on the tools.', 'author' => '— Peter, Sydney' ],
 ];
 
 $_sly_is_pouch_product = ( stripos( get_the_title(), 'separation pouch' ) !== false );
