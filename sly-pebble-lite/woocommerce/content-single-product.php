@@ -81,7 +81,7 @@ if ( '' === $_sly_rev_summary ) {
 }
 // Default reviews for products with "separation pouch" in the title
 $_sly_default_reviews = [
-	[ 'stars' => 5, 'quote' => 'The support pouch is a bloody big upgrade from regular briefs. No more awkward slipping, no more subtle public repacking missions.', 'author' => '— Trev, Melbourne' ],
+	[ 'stars' => 5, 'quote' => 'Finally found boxer briefs that fit really well and feel great, especially in the summer heat. Unlike some other brands I\'ve tried, they don\'t stick to my skin. They\'re comfortable enough to wear all day, give me plenty of freedom to move while I\'m working, and stay nicely in place.', 'author' => '— Locky, Townsville' ],
 	[ 'stars' => 5, 'quote' => 'Finally found underwear that actually fits properly. The pouch support is next level — haven\'t looked back since.', 'author' => '— Jake, Brisbane' ],
 	[ 'stars' => 4, 'quote' => 'Super comfortable for long rides. The anti-chafe design actually works — wore these for 6 hours straight with zero complaints.', 'author' => '— Marcus, Perth' ],
 	[ 'stars' => 5, 'quote' => 'Great quality, fast shipping. My whole pack has converted. The fabric is so much better than the big brands.', 'author' => '— Dean, Sydney' ],
