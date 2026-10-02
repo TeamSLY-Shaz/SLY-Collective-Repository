@@ -1,0 +1,88 @@
+# Deploys sly-pebble-lite/ to slycollective.com (SiteGround) on every push to `production`.
+#
+# Required repository secrets:
+#   SG_HOST, SG_USER, SG_PORT, SG_SSH_KEY, SG_SSH_PASSPHRASE
+#
+# Each run:
+#   1. Backs up the live theme to ~/theme-backups/<timestamp>/ (last 10 kept)
+#   2. rsyncs sly-pebble-lite/ into wp-content/themes/sly-pebble-lite/
+#   3. Purges SiteGround's cache
+#
+# Rollback: push a revert commit to `production`, or restore a folder from ~/theme-backups.
+
+name: Deploy theme to SiteGround
+
+on:
+  push:
+    branches: [production]
+    paths:
+      - "sly-pebble-lite/**"
+      - ".github/workflows/deploy-theme.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+env:
+  # true = report what would change, touch nothing. Flip to false once the dry run looks right.
+  DRY_RUN: "true"
+  # Path relative to the SiteGround home directory.
+  SITE_ROOT: "www/slycollective.com/public_html"
+  THEME_DIR: "sly-pebble-lite"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check theme version
+        run: |
+          grep -m1 '^Version:' "$THEME_DIR/style.css"
+          php -l "$THEME_DIR/functions.php"
+          find "$THEME_DIR" -name '*.php' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Set up SSH
+        env:
+          SG_HOST: ${{ secrets.SG_HOST }}
+          SG_PORT: ${{ secrets.SG_PORT }}
+          SG_SSH_KEY: ${{ secrets.SG_SSH_KEY }}
+          SG_SSH_PASSPHRASE: ${{ secrets.SG_SSH_PASSPHRASE }}
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SG_SSH_KEY" > ~/.ssh/sg_key
+          chmod 600 ~/.ssh/sg_key
+          # Strip the passphrase from the runner's temporary copy only.
+          if [ -n "$SG_SSH_PASSPHRASE" ]; then
+            ssh-keygen -p -P "$SG_SSH_PASSPHRASE" -N "" -f ~/.ssh/sg_key > /dev/null
+          fi
+          ssh-keyscan -p "$SG_PORT" "$SG_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          cat > ~/.ssh/config <<EOF
+          Host sg
+            HostName $SG_HOST
+            Port $SG_PORT
+            User ${{ secrets.SG_USER }}
+            IdentityFile ~/.ssh/sg_key
+            IdentitiesOnly yes
+          EOF
+          ssh sg "test -d \"$SITE_ROOT/wp-content/themes/$THEME_DIR\" && echo 'Live theme folder found' || { echo \"Theme folder not found at ~/$SITE_ROOT/wp-content/themes/$THEME_DIR\"; ls -d ~/www/*/public_html 2>/dev/null; exit 1; }"
+
+      - name: Back up live theme
+        if: env.DRY_RUN != 'true'
+        run: |
+          STAMP=$(date -u +%Y%m%d-%H%M%S)-${GITHUB_SHA::7}
+          ssh sg "mkdir -p ~/theme-backups && cp -a \"$SITE_ROOT/wp-content/themes/$THEME_DIR\" ~/theme-backups/$STAMP && ls -1dt ~/theme-backups/* | tail -n +11 | xargs -r rm -rf && echo Backup: ~/theme-backups/$STAMP"
+
+      - name: Sync theme files
+        run: |
+          FLAGS="-rlptzi --checksum --exclude=.DS_Store --exclude=*.zip"
+          [ "$DRY_RUN" = "true" ] && FLAGS="$FLAGS --dry-run" && echo "DRY RUN - nothing will change on the server"
+          rsync $FLAGS "$THEME_DIR/" "sg:$SITE_ROOT/wp-content/themes/$THEME_DIR/"
+
+      - name: Purge SiteGround cache
+        if: env.DRY_RUN != 'true'
+        run: |
+          ssh sg "cd \"$SITE_ROOT\" && wp sg purge" || echo "Cache purge failed - purge manually in Site Tools > Speed > Caching"
