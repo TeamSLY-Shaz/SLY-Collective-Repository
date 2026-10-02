@@ -112,9 +112,6 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
 @media(max-width:480px){
   .sly-problem{padding:40px 0 8px}
   .sly-problem__headline{margin-bottom:36px}
-  .sly-problem__grid{grid-template-columns:1fr}
-  .sly-problem__card{border-right:none!important;border-bottom:1px solid rgba(255,255,255,0.1);padding:24px 0}
-  .sly-problem__card:last-child{border-bottom:none}
   .sly-benefits-split__left{padding:12px 8px;justify-content:center}
   .sly-benefits-split .sly-benefits__grid{gap:8px 10px}
   .sly-benefits-split .sly-benefit__note{width:55%}
