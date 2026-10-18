@@ -8,7 +8,12 @@ get_header();
 // ── Hero vars ────────────────────────────────────────────────────────────────
 $hero_kicker    = '> NO CHAFE. NO COMPROMISE. NO EXCEPTIONS.';
 $hero_cta_label = get_theme_mod('sly_hero_cta_label', 'Shop Best Sellers');
-$hero_cta_url   = get_theme_mod('sly_hero_cta_url', home_url('/shop'));
+$hero_cta_default = home_url('/product-category/men-underwear/mens-pouch-underwear/');
+$hero_cta_url   = get_theme_mod('sly_hero_cta_url', $hero_cta_default);
+// v242: /shop resolves to the wrong page — treat a saved /shop value as unset.
+if (in_array(untrailingslashit($hero_cta_url), array('/shop', untrailingslashit(home_url('/shop'))), true)) {
+	$hero_cta_url = $hero_cta_default;
+}
 $hero_image_id  = absint(get_theme_mod('sly_hero_image'));
 $hero_bg        = get_template_directory_uri() . '/assets/images/hero-model.webp';
 if ($hero_image_id) {
