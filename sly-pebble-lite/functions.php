@@ -546,7 +546,7 @@ if (!function_exists('sly_pebble_lite_customize_register')) {
 		$add_text_control('sly_hero_title', 'Underwear Built For The Way Men Actually Move', __('Hero Title', 'sly-pebble-lite'), 'sly_home_hero');
 		$add_textarea_control('sly_hero_text', 'Supportive pouch engineering, no-ride-up fit, premium fabrics, and daily comfort from office to trail.', __('Hero Text', 'sly-pebble-lite'), 'sly_home_hero');
 		$add_text_control('sly_hero_cta_label', 'Shop Best Sellers', __('Hero CTA Label', 'sly-pebble-lite'), 'sly_home_hero');
-		$add_url_control('sly_hero_cta_url', '/shop', __('Hero CTA URL', 'sly-pebble-lite'), 'sly_home_hero');
+		$add_url_control('sly_hero_cta_url', home_url('/product-category/men-underwear/mens-pouch-underwear/'), __('Hero CTA URL', 'sly-pebble-lite'), 'sly_home_hero');
 		$add_text_control('sly_hero_cta2_label', 'Why SLY?', __('Hero Secondary CTA Label', 'sly-pebble-lite'), 'sly_home_hero');
 		$add_url_control('sly_hero_cta2_url', home_url('/about-us'), __('Hero Secondary CTA URL', 'sly-pebble-lite'), 'sly_home_hero');
 
