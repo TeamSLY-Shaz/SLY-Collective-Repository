@@ -1063,3 +1063,4 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/fraud-guard.php';
 require get_template_directory() . '/inc/article-images.php';
 require get_template_directory() . '/inc/cart-redesign.php';
+require get_template_directory() . '/inc/seo/seo-engine.php';

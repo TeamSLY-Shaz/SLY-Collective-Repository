@@ -13,15 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// ── SEO meta ──────────────────────────────────────────────────────────────────
-add_action( 'wp_head', function () {
-	$canonical = home_url( '/terms-and-conditions/' );
-	?>
-	<meta name="description" content="SLY Collective's Terms &amp; Conditions — ordering, pricing, shipping, returns, warranties and your Australian Consumer Law rights, laid out in plain English.">
-	<meta name="robots" content="index, follow">
-	<link rel="canonical" href="<?php echo esc_url( $canonical ); ?>">
-	<?php
-}, 1 );
+// SEO title, description, canonical and social tags for this page are managed
+// in inc/seo/seo-pages.php (see inc/seo/README.md).
 
 // ── Page CSS ──────────────────────────────────────────────────────────────────
 add_action( 'wp_head', function () {

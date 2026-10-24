@@ -12,14 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// ── SEO meta ──────────────────────────────────────────────────────────────────
-add_action( 'wp_head', function () {
-	$canonical = home_url( '/refund-returns-policy/' );
-	?>
-	<meta name="robots" content="index, follow">
-	<link rel="canonical" href="<?php echo esc_url( $canonical ); ?>">
-	<?php
-}, 1 );
+// SEO title, description, canonical and social tags for this page are managed
+// in inc/seo/seo-pages.php (see inc/seo/README.md).
 
 // ── Page CSS ──────────────────────────────────────────────────────────────────
 add_action( 'wp_head', function () {

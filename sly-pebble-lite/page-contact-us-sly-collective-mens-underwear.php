@@ -58,15 +58,8 @@ add_action( 'template_redirect', function () {
 	exit;
 } );
 
-// ── SEO meta ──────────────────────────────────────────────────────────────────
-add_action( 'wp_head', function () {
-	$canonical = home_url( '/contact-us-sly-collective-mens-underwear/' );
-	?>
-	<meta name="description" content="Get in touch with SLY Collective. Real humans, no bots — email us at sales@slycollective.com for orders, returns, sizing questions, and anything else.">
-	<meta name="robots" content="index, follow">
-	<link rel="canonical" href="<?php echo esc_url( $canonical ); ?>">
-	<?php
-}, 1 );
+// SEO title, description, canonical and social tags for this page are managed
+// in inc/seo/seo-pages.php (see inc/seo/README.md).
 
 // ── Page CSS ──────────────────────────────────────────────────────────────────
 add_action( 'wp_head', function () {

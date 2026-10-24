@@ -10,22 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// ── SEO meta & Open Graph ─────────────────────────────────────────────────────
-add_action( 'wp_head', function () {
-	$canonical = home_url( '/size_chart/size-guide/' );
-	?>
-	<meta name="description" content="Not sure what size to grab? SLY's size guide sorts it out fast — waist &amp; hip measurements in cm and inches, fit notes for every style, and international sizing for AU, US, UK &amp; EU. Get it right first time.">
-	<meta name="robots" content="index, follow">
-	<meta property="og:title" content="SLY Size Guide — Find Your Perfect Fit | SLY Collective">
-	<meta property="og:description" content="Measure once, order right. SLY Collective's size guide covers pouch underwear, pocket styles &amp; quick-dry ranges — in cm, inches and international sizes.">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="<?php echo esc_url( $canonical ); ?>">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="SLY Size Guide — Find Your Perfect Fit">
-	<meta name="twitter:description" content="Measure once, order right. SLY's size guide covers every style — in cm, inches, and international sizes.">
-	<link rel="canonical" href="<?php echo esc_url( $canonical ); ?>">
-	<?php
-}, 1 );
+// SEO title, description, canonical and social tags for this page are managed
+// in inc/seo/seo-pages.php (see inc/seo/README.md).
 
 // ── FAQ structured data (JSON-LD) ─────────────────────────────────────────────
 add_action( 'wp_head', function () {

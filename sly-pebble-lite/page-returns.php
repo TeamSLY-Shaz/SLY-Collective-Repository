@@ -10,22 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// ── SEO meta ──────────────────────────────────────────────────────────────────
-add_action( 'wp_head', function () {
-	$canonical = home_url( '/returns/' );
-	?>
-	<meta name="description" content="SLY Collective returns &amp; exchange policy. 30-day returns window, free size swaps, 12-month warranty on manufacturer defects, and a Comfort Guarantee. Hassle-free.">
-	<meta name="robots" content="index, follow">
-	<meta property="og:title" content="Returns &amp; Exchanges — No Drama | SLY Collective">
-	<meta property="og:description" content="Bought the wrong size? Changed your mind? SLY's return process is built to be painless — 30 days, free size swaps, tracked postage. We'll sort it.">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="<?php echo esc_url( $canonical ); ?>">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Returns &amp; Exchanges | SLY Collective">
-	<meta name="twitter:description" content="30-day returns, free size swaps, 12-month warranty. SLY Collective makes returns painless.">
-	<link rel="canonical" href="<?php echo esc_url( $canonical ); ?>">
-	<?php
-}, 1 );
+// SEO title, description, canonical and social tags for this page are managed
+// in inc/seo/seo-pages.php (see inc/seo/README.md).
 
 // ── Page CSS ───────────────────────────────────────────────────────────────────
 add_action( 'wp_head', function () {
