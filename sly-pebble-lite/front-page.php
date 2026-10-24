@@ -91,6 +91,12 @@ $benefits_product_img         = get_theme_mod('sly_benefits_product_image', 'htt
 .sly-review__quote::before{content:'\201C';font-family:"Anton",Impact,sans-serif;font-size:120px;line-height:0.6;color:#3789A3;position:absolute;top:0;left:-8px;opacity:0.9}
 .sly-review__attr{font-family:"Poppins",Arial,sans-serif!important;font-size:14px!important;font-weight:400!important;color:rgba(255,255,255,0.4)!important;letter-spacing:0.05em;text-transform:none}
 .sly-review__attr::before{content:'— '}
+/* v244: desktop review quote — much larger to grab attention (tablet/mobile unchanged) */
+@media(min-width:861px){
+  .sly-review__quote{font-size:clamp(28px,2.6vw,40px)!important;line-height:1.2!important;padding-top:64px}
+  .sly-review__quote::before{font-size:150px}
+  .sly-review__attr{font-size:18px!important;margin-top:8px}
+}
 /* Responsive */
 @media(max-width:860px){
   .sly-problem{padding:52px 0 20px}
