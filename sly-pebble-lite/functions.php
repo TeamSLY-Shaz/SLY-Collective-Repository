@@ -721,3 +721,4 @@ add_filter('woocommerce_dropdown_variation_attribute_options_args', function($ar
 
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/fraud-guard.php';
+require get_template_directory() . '/inc/seo-meta.php';
